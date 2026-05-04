@@ -52,13 +52,13 @@ formBusquedaDam.addEventListener("submit", async (event) => {
     event.preventDefault();
     const valorBusqueda = document.getElementById("inputBusqueda").value
 
-    // if (valorBusqueda.length != 13) {
-    //     alertaInputDam.textContent = "Error - Ingresar un DAM correcta"
-    //     return
-    // }
+     if (valorBusqueda.length != 13) {
+         alertaInputDam.textContent = "Error - Ingresar un DAM correcta"
+         return
+     }
 
-    // const dam = await obtenerApiDam(valorBusqueda)
-    dam = await obtenerApiDam("1182610134752")
+     const dam = await obtenerApiDam(valorBusqueda)
+    //dam = await obtenerApiDam("1182610134752")
 
     if (dam == null) {
         alertaInputDam.textContent = "Error - Dam no Encontrada"
