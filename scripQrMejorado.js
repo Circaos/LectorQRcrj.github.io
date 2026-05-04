@@ -57,7 +57,7 @@ formBusquedaDam.addEventListener("submit", async (event) => {
          return
      }
 
-     const dam = await obtenerApiDam(valorBusqueda)
+     dam = await obtenerApiDam(valorBusqueda)
     //dam = await obtenerApiDam("1182610134752")
 
     if (dam == null) {
