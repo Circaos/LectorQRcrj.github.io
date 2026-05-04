@@ -97,7 +97,7 @@ async function obtenerApiDam(dam) {
                  body: JSON.stringify(data)
              })
 
-            const damFinal["dam = await response.json()
+            const damFinal = await response.json()
 
 
 
