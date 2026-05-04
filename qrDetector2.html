@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Scanner QR</title>
+</head>
+<body>
+
+  <h2>Escáner QR / Código de Barras</h2>
+  <div id="reader" style="width:300px;"></div>
+  <p id="resultado"></p>
+
+  <!-- Sonidos -->
+  <audio id="successSound" src="success.mp3"></audio>
+  <audio id="errorSound" src="error.mp3"></audio>
+
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <!-- <script src="./app.js"></script> -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

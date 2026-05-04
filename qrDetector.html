@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Escáner QR y Código de Barras</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .video-container {
+            position: relative;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        #video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #canvas {
+            display: none;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+        }
+
+        .scan-area {
+            width: 80%;
+            height: 80%;
+            border: 3px solid #00ff00;
+            border-radius: 10px;
+            box-shadow: 0 0 0 2000px rgba(0,0,0,0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                border-color: #00ff00;
+                box-shadow: 0 0 0 2000px rgba(0,0,0,0.5);
+            }
+            50% {
+                border-color: #00cc00;
+                box-shadow: 0 0 0 2000px rgba(0,0,0,0.4);
+            }
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-start {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-start:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .btn-stop {
+            background: #f44336;
+            color: white;
+        }
+
+        .btn-stop:hover {
+            background: #da190b;
+            transform: translateY(-2px);
+        }
+
+        .result {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .result-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .result-content {
+            color: #666;
+            word-break: break-all;
+        }
+
+        .status {
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .array-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .array-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .array-items {
+            max-height: 150px;
+            overflow-y: auto;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .array-items p {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.4em;
+            }
+            
+            button {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Escáner QR y Código de Barras</h1>
+        
+        <div class="video-container">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas"></canvas>
+            <div class="overlay">
+                <div class="scan-area"></div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn-start" onclick="startScanner()">▶ Iniciar Escáner</button>
+            <button class="btn-stop" onclick="stopScanner()">⏹ Detener Escáner</button>
+        </div>
+        
+        <div class="result">
+            <div class="result-title">📌 Último código escaneado:</div>
+            <div class="result-content" id="result">Ninguno</div>
+            <div id="status" class="status"></div>
+        </div>
+        
+        <div class="array-info">
+            <div class="array-title">📋 Base de datos de códigos válidos:</div>
+            <div class="array-items" id="arrayItems"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <script>
+
+        //Sonidos
+        const sonidoExito = new Audio('./exitoSonido.mp3');
+        const sonidoError = new Audio('./errorSonido.mp3');
+
+        // Array de códigos válidos (puedes modificar estos valores)
+        let validCodes = [
+            "CODE123456",
+            "QR2024001",
+            "BARCODE001",
+            "PRODUCTO999",
+            "TEST123",
+            "https://www.ejemplo.com",
+            "1234567890"
+        ];
+        
+        let video = document.getElementById('video');
+        let canvas = document.getElementById('canvas');
+        let context = canvas.getContext('2d');
+        let scanning = false;
+        let stream = null;
+        
+
+        function playSound2(sonido) {
+            sonido.play()
+            // if (type === 'success') {
+            //     // El sonido se carga automáticamente al crear el objeto
+            //     const miSonido = new Audio('./exitoSonido.mp3');
+                
+            //     // Para reproducirlo, solo llama a .play()
+            //     miSonido.play();    
+            // } else {
+            //     const miSonido = new Audio('./errorSonido.mp3');
+            //     miSonido.play();    
+            // }
+        }
+
+        // Función para reproducir sonido
+        // function playSound(type) {
+        //     const AudioContext = window.AudioContext || window.webkitAudioContext;
+        //     const audioCtx = new AudioContext();
+            
+        //     const duration = 0.5;
+        //     const now = audioCtx.currentTime;
+        //     const oscillator = audioCtx.createOscillator();
+        //     const gainNode = audioCtx.createGain();
+            
+        //     oscillator.connect(gainNode);
+        //     gainNode.connect(audioCtx.destination);
+            
+        //     if (type === 'success') {
+        //         // Sonido de éxito: dos tonos ascendentes
+        //         oscillator.frequency.value = 523.25; // C5
+        //         gainNode.gain.value = 0.3;
+        //         oscillator.start();
+        //         gainNode.gain.exponentialRampToValueAtTime(0.00001, now + duration);
+                
+        //         setTimeout(() => {
+        //             const oscillator2 = audioCtx.createOscillator();
+        //             const gainNode2 = audioCtx.createGain();
+        //             oscillator2.connect(gainNode2);
+        //             gainNode2.connect(audioCtx.destination);
+        //             oscillator2.frequency.value = 659.25; // E5
+        //             gainNode2.gain.value = 0.3;
+        //             oscillator2.start();
+        //             gainNode2.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + duration);
+        //             setTimeout(() => oscillator2.stop(), duration * 1000);
+        //         }, 100);
+                
+        //         setTimeout(() => oscillator.stop(), duration * 1000);
+        //     } else {
+        //         // Sonido de error: tono grave descendente
+        //         oscillator.frequency.value = 220; // A3
+        //         gainNode.gain.value = 0.3;
+        //         oscillator.start();
+        //         oscillator.frequency.exponentialRampToValueAtTime(110, now + duration);
+        //         gainNode.gain.exponentialRampToValueAtTime(0.00001, now + duration);
+        //         setTimeout(() => oscillator.stop(), duration * 1000);
+        //     }
+        // }
+        
+        // Función para mostrar y actualizar el array en la interfaz
+        function updateArrayDisplay() {
+            const arrayItemsDiv = document.getElementById('arrayItems');
+            arrayItemsDiv.innerHTML = '';
+            validCodes.forEach((code, index) => {
+                const p = document.createElement('p');
+                p.innerHTML = `<strong>Posición ${index}:</strong> ${code}`;
+                arrayItemsDiv.appendChild(p);
+            });
+        }
+        
+        // Función para verificar el código escaneado
+        function verifyCode(scannedCode) {
+            const resultDiv = document.getElementById('result');
+            const statusDiv = document.getElementById('status');
+            
+            resultDiv.innerHTML = scannedCode;
+            
+            const index = validCodes.indexOf(scannedCode);
+            
+            if (index !== -1) {
+                // Éxito: el código está en el array
+                statusDiv.className = 'status success';
+                statusDiv.innerHTML = `✅ ¡ÉXITO! El código "${scannedCode}" se encuentra en la posición ${index} del array.`;
+                playSound2(sonidoExito);
+                console.log("EXITO")
+                // Animación de éxito en el área de escaneo
+                const scanArea = document.querySelector('.scan-area');
+                scanArea.style.animation = 'none';
+                scanArea.style.borderColor = '#00ff00';
+                setTimeout(() => {
+                    scanArea.style.animation = 'pulse 2s infinite';
+                }, 100);
+            } else {
+                // Error: el código no está en el array
+                statusDiv.className = 'status error';
+                statusDiv.innerHTML = `❌ ERROR: El código "${scannedCode}" NO se encuentra en el array.`;
+                playSound2(sonidoError);
+                console.log("ERROR")
+                
+                // Animación de error en el área de escaneo
+                const scanArea = document.querySelector('.scan-area');
+                scanArea.style.animation = 'none';
+                scanArea.style.borderColor = '#ff0000';
+                setTimeout(() => {
+                    scanArea.style.animation = 'pulse 2s infinite';
+                    scanArea.style.borderColor = '#00ff00';
+                }, 500);
+            }
+        }
+        
+        // Función para escanear usando jsQR
+        function scanFrame() {
+            if (!scanning) return;
+            
+            if (video.readyState === video.HAVE_ENOUGH_DATA) {
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                
+                const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                const code = jsQR(imageData.data, imageData.width, imageData.height, {
+                    inversionAttempts: "dontInvert",
+                });
+                
+                if (code) {
+                    verifyCode(code.data);
+                    // Detener el escaneo después de encontrar un código para evitar múltiples escaneos del mismo
+                    stopScanner();
+                }
+            }
+            
+            requestAnimationFrame(scanFrame);
+        }
+        
+        // Función para iniciar el escáner
+        async function startScanner() {
+            try {
+                // Solicitar permiso para usar la cámara
+                stream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { facingMode: "environment" } // Usar cámara trasera en móviles
+                });
+                
+                video.srcObject = stream;
+                await video.play();
+                
+                scanning = true;
+                scanFrame();
+                
+                const statusDiv = document.getElementById('status');
+                statusDiv.className = '';
+                statusDiv.innerHTML = '📷 Escáner activado. Apunta a un código QR o código de barras.';
+                
+            } catch (error) {
+                console.error('Error al acceder a la cámara:', error);
+                const statusDiv = document.getElementById('status');
+                statusDiv.className = 'status error';
+                statusDiv.innerHTML = '❌ Error al acceder a la cámara. Asegúrate de dar los permisos necesarios.';
+            }
+        }
+        
+        // Función para detener el escáner
+        function stopScanner() {
+            scanning = false;
+            
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+                stream = null;
+            }
+            
+            video.srcObject = null;
+            
+            const statusDiv = document.getElementById('status');
+            if (statusDiv.innerHTML !== '❌ Error al acceder a la cámara. Asegúrate de dar los permisos necesarios.') {
+                statusDiv.className = '';
+                statusDiv.innerHTML = '⏹ Escáner detenido. Presiona "Iniciar Escáner" para continuar.';
+            }
+        }
+        
+        // Función para agregar un código al array (ejemplo de cómo modificar el array)
+        function addCodeToArray(code) {
+            if (code && !validCodes.includes(code)) {
+                validCodes.push(code);
+                updateArrayDisplay();
+                return true;
+            }
+            return false;
+        }
+        
+        // Función para eliminar un código del array
+        function removeCodeFromArray(index) {
+            if (index >= 0 && index < validCodes.length) {
+                validCodes.splice(index, 1);
+                updateArrayDisplay();
+                return true;
+            }
+            return false;
+        }
+        
+        // Inicializar la visualización del array
+        updateArrayDisplay();
+        
+        // Mostrar instrucciones adicionales en consola
+        console.log('Aplicación de escáner iniciada');
+        console.log('Códigos válidos:', validCodes);
+        console.log('Para agregar un código: addCodeToArray("NuevoCódigo")');
+        console.log('Para eliminar un código: removeCodeFromArray(posición)');
+        
+        // Opcional: Permitir agregar códigos desde la consola para pruebas
+        window.addCodeToArray = addCodeToArray;
+        window.removeCodeFromArray = removeCodeFromArray;
+        window.validCodes = validCodes;
+        
+        // Iniciar el escáner automáticamente al cargar la página
+        startScanner();
+    </script>
+</body>
+</html>

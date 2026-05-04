@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Lector de Códigos de Barras - Multi Formato</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 650px;
+            width: 100%;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .scanner-container {
+            background: #f7f9fc;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 2px dashed #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .scanner-container:hover {
+            border-color: #667eea;
+        }
+
+        #reader {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        button {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 600;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #stopBtn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .result-area {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .result-header {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            border-left: 4px solid #667eea;
+            padding-left: 12px;
+        }
+
+        .result-content {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+        }
+
+        #result {
+            font-family: monospace;
+            word-break: break-all;
+            color: #667eea;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .format-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-left: 10px;
+            font-weight: normal;
+        }
+
+        .status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .status.info {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .status.success {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .status.error {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .supported-formats {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            font-size: 0.85em;
+        }
+
+        .supported-formats h4 {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .format-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .format-tag {
+            background: #e0e0e0;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+            
+            button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .header h1 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📷 Lector de Códigos de Barras</h1>
+            <p>Soporta múltiples formatos • Alta precisión</p>
+        </div>
+        
+        <div class="content">
+            <div class="scanner-container">
+                <div id="reader"></div>
+                <div class="controls">
+                    <button id="startBtn">▶ Iniciar Escáner</button>
+                    <button id="stopBtn" disabled>⏹ Detener</button>
+                </div>
+            </div>
+            
+            <div class="result-area">
+                <div class="result-header">
+                    Último código leído
+                    <span id="formatSpan" class="format-badge">-</span>
+                </div>
+                <div class="result-content">
+                    <div id="result">No hay datos</div>
+                </div>
+                <div id="status" class="status info">
+                    💡 Presiona "Iniciar Escáner" y permite el acceso a la cámara
+                </div>
+            </div>
+            
+            <div class="supported-formats">
+                <h4>📦 Formatos soportados:</h4>
+                <div class="format-list">
+                    <span class="format-tag">Código 128</span>
+                    <span class="format-tag">Código 39</span>
+                    <span class="format-tag">EAN-13</span>
+                    <span class="format-tag">EAN-8</span>
+                    <span class="format-tag">UPC-A</span>
+                    <span class="format-tag">UPC-E</span>
+                    <span class="format-tag">ITF</span>
+                    <span class="format-tag">Código 93</span>
+                    <span class="format-tag">PDF417</span>
+                    <span class="format-tag">QR</span>
+                    <span class="format-tag">Data Matrix</span>
+                    <span class="format-tag">Aztec</span>
+                    <span class="format-tag">MaxiCode</span>
+                    <span class="format-tag">RSS-14</span>
+                    <span class="format-tag">RSS-Expanded</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <script>
+        // Configuración del escáner
+        let html5QrCode = null;
+        let isScanning = false;
+        let lastResult = '';
+        
+        // Elementos del DOM
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const resultDiv = document.getElementById('result');
+        const formatSpan = document.getElementById('formatSpan');
+        const statusDiv = document.getElementById('status');
+        
+        // Configuración avanzada para mejor lectura
+        const qrCodeConfig = {
+            fps: 30, // Fotogramas por segundo
+            qrbox: { width: 300, height: 200 }, // Área de escaneo
+            aspectRatio: 1.0,
+            disableFlip: false,
+            rememberLastUsedCamera: true,
+            supportedScanTypes: [
+                Html5QrcodeScanType.SCAN_TYPE_CAMERA,
+                Html5QrcodeScanType.SCAN_TYPE_FILE
+            ]
+        };
+        
+        // Formatos que soporta la biblioteca
+        const supportedFormatsList = [
+            'QR_CODE', 'AZTEC', 'CODABAR', 'CODE_39', 'CODE_93', 'CODE_128',
+            'DATA_MATRIX', 'EAN_8', 'EAN_13', 'ITF', 'MAXICODE', 'PDF_417',
+            'RSS_14', 'RSS_EXPANDED', 'UPC_A', 'UPC_E', 'UPC_EAN_EXTENSION'
+        ];
+        
+        // Función para actualizar el estado
+        function updateStatus(message, type = 'info') {
+            statusDiv.className = `status ${type}`;
+            statusDiv.innerHTML = message;
+        }
+        
+        // Función para formatear el nombre del formato
+        function formatFormatName(format) {
+            const formatNames = {
+                'QR_CODE': 'QR',
+                'AZTEC': 'Aztec',
+                'CODABAR': 'Codabar',
+                'CODE_39': 'Code 39',
+                'CODE_93': 'Code 93',
+                'CODE_128': 'Code 128',
+                'DATA_MATRIX': 'Data Matrix',
+                'EAN_8': 'EAN-8',
+                'EAN_13': 'EAN-13',
+                'ITF': 'ITF-14',
+                'MAXICODE': 'MaxiCode',
+                'PDF_417': 'PDF417',
+                'RSS_14': 'RSS-14',
+                'RSS_EXPANDED': 'RSS-Expanded',
+                'UPC_A': 'UPC-A',
+                'UPC_E': 'UPC-E',
+                'UPC_EAN_EXTENSION': 'UPC/EAN Extension'
+            };
+            return formatNames[format] || format;
+        }
+        
+        // Callback cuando se detecta un código
+        function onScanSuccess(decodedText, decodedResult) {
+            // Evitar lecturas duplicadas del mismo código consecutivamente
+            if (lastResult === decodedText) {
+                return;
+            }
+            
+            lastResult = decodedText;
+            const format = decodedResult?.result?.format?.formatName || 'Desconocido';
+            const formattedFormat = formatFormatName(format);
+            
+            // Mostrar resultado
+            resultDiv.innerHTML = decodedText;
+            formatSpan.innerHTML = formattedFormat;
+            formatSpan.style.background = '#4caf50';
+            formatSpan.style.color = 'white';
+            
+            updateStatus(`✅ ¡Código leído! Formato: ${formattedFormat}`, 'success');
+            
+            // Reproducir sonido de lectura (opcional)
+            try {
+                const beep = new Audio('data:audio/wav;base64,U3RlYWx0aCBzb3VuZA==');
+                beep.play().catch(e => console.log('No se pudo reproducir el sonido'));
+            } catch(e) {}
+            
+            // Resetear el formato del badge después de 2 segundos
+            setTimeout(() => {
+                if (formatSpan.innerHTML === formattedFormat) {
+                    formatSpan.style.background = '#e8f5e9';
+                    formatSpan.style.color = '#2e7d32';
+                }
+            }, 2000);
+            
+            // Mostrar notificación si está permitido
+            if (Notification.permission === 'granted') {
+                new Notification('Código leído', {
+                    body: `${formattedFormat}: ${decodedText}`,
+                    icon: 'https://cdn-icons-png.flaticon.com/512/149/149060.png'
+                });
+            }
+        }
+        
+        // Callback cuando hay error en lectura
+        function onScanError(errorMessage) {
+            // Los errores son muy frecuentes durante el escaneo normal, no los mostramos
+            // Solo mostramos errores críticos
+            if (errorMessage.includes('No MultiFormat Readers were able to detect the code')) {
+                // Esto es normal mientras busca códigos, no mostrar
+                return;
+            }
+            console.warn('Error de escaneo:', errorMessage);
+        }
+        
+        // Iniciar el escáner
+        async function startScanner() {
+            if (isScanning) {
+                updateStatus('⚠️ El escáner ya está activo', 'info');
+                return;
+            }
+            
+            updateStatus('🔄 Solicitando acceso a la cámara...', 'info');
+            
+            try {
+                // Verificar si el navegador soporta la API
+                if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                    throw new Error('Tu navegador no soporta acceso a la cámara');
+                }
+                
+                // Solicitar permisos de notificación
+                if (Notification.permission === 'default') {
+                    Notification.requestPermission();
+                }
+                
+                // Crear instancia del escáner
+                html5QrCode = new Html5Qrcode("reader");
+                
+                // Configuración de la cámara
+                const cameraConfig = {
+                    fps: qrCodeConfig.fps,
+                    qrbox: qrCodeConfig.qrbox,
+                    aspectRatio: qrCodeConfig.aspectRatio,
+                    disableFlip: qrCodeConfig.disableFlip
+                };
+                
+                // Iniciar escaneo con la cámara trasera preferentemente
+                await html5QrCode.start(
+                    { facingMode: "environment" }, // Usar cámara trasera
+                    cameraConfig,
+                    onScanSuccess,
+                    onScanError
+                );
+                
+                isScanning = true;
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+                updateStatus('✅ Escáner activo - Apunta a un código de barras', 'success');
+                
+            } catch (err) {
+                console.error('Error al iniciar el escáner:', err);
+                updateStatus(`❌ Error: ${err.message || 'No se pudo acceder a la cámara'}`, 'error');
+                
+                // Intentar con la cámara frontal si falla la trasera
+                if (err.message && err.message.includes('environment')) {
+                    try {
+                        updateStatus('🔄 Intentando con cámara frontal...', 'info');
+                        await html5QrCode.start(
+                            { facingMode: "user" },
+                            {
+                                fps: qrCodeConfig.fps,
+                                qrbox: qrCodeConfig.qrbox,
+                                aspectRatio: qrCodeConfig.aspectRatio
+                            },
+                            onScanSuccess,
+                            onScanError
+                        );
+                        isScanning = true;
+                        startBtn.disabled = true;
+                        stopBtn.disabled = false;
+                        updateStatus('✅ Escáner activo (cámara frontal)', 'success');
+                    } catch (err2) {
+                        updateStatus(`❌ No se pudo acceder a ninguna cámara. Verifica los permisos.`, 'error');
+                    }
+                }
+            }
+        }
+        
+        // Detener el escáner
+        async function stopScanner() {
+            if (!isScanning || !html5QrCode) {
+                updateStatus('ℹ️ El escáner no está activo', 'info');
+                return;
+            }
+            
+            try {
+                await html5QrCode.stop();
+                html5QrCode.clear();
+                isScanning = false;
+                startBtn.disabled = false;
+                stopBtn.disabled = true;
+                updateStatus('⏹️ Escáner detenido. Presiona "Iniciar" para continuar', 'info');
+            } catch (err) {
+                console.error('Error al detener el escáner:', err);
+                updateStatus('⚠️ Error al detener el escáner', 'error');
+            }
+        }
+        
+        // Event listeners
+        startBtn.addEventListener('click', startScanner);
+        stopBtn.addEventListener('click', stopScanner);
+        
+        // Limpiar al cerrar la página
+        window.addEventListener('beforeunload', () => {
+            if (isScanning && html5QrCode) {
+                html5QrCode.stop().catch(e => console.log('Error al limpiar:', e));
+            }
+        });
+        
+        // Mensaje inicial con información de formatos
+        console.log('Lector de códigos de barras iniciado');
+        updateStatus('📱 Listo para iniciar - Permite el acceso a la cámara cuando se solicite', 'info');
+        
+        // Mostrar información en consola
+        console.log('Formatos soportados:', supportedFormatsList.join(', '));
+    </script>
+</body>
+</html>
