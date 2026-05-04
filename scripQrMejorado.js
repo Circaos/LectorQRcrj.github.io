@@ -13,8 +13,8 @@ const btnLector = document.getElementById("idBtnLector")
 
 
 const contenedorLector = document.getElementById("idContenedorLector")
-const sonidoExito = new Audio('./exitoSonido.mp3');
-const sonidoError = new Audio('./errorSonido.mp3');
+//const sonidoExito = new Audio('./exitoSonido.mp3');
+//const sonidoError = new Audio('./errorSonido.mp3');
 const btnVolverScanear = document.getElementById("idBtnVolverScanear")
 const responseScam = document.getElementById("idResponseScam")
 // Elementos del DOM
@@ -89,7 +89,7 @@ async function obtenerApiDam(dam) {
 
 
              const url = "https://apiproviaspruebav1-production.up.railway.app/damcito/getDamcito"
-             const data = { 'dua': serie }
+             const data = { 'dua': dam }
 
              const response = await fetch(url, {
                  method: 'POST',
