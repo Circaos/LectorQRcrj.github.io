@@ -77,14 +77,32 @@ formBusquedaDam.addEventListener("submit", async (event) => {
 
 
 async function obtenerApiDam(dam) {
-    const damFinalTempo = await fetch(`./${dam}.json`)
+    //const damFinalTempo = await fetch(`./${dam}.json`)
 
-    console.log(damFinalTempo)
-    if (!damFinalTempo.ok) {
-        return null
-    }
+    //console.log(damFinalTempo)
+    //if (!damFinalTempo.ok) {
+     //   return null
+   // }
 
-    const damFinal = await damFinalTempo.json();
+   // const damFinal = await damFinalTempo.json();
+
+
+
+             const url = "https://apiproviaspruebav1-production.up.railway.app/damcito/getDamcito"
+             const data = { 'dua': serie }
+
+             const response = await fetch(url, {
+                 method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                 body: JSON.stringify(data)
+             })
+
+            const damFinal["dam = await response.json()
+
+
+
+
+
 
     return damFinal["dam"]
 }
