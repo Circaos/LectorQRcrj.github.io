@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styleQrMejorado.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedorInputDAM" id="idContenedorInputDam">
+        <h1>INGRESAR DAM</h1>
+        <form id="formBusqueda" onsubmit="return false;">
+            <input type="number" id="inputBusqueda" placeholder="1182610...">
+            <button type="submit">Buscar</button>
+        </form>
+        <h2 id="idMensajeAlertaInputDam"> </h2>
+    </div>
+
+    <div class="contenedorInfoDam noView" id="idContenedorInfoDam">
+        <div class="tablasInformacion">
+            <table id="idTablaCabeceraInfo">
+                <tbody></tbody>
+            </table>
+            <table id="idTablaInfo">
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="menuOpciones">
+            <button class="botonFixed" id="idBtnLector">🔎 Buscador</button>
+            <!-- <div class="opcion01">
+                Hello
+            </div>
+            <div class="opcion01">
+                Hello
+            </div> -->
+        </div>
+
+    </div>
+
+    <div class="contenedorLector noView" id="idContenedorLector">
+        <!-- <h1>HOLA MUNDO</h1> -->
+        <div class="container">
+            <div class="header">
+                <h1>📷 Lector</h1>
+                <!-- <p>Soporta múltiples formatos • Alta precisión</p> -->
+            </div>
+
+            <div class="content">
+                <div class="scanner-container">
+                    <div id="reader"></div>
+                    <div class="controls noView">
+                        <button id="startBtn">▶ Iniciar Escáner</button>
+                        <button id="stopBtn" disabled>⏹ Detener</button>
+                    </div>
+                </div>
+
+                <!-- <div class="result-area">
+                    <div class="result-header">
+                        Último código leído
+                        <span id="formatSpan" class="format-badge">-</span>
+                    </div>
+                    <div class="result-content">
+                        <div id="result">No hay datos</div>
+                    </div>
+                    <div id="status" class="status info">
+                        💡 Presiona "Iniciar Escáner" y permite el acceso a la cámara
+                    </div>
+                </div>
+
+                <div class="supported-formats">
+                    <h4>📦 Formatos soportados:</h4>
+                    <div class="format-list">
+                        <span class="format-tag">Código 128</span>
+                        <span class="format-tag">Código 39</span>
+                        <span class="format-tag">EAN-13</span>
+                        <span class="format-tag">EAN-8</span>
+                        <span class="format-tag">UPC-A</span>
+                        <span class="format-tag">UPC-E</span>
+                        <span class="format-tag">ITF</span>
+                        <span class="format-tag">Código 93</span>
+                        <span class="format-tag">PDF417</span>
+                        <span class="format-tag">QR</span>
+                        <span class="format-tag">Data Matrix</span>
+                        <span class="format-tag">Aztec</span>
+                        <span class="format-tag">MaxiCode</span>
+                        <span class="format-tag">RSS-14</span>
+                        <span class="format-tag">RSS-Expanded</span>
+                    </div>
+                </div> -->
+            </div>
+            <div id="idResponseScam" class="noView">
+
+            </div>
+        </div>
+        <div class="menuOpcionesScam">
+            <button class="botonFixed noView" id="idBtnVolverScanear">🔎 VOLVER A ESCANEAR</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script> -->
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <script type="module" src="./scripQrMejorado.js"></script>
+</body>
+
+</html>
