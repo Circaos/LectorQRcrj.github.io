@@ -305,8 +305,8 @@ td {
 
 .btnScam{
     background-color: #3cdb44;
-    height: 40px;
-    min-width: 40px;
+    height: 30px;
+    min-width: 30px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -320,10 +320,14 @@ td {
 }
 
 h1{
-    margin: 15px 0;
+    margin: 10px 0;
+    font-size: 1.5rem;
 }
 
-
+.cajaBotonesRedimensionarScam{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 
 
@@ -339,9 +343,11 @@ h1{
         font-size: 0.85rem;
     }
     .container{
-        padding: 10px;
+        padding: 7px;
     }
-
+    .scanner-container{
+        padding: 12px;
+    }
 }
 
 /* @media (max-width: 480px) {
