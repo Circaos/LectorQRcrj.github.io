@@ -1,0 +1,185 @@
+{
+    "estado": "OK",
+    "error": "",
+    "dam": {
+        "dam": "118-2026-10-128747-00",
+        "fechaNumeracion": "19/03/2026",
+        "rucImportador": "4-20128967606",
+        "nomImportador": "SOCOPUR S.A.C.",
+        "cantBultos": "16.00",
+        "cantUndFisicas": "197,971.00",
+        "cantUndComerciales": "197,971.00",
+        "cantSeries": "13",
+        "series": [
+            {
+                "serie": "1",
+                "unidadesFisicas": "4,560.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6004-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "2",
+                "unidadesFisicas": "4,000.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6201-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "3",
+                "unidadesFisicas": "12,000.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6202-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "4",
+                "unidadesFisicas": "9,120.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6203-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "5",
+                "unidadesFisicas": "8,200.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6204-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "6",
+                "unidadesFisicas": "1,050.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6205-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "7",
+                "unidadesFisicas": "800.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6206-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "8",
+                "unidadesFisicas": "441.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 63/28-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "9",
+                "unidadesFisicas": "52,800.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6301-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "10",
+                "unidadesFisicas": "103,200.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6302-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "11",
+                "unidadesFisicas": "600.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6303-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "12",
+                "unidadesFisicas": "900.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6304-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            },
+            {
+                "serie": "13",
+                "unidadesFisicas": "300.00 U",
+                "partida": "8482100000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RODAJE BOLAS, SCP, S/M",
+                    "CODIGO PROVEEDOR: 6305-2NSL",
+                    "EN UNIDADES",
+                    "LOTE: I202523"
+                ]
+            }
+        ]
+    }
+}

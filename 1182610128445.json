@@ -1,0 +1,242 @@
+{
+    "estado": "OK",
+    "error": "",
+    "dam": {
+        "dam": "118-2026-10-128445-00",
+        "fechaNumeracion": "19/03/2026",
+        "rucImportador": "4-20528132988",
+        "nomImportador": "INVERSIONES DIAZ E.I.R.L.",
+        "cantBultos": "1,242.00",
+        "cantUndFisicas": "4,571.00",
+        "cantUndComerciales": "4,571.00",
+        "cantSeries": "17",
+        "series": [
+            {
+                "serie": "1",
+                "unidadesFisicas": "18.00 U",
+                "partida": "8467899000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-",
+                "descripciones": [
+                    "BARRENA DE TIERRA, BONHOEFFER, BON-P-EA52",
+                    "BARRENA DE TIERRA",
+                    "01/2026-03051; 01/2026-03053; 01/2026-03054 ; 01/2026-03058 ; 01/2026-03062 ; 01/2026-0306",
+                    "01/2026-03066 ; 01/2026-03068 ; 01/2026-03070 ; 01/2026-03071 ; 01/2026-03079 ; 01/2026-03",
+                    "01/2026-03086; 01/2026-03089 ; 01/2026-03093 ; 01/2026-03095 ; 01/2026-03098 ; 01/2026-031"
+                ]
+            },
+            {
+                "serie": "2",
+                "unidadesFisicas": "12.00 U",
+                "partida": "8467899000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-",
+                "descripciones": [
+                    "BARRENA DE TIERRA, BONHOEFFER, BON-P-EA52",
+                    "BARRENA DE TIERRA",
+                    "01/2026-03103 AL 01/2026-03105; 01/2026-03107 ; 01/2026-03117; 01/2026-03131;",
+                    "01/2026-03138;01/2026-03139;01/2026-03140;01/2026-03145;01/2026-03147;01/2026-03149"
+                ]
+            },
+            {
+                "serie": "3",
+                "unidadesFisicas": "28.00 U",
+                "partida": "8467899000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "BARRENA DE TIERRA, BONHOEFFER, BON-P-EA52",
+                    "01/2026-03151;01/2026-03153 AL 01/2026-03157;01/2026-03159;01/2026-03160;01/2026-03163;",
+                    "01/2026-03165;01/2026-03167;01/2026-03170;01/2026-03171;01/2026-03173;01/2026-03174;",
+                    "01/2026-03176;01/2026-03179;01/2026-03184;01/2026-03185;01/2026-03187;01/2026-03189;",
+                    "01/2026-03190;01/2026-03192 AL 01/2026-03194;01/2026-03196;01/2026-03208;01/2026-03212;"
+                ]
+            },
+            {
+                "serie": "4",
+                "unidadesFisicas": "27.00 U",
+                "partida": "8467899000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "BARRENA DE TIERRA, BONHOEFFER, BON-P-EA52",
+                    "01/2026-03214;01/2026-03216;01/2026-03218;01/2026-03219;01/2026-03225;01/2026-03229;",
+                    "01/2026-03230;01/2026-03233;01/2026-03234;01/2026-03236;01/2026-03239;01/2026-03243;",
+                    "01/2026-03244;01/2026-03247;01/2026-03248;01/2026-03250;01/2026-03253;01/2026-03257;",
+                    "01/2026-03258;01/2026-03260;01/2026-03288 AL 01/2026-03291;01/2026-03294 AL 01/2026-03296;"
+                ]
+            },
+            {
+                "serie": "5",
+                "unidadesFisicas": "26.00 U",
+                "partida": "8467899000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "BARRENA DE TIERRA, BONHOEFFER, BON-P-EA52",
+                    "01/2026-03298;01/2026-03299;01/2026-03301;01/2026-03305;01/2026-03307 AL 01/2026-03310;",
+                    "01/2026-03312;01/2026-03314;01/2026-03315;01/2026-03317;01/2026-03318;01/2026-03319;",
+                    "01/2026-03323;01/2026-03324;01/2026-03327;01/2026-03330;01/2026-03332;01/2026-03336;",
+                    "01/2026-03337;01/2026-03340;01/2026-03342;01/2026-03343;01/2026-03346;01/2026-03354;"
+                ]
+            },
+            {
+                "serie": "6",
+                "unidadesFisicas": "53.00 U",
+                "partida": "8467899000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "BARRENA DE TIERRA, BONHOEFFER, BON-P-EA52",
+                    "01/2026-03356;01/2026-03357;01/2026-03359;01/2026-03360;01/2026-03362;01/2026-03363;",
+                    "01/2026-03365;01/2026-03367 AL 01/2026-03371;01/2026-03373 AL 01/2026-03375;01/2026-03377",
+                    "AL 01/2026-03384;01/2026-03386 AL 01/2026-03398;01/2026-03400;01/2026-03403 AL 01/2026-034",
+                    "01/2026-03408 AL 01/2026-03410;01/2026-03412 AL 01/2026-03414;01/2026-03416 AL 01/2026-034"
+                ]
+            },
+            {
+                "serie": "7",
+                "unidadesFisicas": "27.00 U",
+                "partida": "8467899000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "BARRENA DE TIERRA, BONHOEFFER, BON-P-EA52",
+                    "BARRENA DE TIERRA",
+                    "BON-P-EA52",
+                    "01/2026-03423;01/2026-03425 AL 01/2026-03450"
+                ]
+            },
+            {
+                "serie": "8",
+                "unidadesFisicas": "120.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, BONHOEFFER, BON-P-CS65",
+                    "MOTOSIERRA",
+                    "BON-P-CS65",
+                    "SERIES : BP10265280001 AL  BP10265280120"
+                ]
+            },
+            {
+                "serie": "9",
+                "unidadesFisicas": "280.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, BONHOEFFER, BON-P-CS65",
+                    "MOTOSIERRA",
+                    "BON-P-CS65",
+                    "SERIES :  BP10265280121 AL  BP10265280400"
+                ]
+            },
+            {
+                "serie": "10",
+                "unidadesFisicas": "50.00 U",
+                "partida": "8424823000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "FUMIGADORA, BONHOEFFER, BON-P-MS20L-JB",
+                    "FUMIGADORA",
+                    "BON-P-MS20L-JB",
+                    "SERIES : BMSJB-BP107-001 AL BMSJB-BP107-050"
+                ]
+            },
+            {
+                "serie": "11",
+                "unidadesFisicas": "150.00 U",
+                "partida": "8424823000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "FUMIGADORA, BONHOEFFER, BON-P-MS20L-JB",
+                    "FUMIGADORA",
+                    "BON-P-MS20L-JB",
+                    "SERIES : BMSJB-BP107-051 AL  BMSJB-BP107-200"
+                ]
+            },
+            {
+                "serie": "12",
+                "unidadesFisicas": "100.00 U",
+                "partida": "8424823000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "FUMIGADORA, BONHOEFFER, BON-P-MS20L-JP",
+                    "FUMIGADORA",
+                    "BON-P-MS20L-JP",
+                    "SERIES : BMSJP-BP71A-001 AL BMSJP-BP71A-100"
+                ]
+            },
+            {
+                "serie": "13",
+                "unidadesFisicas": "180.00 U",
+                "partida": "8424823000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "FUMIGADORA, BONHOEFFER, BON-P-MS20L-JP",
+                    "FUMIGADORA",
+                    "BON-P-MS20L-JP",
+                    "SERIES : BMSJP-BP71A-101 AL BMSJP-BP71A-280"
+                ]
+            },
+            {
+                "serie": "14",
+                "unidadesFisicas": "500.00 U",
+                "partida": "8202310000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SIERRA REDONDA, BONHOEFFER, BON-BCRBLADE-013",
+                    "SIERRA REDONDA PARA MOTOGUADANA",
+                    "BON-BCRBLADE-013",
+                    "BLADE SIZE : 255MM CENTRE HOLE : 25.4MM THIKNESS : 1.8MMNUMBER OF TEETH : 40T"
+                ]
+            },
+            {
+                "serie": "15",
+                "unidadesFisicas": "1,500.00 U",
+                "partida": "8202310000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SIERRA REDONDA, BONHOEFFER, BON-BCRBLADE-013",
+                    "SIERRA REDONDA PARA MOTOGUADANA",
+                    "BON-BCRBLADE-013",
+                    "BLADE SIZE : 255MM CENTRE HOLE : 25.4MM THIKNESS : 1.8MMNUMBER OF TEETH : 40T"
+                ]
+            },
+            {
+                "serie": "16",
+                "unidadesFisicas": "350.00 U",
+                "partida": "8202310000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SIERRA REDONDA, BONHOEFFER, BON-BCRBLADE-002",
+                    "SIERRA REDONDA PARA MOTOGUADANA",
+                    "BON-BCRBLADE-002",
+                    "BLADE SIZE : 255MM CENTRE HOLE : 25.4MM THIKNESS : 1.8MMNUMBER OF TEETH : 40T"
+                ]
+            },
+            {
+                "serie": "17",
+                "unidadesFisicas": "1,150.00 U",
+                "partida": "8202310000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SIERRA REDONDA, BONHOEFFER, BON-BCRBLADE-002",
+                    "SIERRA REDONDA PARA MOTOGUADANA",
+                    "BON-BCRBLADE-002",
+                    "BLADE SIZE : 255MM CENTRE HOLE : 25.4MM THIKNESS : 1.8MMNUMBER OF TEETH : 40T"
+                ]
+            }
+        ]
+    }
+}

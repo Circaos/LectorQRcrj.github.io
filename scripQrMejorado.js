@@ -13,9 +13,10 @@ const btnLector = document.getElementById("idBtnLector")
 
 
 const contenedorLector = document.getElementById("idContenedorLector")
-//const sonidoExito = new Audio('./exitoSonido.mp3');
-//const sonidoError = new Audio('./errorSonido.mp3');
+const sonidoExito = new Audio('./exitoSonido.mp3');
+const sonidoError = new Audio('./errorSonido.mp3');
 const btnVolverScanear = document.getElementById("idBtnVolverScanear")
+const btnAtrasScam = document.getElementById("idBtnAtrasScam")
 const responseScam = document.getElementById("idResponseScam")
 // Elementos del DOM
 const startBtn = document.getElementById('startBtn');
@@ -23,14 +24,15 @@ const stopBtn = document.getElementById('stopBtn');
 const resultDiv = document.getElementById('result');
 const formatSpan = document.getElementById('formatSpan');
 const statusDiv = document.getElementById('status');
+const contentDiv = document.getElementsByClassName('content');
 // Configuración del escáner
 let html5QrCode = null;
 let isScanning = false;
 let lastResult = '';
 // Configuración avanzada para mejor lectura
-const qrCodeConfig = {
+let qrCodeConfig = {
     fps: 30, // Fotogramas por segundo
-    qrbox: { width: 300, height: 200 }, // Área de escaneo
+    qrbox: { width: (contentDiv.offsetWidth - 35), height: 200 }, // Área de escaneo
     aspectRatio: 1.0,
     disableFlip: false,
     rememberLastUsedCamera: true,
@@ -52,13 +54,13 @@ formBusquedaDam.addEventListener("submit", async (event) => {
     event.preventDefault();
     const valorBusqueda = document.getElementById("inputBusqueda").value
 
-     if (valorBusqueda.length != 13) {
-         alertaInputDam.textContent = "Error - Ingresar un DAM correcta"
-         return
-     }
+    // if (valorBusqueda.length != 13) {
+    //     alertaInputDam.textContent = "Error - Ingresar un DAM correcta"
+    //     return
+    // }
 
-     dam = await obtenerApiDam(valorBusqueda)
-    //dam = await obtenerApiDam("1182610134752")
+    // const dam = await obtenerApiDam(valorBusqueda)
+    dam = await obtenerApiDam("1182610134752")
 
     if (dam == null) {
         alertaInputDam.textContent = "Error - Dam no Encontrada"
@@ -77,32 +79,14 @@ formBusquedaDam.addEventListener("submit", async (event) => {
 
 
 async function obtenerApiDam(dam) {
-    //const damFinalTempo = await fetch(`./${dam}.json`)
+    const damFinalTempo = await fetch(`./${dam}.json`)
 
-    //console.log(damFinalTempo)
-    //if (!damFinalTempo.ok) {
-     //   return null
-   // }
+    console.log(damFinalTempo)
+    if (!damFinalTempo.ok) {
+        return null
+    }
 
-   // const damFinal = await damFinalTempo.json();
-
-
-
-             const url = "https://apiproviaspruebav1-production.up.railway.app/damcito/getDamcito"
-             const data = { 'dua': dam }
-
-             const response = await fetch(url, {
-                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                 body: JSON.stringify(data)
-             })
-
-            const damFinal = await response.json()
-
-
-
-
-
+    const damFinal = await damFinalTempo.json();
 
     return damFinal["dam"]
 }
@@ -206,7 +190,7 @@ function agregarListener() {
 
 
 
-
+/////////////////////////////////////////////////////////////////
 // FUNCIONES SCAM
 // Función para actualizar el estado
 function updateStatus(message, type = 'info') {
@@ -400,6 +384,12 @@ function iniciarPantallaSCAM() {
     startBtn.addEventListener('click', startScanner);
     stopBtn.addEventListener('click', stopScanner);
     btnVolverScanear.addEventListener('click', startScanner)
+    btnAtrasScam.addEventListener('click', ()=>{
+        stopScanner()
+        contenedorLector.classList.add("noView")
+        contenedorInfoDam.classList.remove("noView")
+    })
+
 }
 
 function enviarResponse(rptAlgoritmo, busquedaPalabra) {
@@ -408,10 +398,14 @@ function enviarResponse(rptAlgoritmo, busquedaPalabra) {
     // responseScam.textContent = "hols"
     console.log("pollo2")
     if (rptAlgoritmo.encontrado) {
+        sonidoExito.play()
+
         responseScam.textContent = `Se econtró ${busquedaPalabra} en la serie ${rptAlgoritmo["serie"]}`
         responseScam.classList.add("responseOKScam")
         responseScam.classList.remove("responseNOScam")
     }else{
+        sonidoError.play()
+
         responseScam.textContent = `NO Se econtró ${busquedaPalabra} en ninguna serie`
         responseScam.classList.add("responseNOScam")
         responseScam.classList.remove("responseOKScam")

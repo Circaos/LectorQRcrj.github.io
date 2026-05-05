@@ -139,6 +139,7 @@ td {
 
 /* estilos scam */
 .container {
+    padding: 20px;
     background: white;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -146,6 +147,8 @@ td {
     width: 100%;
     /* overflow: hidden; */
     animation: fadeIn 0.5s ease;
+
+    margin: 0 auto;
 }
 
 
@@ -153,7 +156,7 @@ td {
     background: #f7f9fc;
     border-radius: 15px;
     padding: 20px;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     border: 2px dashed #ddd;
     transition: all 0.3s ease;
 }
@@ -291,6 +294,37 @@ td {
 .responseOKScam{
     background-color: greenyellow;
 }
+
+
+.header{
+    margin: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnScam{
+    background-color: #3cdb44;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btnScam:hover {
+    transform: scale(1.1);
+    background: #32b639;
+}
+
+h1{
+    margin: 15px 0;
+}
+
+
+
 
 
 

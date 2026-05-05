@@ -1,0 +1,304 @@
+{
+    "estado": "OK",
+    "error": "",
+    "dam": {
+        "dam": "118-2026-10-144585-00",
+        "fechaNumeracion": "27/03/2026",
+        "rucImportador": "4-20611784423",
+        "nomImportador": "CT (PR) MANUFACTURING S.A.C.",
+        "cantBultos": "484.00",
+        "cantUndFisicas": "6,484.00",
+        "cantUndComerciales": "9,882.00",
+        "cantSeries": "22",
+        "series": [
+            {
+                "serie": "1",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8479300000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "LÍNEA AUTOMÁTICA DE PRODUCCIÓN, QIANGTONG, YX2400-7x8",
+                    "LÍNEA AUTOMÁTICA DE PRODUCCIÓN DE PRENSADO EN CALIENTE DE DOBLE REVESTIMIENTO",
+                    "HOT PRESS PRODUCTION LINE WITH THEIR OWN PART AND ACCESSORIES",
+                    "PARA EL PROCESAMIENTO Y LAMINADO DE DOBLE CHAPA EN TABLEROS",
+                    "NUEVO DESARMADO CON SUS ACCESORIOS,PAGO:CREDITO 24 MESES DE FECHA DE FACTURA"
+                ]
+            },
+            {
+                "serie": "2",
+                "unidadesFisicas": "6,000.00 KG",
+                "partida": "3920100000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "FLEJE DE EMBALAJE DE PET, S/M, S/M",
+                    "COM: 100% POLITEREFTALATO DE ETILENO, ELAB:SIN SOPORTE, ESTRATIFICADO",
+                    "ACABADO:LISO; COLOR:CON COLOR, PLASTIF:   %",
+                    "SIN SOPORTE",
+                    "ANCHO:12 M, ESPE.1: 0.8 MM, GRAMAJE:12 GR/M2, COMPO.PLASTICO:50 %, COMPO.SOPORTE:50 %"
+                ]
+            },
+            {
+                "serie": "3",
+                "unidadesFisicas": "30.00 KG",
+                "partida": "7318240000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MANGUITO DE FIJACIÓN, YLDVZ, H2330",
+                    "MANGUITO DE FIJACIÓN",
+                    "LOCKING SLEEVE H2330",
+                    "PARA FIJAR EL RODAMIENTO AL EJE Y EVITAR EL DESPLAZAMIENTO AXIAL, SE UTILIZA JUNTO CON TUE"
+                ]
+            },
+            {
+                "serie": "4",
+                "unidadesFisicas": "6.00 U",
+                "partida": "8483309000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SOPORTE DE RODAMIENTO, S/M, SN220-22 ZF22/ZF24",
+                    "SOPORTE DE RODAMIENTO",
+                    "BEARING HOUSING SN220-22 ZF22/ZF24",
+                    "PARA FIJAR Y SOPORTAR EL RODAMIENTO, ASEGURANDO LA CORRECTA ALINEACIÓN DEL EJE ROTATIVO Y"
+                ]
+            },
+            {
+                "serie": "5",
+                "unidadesFisicas": "49.00 2U",
+                "partida": "6403400000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "CALZADO DE SEGURIDAD(EXCEPTO BOTA DE SEGURIDAD), S/M, F505SZBpu",
+                    "PARTE SUP:CUERO, ORIGEN:BOVINO,AFELPADO(AGAMUZADO)",
+                    "PLANTA:POLIURETANO, FORRO:MATERIAL SINTETICO",
+                    "PARA CABALLERO, TALLA: 40   -44 (EUR), PUNTA DE ACERO"
+                ]
+            },
+            {
+                "serie": "6",
+                "unidadesFisicas": "6.00 U",
+                "partida": "8483309000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SOPORTE DE RODAMIENTO, S/M, SN224-22 ZF27/ZF29",
+                    "SOPORTE DE RODAMIENTO",
+                    "BEARING HOUSING   SN224-22 ZF27/ZF29",
+                    "PARA FIJAR Y SOPORTAR EL RODAMIENTO, ASEGURANDO LA CORRECTA ALINEACIÓN DEL EJE ROTATIVO Y"
+                ]
+            },
+            {
+                "serie": "7",
+                "unidadesFisicas": "2.00 U",
+                "partida": "8483309000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SOPORTE DE RODAMIENTO, S/M, SN216 ZF18/ZF20",
+                    "SOPORTE DE RODAMIENTO",
+                    "BEARING HOUSING SN216 ZF18/ZF20",
+                    "PARA FIJAR Y SOPORTAR EL RODAMIENTO, ASEGURANDO LA CORRECTA ALINEACIÓN DEL EJE ROTATIVO Y"
+                ]
+            },
+            {
+                "serie": "8",
+                "unidadesFisicas": "2.00 U",
+                "partida": "8483309000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SOPORTE DE RODAMIENTO, S/M, SN218 ZF20/ZF22",
+                    "SOPORTE DE RODAMIENTO",
+                    "BEARING HOUSING SN218 ZF20/ZF22",
+                    "PARA FIJAR Y SOPORTAR EL RODAMIENTO, ASEGURANDO LA CORRECTA ALINEACIÓN DEL EJE ROTATIVO Y"
+                ]
+            },
+            {
+                "serie": "9",
+                "unidadesFisicas": "10.00 KG",
+                "partida": "7318159000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "PERNO HEXAGONAL EXTERIOR, HAIWEI, M20*75",
+                    "PERNO HEXAGONAL EXTERIOR GRADO 12.9",
+                    "GRADE 12.9 HEXAGONAL BOLT 12.9 M20*75",
+                    "PARA FIJACIÓN Y CONEXIÓN"
+                ]
+            },
+            {
+                "serie": "10",
+                "unidadesFisicas": "10.00 KG",
+                "partida": "7318159000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "PERNO HEXAGONAL EXTERIOR, HAIWEI, M16*140",
+                    "PERNO HEXAGONAL EXTERIOR GRADO 12.9",
+                    "GRADE 12.9 HEXAGONAL BOLT 12.9 M16*140",
+                    "PARA FIJACIÓN Y CONEXIÓN"
+                ]
+            },
+            {
+                "serie": "11",
+                "unidadesFisicas": "10.00 KG",
+                "partida": "7318159000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "PERNO HEXAGONAL INTERIOR, HAIWEI, M12*65",
+                    "PERNO HEXAGONAL INTERIOR (ALLEN) GRADO 12.9",
+                    "12.9 GRADE HEXAGONAL SOCKET BOLT 12.9 M12*65",
+                    "PARA FIJACIÓN Y CONEXIÓN"
+                ]
+            },
+            {
+                "serie": "12",
+                "unidadesFisicas": "10.00 KG",
+                "partida": "7318159000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "PERNO HEXAGONAL INTERIOR, HAIWEI, M14*55",
+                    "PERNO HEXAGONAL INTERIOR (ALLEN) GRADO 12.9",
+                    "12.9 GRADE HEXAGONAL SOCKET BOLT 12.9 M14*55",
+                    "PARA FIJACIÓN Y CONEXIÓN"
+                ]
+            },
+            {
+                "serie": "13",
+                "unidadesFisicas": "10.00 KG",
+                "partida": "7318159000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "PERNO HEXAGONAL INTERIOR, HAIWEI, M10*70",
+                    "PERNO HEXAGONAL INTERIOR (ALLEN) GRADO 12.9",
+                    "GRADE 12.9 HEXAGONAL SOCKET BOLT 12.9 M10*70",
+                    "PARA FIJACIÓN Y CONEXIÓN"
+                ]
+            },
+            {
+                "serie": "14",
+                "unidadesFisicas": "10.00 KG",
+                "partida": "7318159000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "PERNO AVELLANADO HEXAGONAL, HAIWEI, M10*30",
+                    "PERNO AVELLANADO HEXAGONAL INTERIOR GRADO 12.9",
+                    "GRADE 12.9 COUNTERSUNK HEXAGONAL SOCKET BOLT   12.9 M10*30",
+                    "PARA FIJACIÓN Y CONEXIÓN"
+                ]
+            },
+            {
+                "serie": "15",
+                "unidadesFisicas": "10.00 KG",
+                "partida": "7318159000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "CONJUNTO DE PERNO HEXAGONAL, S/M, M16*100",
+                    "CONJUNTO DE PERNO HEXAGONAL EXTERIOR DE ACERO INOXIDABLE (4 PIEZAS)",
+                    "STAINLESS STEEL HEXAGONAL BOLT SET OF FOUR COMPONENTS  M16*100",
+                    "SUJETADOR RESISTENTE A LA CORROSIÓN"
+                ]
+            },
+            {
+                "serie": "16",
+                "unidadesFisicas": "10.00 KG",
+                "partida": "7318159000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "CONJUNTO DE PERNO HEXAGONAL, S/M, M16*120",
+                    "CONJUNTO DE PERNO HEXAGONAL EXTERIOR DE ACERO INOXIDABLE (4 PIEZAS)",
+                    "STAINLESS STEEL HEXAGONAL BOLT SET OF FOUR COMPONENTS  M16*120",
+                    "SUJETADOR RESISTENTE A LA CORROSIÓN"
+                ]
+            },
+            {
+                "serie": "17",
+                "unidadesFisicas": "5.00 KG",
+                "partida": "7318230000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "REMACHE CIEGO, HAIWEI, M3.2*16",
+                    "REMACHE CIEGO",
+                    "BLIND RIVET M3.2*16",
+                    "PARA FIJACIÓN RÁPIDA MEDIANTE REMACHADO CIEGO EN PIEZAS DE CHAPA DELGADA"
+                ]
+            },
+            {
+                "serie": "18",
+                "unidadesFisicas": "10.00 KG",
+                "partida": "7318159000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "CONJUNTO DE PERNO HEXAGONAL, HAIWEI, M14*60",
+                    "CONJUNTO DE PERNO HEXAGONAL EXTERIOR GRADO 8.8 (4 PIEZAS)",
+                    "GRADE 8.8 HEXAGONAL BOLT WITH FOUR COMPONENTS 8.8 M14*60",
+                    "PARA FIJACIÓN Y CONEXIÓN"
+                ]
+            },
+            {
+                "serie": "19",
+                "unidadesFisicas": "277.00 2U",
+                "partida": "6403400000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "CALZADO DE SEGURIDAD(EXCEPTO BOTA DE SEGURIDAD), S/M, F505SZBpu",
+                    "PARTE SUP:CUERO, ORIGEN:BOVINO,AFELPADO(AGAMUZADO)",
+                    "PLANTA:POLIURETANO, FORRO:MATERIAL SINTETICO",
+                    "PARA CABALLERO, TALLA: 40   -44 (EUR), PUNTA DE ACERO"
+                ]
+            },
+            {
+                "serie": "20",
+                "unidadesFisicas": "4.00 U",
+                "partida": "8483309000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SOPORTE DE RODAMIENTO, S/M, SNL510-608",
+                    "SOPORTE DE RODAMIENTO",
+                    "BEARING HOUSING SNL510-608",
+                    "PARA FIJAR Y SOPORTAR EL RODAMIENTO, ASEGURANDO LA CORRECTA ALINEACIÓN DEL EJE ROTATIVO Y"
+                ]
+            },
+            {
+                "serie": "21",
+                "unidadesFisicas": "4.00 U",
+                "partida": "8483309000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SOPORTE DE RODAMIENTO, S/M, SNL512-610",
+                    "SOPORTE DE RODAMIENTO",
+                    "BEARING HOUSING  SNL512-610",
+                    "PARA FIJAR Y SOPORTAR EL RODAMIENTO, ASEGURANDO LA CORRECTA ALINEACIÓN DEL EJE ROTATIVO Y"
+                ]
+            },
+            {
+                "serie": "22",
+                "unidadesFisicas": "8.00 U",
+                "partida": "8483309000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "SOPORTE DE RODAMIENTO, S/M, SN532",
+                    "SOPORTE DE RODAMIENTO",
+                    "BEARING HOUSING SN532",
+                    "PARA FIJAR Y SOPORTAR EL RODAMIENTO, ASEGURANDO LA CORRECTA ALINEACIÓN DEL EJE ROTATIVO Y"
+                ]
+            }
+        ]
+    }
+}

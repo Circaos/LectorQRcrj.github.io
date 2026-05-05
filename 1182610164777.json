@@ -1,0 +1,170 @@
+{
+    "estado": "OK",
+    "error": "",
+    "dam": {
+        "dam": "118-2026-10-164777-00",
+        "fechaNumeracion": "10/04/2026",
+        "rucImportador": "4-20613086235",
+        "nomImportador": "HUSQVARNA COMERCIAL AMAZONICA SOCIEDAD ANONIMA - HUSQVARNA COMERCIAL AMAZONICA S.A",
+        "cantBultos": "6.00",
+        "cantUndFisicas": "150.00",
+        "cantUndComerciales": "150.00",
+        "cantSeries": "11",
+        "series": [
+            {
+                "serie": "1",
+                "unidadesFisicas": "16.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 61",
+                    "CODIGO: 967 06 24-94. S/N:20260426170, 20260426155, 20260426168, 20260426172",
+                    "S/N:20260426186, 20260426187, 20260426141, 20260426158",
+                    "S/N:20260426175, 20260426173, 20260426171, 20260426166",
+                    "S/N:20260426148, 20260426179, 20260426182, 20260426183"
+                ]
+            },
+            {
+                "serie": "2",
+                "unidadesFisicas": "16.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 61",
+                    "CODIGO: 967 06 24-94. S/N:20260426191, 20260426167, 20260426153, 20260426156",
+                    "S/N:20260426174, 20260426152, 20260426196, 20260426198",
+                    "S/N:20260426178, 20260426195, 20260426194, 20260426149",
+                    "S/N:20260426176, 20260426177, 20260426192, 20260426193"
+                ]
+            },
+            {
+                "serie": "3",
+                "unidadesFisicas": "10.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 61",
+                    "CODIGO: 967 06 24-94",
+                    "S/N:20260426154, 20260426162, 20260426160, 20260426159",
+                    "S/N:20260426157, 20260426151",
+                    "S/N:20260426161, 20260426163, 20260426164, 20260426165"
+                ]
+            },
+            {
+                "serie": "4",
+                "unidadesFisicas": "16.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 365",
+                    "CODIGO: 970 71 86-94. S/N:20260572133, 20260572132, 20260572130, 20260572131",
+                    "S/N:20260572154, 20260572111, 20260572148, 20260572149",
+                    "S/N:20260572150, 20260572151, 20260572147, 20260572152",
+                    "S/N:20260572155, 20260572157, 20260572158, 20260572153"
+                ]
+            },
+            {
+                "serie": "5",
+                "unidadesFisicas": "16.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 365",
+                    "CODIGO: 970 71 86-94. S/N:20260572100, 20260572106, 20260572102, 20260572105",
+                    "S/N:20260572124, 20260572125, 20260572127, 20260572126",
+                    "S/N:20260572104, 20260572103, 20260572109, 20260572107",
+                    "S/N:20260572129, 20260572128, 20260572074, 20260572064"
+                ]
+            },
+            {
+                "serie": "6",
+                "unidadesFisicas": "16.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 365",
+                    "CODIGO: 970 71 86-94. S/N:20260572143, 20260572144, 20260572145, 20260572146",
+                    "S/N:20260572156, 20260572162, 20260572161, 20260572139",
+                    "S/N:20260572160, 20260572159, 20260572142, 20260572141",
+                    "S/N:20260572099, 20260572101, 20260572108, 20260572110"
+                ]
+            },
+            {
+                "serie": "7",
+                "unidadesFisicas": "16.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 365",
+                    "CODIGO: 970 71 86-94. S/N:20260572115, 20260572121, 20260572119, 20260572114",
+                    "S/N:20260572134, 20260572135, 20260572123, 20260572053",
+                    "S/N:20260572062, 20260572051, 20260572063, 20260572066",
+                    "S/N:20260572140, 20260572137, 20260572138, 20260572136"
+                ]
+            },
+            {
+                "serie": "8",
+                "unidadesFisicas": "16.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 365",
+                    "CODIGO: 970 71 86-94. S/N:20260572047, 20260572055, 20260572049, 20260572054",
+                    "S/N:20260572117, 20260572118, 20260572120, 20260572122",
+                    "S/N:20260572032, 20260572036, 20260572050, 20260572046",
+                    "S/N:20260572116, 20260572090, 20260572112, 20260572113"
+                ]
+            },
+            {
+                "serie": "9",
+                "unidadesFisicas": "16.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 365",
+                    "CODIGO: 970 71 86-94. S/N:20260571992, 20260572043, 20260572040, 20260572057",
+                    "S/N:20260571920, 20260572035, 20260572037, 20260572039",
+                    "S/N:20260572016, 20260572034, 20260572052, 20260572041",
+                    "S/N:20260572059, 20260572068, 20260572065, 20260572006"
+                ]
+            },
+            {
+                "serie": "10",
+                "unidadesFisicas": "6.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 365",
+                    "CODIGO: 970 71 86-94.",
+                    "S/N:20260572061, 20260572056",
+                    "CODIGO: 970 71 86-94.",
+                    "S/N:20260572067, 20260572069, 20260572042, 20260572058"
+                ]
+            },
+            {
+                "serie": "11",
+                "unidadesFisicas": "6.00 U",
+                "partida": "8467810000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "MOTOSIERRA, HUSQVARNA, 288XP",
+                    "CODIGO: 965 82 05-36",
+                    "S/N:20260620687, 20260620688",
+                    "S/N:20260620690, 20260620689",
+                    "S/N:20260620682, 20260620678"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,2536 @@
+{
+    "estado": "OK",
+    "error": "",
+    "dam": {
+        "dam": "118-2026-10-134752-00",
+        "fechaNumeracion": "23/03/2026",
+        "rucImportador": "4-20493190611",
+        "nomImportador": "CORPORACION CAYMAN S.A.C.",
+        "cantBultos": "510.00",
+        "cantUndFisicas": "1,813.90",
+        "cantUndComerciales": "2,040.00",
+        "cantSeries": "180",
+        "series": [
+            {
+                "serie": "1",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002700,VI:LZSPCKLF5T1002700,MO:ZS162FMJ*8T108848*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "2",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002701,VI:LZSPCKLF7T1002701,MO:ZS162FMJ*8T108849*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "3",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002702,VI:LZSPCKLF9T1002702,MO:ZS162FMJ*8T108850*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "4",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002703,VI:LZSPCKLF0T1002703,MO:ZS162FMJ*8T108851*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "5",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002712,VI:LZSPCKLF1T1002712,MO:ZS162FMJ*8T108852*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "6",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002713,VI:LZSPCKLF3T1002713,MO:ZS162FMJ*8T108853*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "7",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002714,VI:LZSPCKLF5T1002714,MO:ZS162FMJ*8T108854*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "8",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002711,VI:LZSPCKLFXT1002711,MO:ZS162FMJ*8T108855*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "9",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002715,VI:LZSPCKLF7T1002715,MO:ZS162FMJ*8T108856*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "10",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002716,VI:LZSPCKLF9T1002716,MO:ZS162FMJ*8T108857*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "11",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002717,VI:LZSPCKLF0T1002717,MO:ZS162FMJ*8T108858*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "12",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002718,VI:LZSPCKLF2T1002718,MO:ZS162FMJ*8T108859*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "13",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002719,VI:LZSPCKLF4T1002719,MO:ZS162FMJ*8T108860*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "14",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002720,VI:LZSPCKLF0T1002720,MO:ZS162FMJ*8T108861*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "15",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002721,VI:LZSPCKLF2T1002721,MO:ZS162FMJ*8T108862*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "16",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002722,VI:LZSPCKLF4T1002722,MO:ZS162FMJ*8T108863*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "17",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002723,VI:LZSPCKLF6T1002723,MO:ZS162FMJ*8T108864*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "18",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002725,VI:LZSPCKLFXT1002725,MO:ZS162FMJ*8T108865*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "19",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002724,VI:LZSPCKLF8T1002724,MO:ZS162FMJ*8T108866*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "20",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002704,VI:LZSPCKLF2T1002704,MO:ZS162FMJ*8T108867*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "21",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002726,VI:LZSPCKLF1T1002726,MO:ZS162FMJ*8T108868*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "22",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002727,VI:LZSPCKLF3T1002727,MO:ZS162FMJ*8T108869*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "23",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002705,VI:LZSPCKLF4T1002705,MO:ZS162FMJ*8T108870*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "24",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002728,VI:LZSPCKLF5T1002728,MO:ZS162FMJ*8T108871*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "25",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002729,VI:LZSPCKLF7T1002729,MO:ZS162FMJ*8T108872*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "26",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002730,VI:LZSPCKLF3T1002730,MO:ZS162FMJ*8T108873*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "27",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002706,VI:LZSPCKLF6T1002706,MO:ZS162FMJ*8T108874*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "28",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002731,VI:LZSPCKLF5T1002731,MO:ZS162FMJ*8T108875*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "29",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002732,VI:LZSPCKLF7T1002732,MO:ZS162FMJ*8T108876*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "30",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002733,VI:LZSPCKLF9T1002733,MO:ZS162FMJ*8T108877*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "31",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002734,VI:LZSPCKLF0T1002734,MO:ZS162FMJ*8T108878*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "32",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002735,VI:LZSPCKLF2T1002735,MO:ZS162FMJ*8T108879*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "33",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002710,VI:LZSPCKLF8T1002710,MO:ZS162FMJ*8T108880*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "34",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002708,VI:LZSPCKLFXT1002708,MO:ZS162FMJ*8T108881*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "35",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002736,VI:LZSPCKLF4T1002736,MO:ZS162FMJ*8T108882*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "36",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002737,VI:LZSPCKLF6T1002737,MO:ZS162FMJ*8T108883*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "37",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002738,VI:LZSPCKLF8T1002738,MO:ZS162FMJ*8T108884*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "38",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002709,VI:LZSPCKLF1T1002709,MO:ZS162FMJ*8T108885*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "39",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002739,VI:LZSPCKLFXT1002739,MO:ZS162FMJ*8T108886*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "40",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002707,VI:LZSPCKLF8T1002707,MO:ZS162FMJ*8T108887*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "41",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002740,VI:LZSPCKLF6T1002740,MO:ZS162FMJ*8T108888*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "42",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002741,VI:LZSPCKLF8T1002741,MO:ZS162FMJ*8T108889*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "43",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002742,VI:LZSPCKLFXT1002742,MO:ZS162FMJ*8T108890*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "44",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002743,VI:LZSPCKLF1T1002743,MO:ZS162FMJ*8T108891*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "45",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002744,VI:LZSPCKLF3T1002744,MO:ZS162FMJ*8T108892*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "46",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002745,VI:LZSPCKLF5T1002745,MO:ZS162FMJ*8T108893*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "47",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002746,VI:LZSPCKLF7T1002746,MO:ZS162FMJ*8T108894*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "48",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002747,VI:LZSPCKLF9T1002747,MO:ZS162FMJ*8T108895*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "49",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002748,VI:LZSPCKLF0T1002748,MO:ZS162FMJ*8T108896*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "50",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002749,VI:LZSPCKLF2T1002749,MO:ZS162FMJ*8T108897*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "51",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002693,VI:LZSPCKLF1T1002693,MO:ZS162FMJ*8T108898*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "52",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002750,VI:LZSPCKLF9T1002750,MO:ZS162FMJ*8T108899*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "53",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002694,VI:LZSPCKLF3T1002694,MO:ZS162FMJ*8T108900*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "54",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002751,VI:LZSPCKLF0T1002751,MO:ZS162FMJ*8T108901*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "55",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002752,VI:LZSPCKLF2T1002752,MO:ZS162FMJ*8T108902*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "56",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002753,VI:LZSPCKLF4T1002753,MO:ZS162FMJ*8T108903*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "57",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002754,VI:LZSPCKLF6T1002754,MO:ZS162FMJ*8T108904*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "58",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002755,VI:LZSPCKLF8T1002755,MO:ZS162FMJ*8T108905*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "59",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002756,VI:LZSPCKLFXT1002756,MO:ZS162FMJ*8T108906*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "60",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002757,VI:LZSPCKLF1T1002757,MO:ZS162FMJ*8T108907*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:ROJO,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "61",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002758,VI:LZSPCKLF3T1002758,MO:ZS162FMJ*8T108908*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "62",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002759,VI:LZSPCKLF5T1002759,MO:ZS162FMJ*8T108909*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "63",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002760,VI:LZSPCKLF1T1002760,MO:ZS162FMJ*8T108910*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "64",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002761,VI:LZSPCKLF3T1002761,MO:ZS162FMJ*8T108911*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "65",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002762,VI:LZSPCKLF5T1002762,MO:ZS162FMJ*8T108912*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "66",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002763,VI:LZSPCKLF7T1002763,MO:ZS162FMJ*8T108913*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "67",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002695,VI:LZSPCKLF5T1002695,MO:ZS162FMJ*8T108914*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "68",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002696,VI:LZSPCKLF7T1002696,MO:ZS162FMJ*8T108915*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "69",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002697,VI:LZSPCKLF9T1002697,MO:ZS162FMJ*8T108916*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "70",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002698,VI:LZSPCKLF0T1002698,MO:ZS162FMJ*8T108917*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "71",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002699,VI:LZSPCKLF2T1002699,MO:ZS162FMJ*8T108918*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "72",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002764,VI:LZSPCKLF9T1002764,MO:ZS162FMJ*8T108919*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "73",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002765,VI:LZSPCKLF0T1002765,MO:ZS162FMJ*8T108920*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "74",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002766,VI:LZSPCKLF2T1002766,MO:ZS162FMJ*8T108921*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "75",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002767,VI:LZSPCKLF4T1002767,MO:ZS162FMJ*8T108922*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "76",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002768,VI:LZSPCKLF6T1002768,MO:ZS162FMJ*8T108923*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "77",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002769,VI:LZSPCKLF8T1002769,MO:ZS162FMJ*8T108924*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "78",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002770,VI:LZSPCKLF4T1002770,MO:ZS162FMJ*8T108925*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "79",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002771,VI:LZSPCKLF6T1002771,MO:ZS162FMJ*8T108926*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "80",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002772,VI:LZSPCKLF8T1002772,MO:ZS162FMJ*8T108927*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "81",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002774,VI:LZSPCKLF1T1002774,MO:ZS162FMJ*8T108928*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "82",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002773,VI:LZSPCKLFXT1002773,MO:ZS162FMJ*8T108929*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "83",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002775,VI:LZSPCKLF3T1002775,MO:ZS162FMJ*8T108930*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "84",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002776,VI:LZSPCKLF5T1002776,MO:ZS162FMJ*8T108931*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "85",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002777,VI:LZSPCKLF7T1002777,MO:ZS162FMJ*8T108932*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "86",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002778,VI:LZSPCKLF9T1002778,MO:ZS162FMJ*8T108933*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "87",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002779,VI:LZSPCKLF0T1002779,MO:ZS162FMJ*8T108934*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "88",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002780,VI:LZSPCKLF7T1002780,MO:ZS162FMJ*8T108935*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "89",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002781,VI:LZSPCKLF9T1002781,MO:ZS162FMJ*8T108936*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "90",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002782,VI:LZSPCKLF0T1002782,MO:ZS162FMJ*8T108937*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "91",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002783,VI:LZSPCKLF2T1002783,MO:ZS162FMJ*8T108938*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "92",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002784,VI:LZSPCKLF4T1002784,MO:ZS162FMJ*8T108939*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "93",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002785,VI:LZSPCKLF6T1002785,MO:ZS162FMJ*8T108940*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "94",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002786,VI:LZSPCKLF8T1002786,MO:ZS162FMJ*8T108941*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "95",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002787,VI:LZSPCKLFXT1002787,MO:ZS162FMJ*8T108942*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "96",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002788,VI:LZSPCKLF1T1002788,MO:ZS162FMJ*8T108943*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "97",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002789,VI:LZSPCKLF3T1002789,MO:ZS162FMJ*8T108944*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "98",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002790,VI:LZSPCKLFXT1002790,MO:ZS162FMJ*8T108945*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "99",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002791,VI:LZSPCKLF1T1002791,MO:ZS162FMJ*8T108946*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "100",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002792,VI:LZSPCKLF3T1002792,MO:ZS162FMJ*8T108947*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "101",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002793,VI:LZSPCKLF5T1002793,MO:ZS162FMJ*8T108948*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "102",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002794,VI:LZSPCKLF7T1002794,MO:ZS162FMJ*8T108949*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "103",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002795,VI:LZSPCKLF9T1002795,MO:ZS162FMJ*8T108950*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "104",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002796,VI:LZSPCKLF0T1002796,MO:ZS162FMJ*8T108951*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "105",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002797,VI:LZSPCKLF2T1002797,MO:ZS162FMJ*8T108952*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "106",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002798,VI:LZSPCKLF4T1002798,MO:ZS162FMJ*8T108953*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "107",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002799,VI:LZSPCKLF6T1002799,MO:ZS162FMJ*8T108954*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "108",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002800,VI:LZSPCKLF9T1002800,MO:ZS162FMJ*8T108955*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "109",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002801,VI:LZSPCKLF0T1002801,MO:ZS162FMJ*8T108956*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "110",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002802,VI:LZSPCKLF2T1002802,MO:ZS162FMJ*8T108957*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "111",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002804,VI:LZSPCKLF6T1002804,MO:ZS162FMJ*8T108958*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "112",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002803,VI:LZSPCKLF4T1002803,MO:ZS162FMJ*8T108959*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "113",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002805,VI:LZSPCKLF8T1002805,MO:ZS162FMJ*8T108960*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "114",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002806,VI:LZSPCKLFXT1002806,MO:ZS162FMJ*8T108961*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "115",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002685,VI:LZSPCKLF2T1002685,MO:ZS162FMJ*8T108962*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "116",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002807,VI:LZSPCKLF1T1002807,MO:ZS162FMJ*8T108963*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "117",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002684,VI:LZSPCKLF0T1002684,MO:ZS162FMJ*8T108964*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "118",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002808,VI:LZSPCKLF3T1002808,MO:ZS162FMJ*8T108965*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "119",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002809,VI:LZSPCKLF5T1002809,MO:ZS162FMJ*8T108966*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "120",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002810,VI:LZSPCKLF1T1002810,MO:ZS162FMJ*8T108967*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "121",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002811,VI:LZSPCKLF3T1002811,MO:ZS162FMJ*8T108968*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "122",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002812,VI:LZSPCKLF5T1002812,MO:ZS162FMJ*8T108969*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "123",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002813,VI:LZSPCKLF7T1002813,MO:ZS162FMJ*8T108970*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "124",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002814,VI:LZSPCKLF9T1002814,MO:ZS162FMJ*8T108971*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "125",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002815,VI:LZSPCKLF0T1002815,MO:ZS162FMJ*8T108972*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "126",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002816,VI:LZSPCKLF2T1002816,MO:ZS162FMJ*8T108973*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "127",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002817,VI:LZSPCKLF4T1002817,MO:ZS162FMJ*8T108974*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "128",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002818,VI:LZSPCKLF6T1002818,MO:ZS162FMJ*8T108975*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "129",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002819,VI:LZSPCKLF8T1002819,MO:ZS162FMJ*8T108976*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "130",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002682,VI:LZSPCKLF7T1002682,MO:ZS162FMJ*8T108977*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "131",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002683,VI:LZSPCKLF9T1002683,MO:ZS162FMJ*8T108978*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "132",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002820,VI:LZSPCKLF4T1002820,MO:ZS162FMJ*8T108979*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "133",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002821,VI:LZSPCKLF6T1002821,MO:ZS162FMJ*8T108980*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "134",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002822,VI:LZSPCKLF8T1002822,MO:ZS162FMJ*8T108981*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "135",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002823,VI:LZSPCKLFXT1002823,MO:ZS162FMJ*8T108982*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "136",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002824,VI:LZSPCKLF1T1002824,MO:ZS162FMJ*8T108983*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "137",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002825,VI:LZSPCKLF3T1002825,MO:ZS162FMJ*8T108984*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "138",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002826,VI:LZSPCKLF5T1002826,MO:ZS162FMJ*8T108985*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "139",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002827,VI:LZSPCKLF7T1002827,MO:ZS162FMJ*8T108986*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "140",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002828,VI:LZSPCKLF9T1002828,MO:ZS162FMJ*8T108987*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "141",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002829,VI:LZSPCKLF0T1002829,MO:ZS162FMJ*8T108988*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "142",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002830,VI:LZSPCKLF7T1002830,MO:ZS162FMJ*8T108989*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "143",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002831,VI:LZSPCKLF9T1002831,MO:ZS162FMJ*8T108990*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "144",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002832,VI:LZSPCKLF0T1002832,MO:ZS162FMJ*8T108991*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "145",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002833,VI:LZSPCKLF2T1002833,MO:ZS162FMJ*8T108992*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "146",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002834,VI:LZSPCKLF4T1002834,MO:ZS162FMJ*8T108993*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "147",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002835,VI:LZSPCKLF6T1002835,MO:ZS162FMJ*8T108994*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "148",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002836,VI:LZSPCKLF8T1002836,MO:ZS162FMJ*8T108995*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "149",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002837,VI:LZSPCKLFXT1002837,MO:ZS162FMJ*8T108996*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "150",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002838,VI:LZSPCKLF1T1002838,MO:ZS162FMJ*8T108997*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "151",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002839,VI:LZSPCKLF3T1002839,MO:ZS162FMJ*8T108998*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "152",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002840,VI:LZSPCKLFXT1002840,MO:ZS162FMJ*8T108999*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "153",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF1T1002841,VI:LZSPCKLF1T1002841,MO:ZS162FMJ*8T109000*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "154",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002842,VI:LZSPCKLF3T1002842,MO:ZS162FMJ*8T109001*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "155",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002843,VI:LZSPCKLF5T1002843,MO:ZS162FMJ*8T109002*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "156",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF5T1002681,VI:LZSPCKLF5T1002681,MO:ZS162FMJ*8T109003*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "157",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002844,VI:LZSPCKLF7T1002844,MO:ZS162FMJ*8T109004*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "158",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF7T1002679,VI:LZSPCKLF7T1002679,MO:ZS162FMJ*8T109005*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "159",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF3T1002680,VI:LZSPCKLF3T1002680,MO:ZS162FMJ*8T109006*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "160",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002687,VI:LZSPCKLF6T1002687,MO:ZS162FMJ*8T109007*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "161",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002686,VI:LZSPCKLF4T1002686,MO:ZS162FMJ*8T109008*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "162",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002688,VI:LZSPCKLF8T1002688,MO:ZS162FMJ*8T109009*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "163",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002689,VI:LZSPCKLFXT1002689,MO:ZS162FMJ*8T109010*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "164",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF6T1002690,VI:LZSPCKLF6T1002690,MO:ZS162FMJ*8T109011*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "165",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLFXT1002692,VI:LZSPCKLFXT1002692,MO:ZS162FMJ*8T109012*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "166",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF8T1002691,VI:LZSPCKLF8T1002691,MO:ZS162FMJ*8T109013*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "167",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF9T1002845,VI:LZSPCKLF9T1002845,MO:ZS162FMJ*8T109014*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "168",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF0T1002846,VI:LZSPCKLF0T1002846,MO:ZS162FMJ*8T109015*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "169",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF2T1002847,VI:LZSPCKLF2T1002847,MO:ZS162FMJ*8T109016*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "170",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8711200000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "L3,Marca:ZONSEN,Modelo:ZS150SA,VE:2026,Año Mod.:2026",
+                    ",NR:2 EJ:2, NF:ZONSEN INDUSTRIAL GROUP CO., LTD.,AÑO FAB: 2025",
+                    "NC:1,CC:149.4,CH:LZSPCKLF4T1002848,VI:LZSPCKLF4T1002848,MO:ZS162FMJ*8T109017*,ACC:AROS DE",
+                    "AS:02,FR:2X1,TT:MEC,PA:1,PM:9.60@8500,PB:271,PN:121,CU:150",
+                    "CA:MOTOCICLETA,C1:AZUL,CO:GASOLINA,SN:0,LA:2090,AN:750,AL:1100"
+                ]
+            },
+            {
+                "serie": "171",
+                "unidadesFisicas": "79.10 KG",
+                "partida": "7315110000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "CADENA DE ARRASTRE, S/M, S/M",
+                    "CHAIN 428H×150, PART CODE: 26400-428H-0150",
+                    "FIERRO",
+                    "REPUESTO PARA MOTOCICLETA",
+                    "CADENA DE ARRASTRE"
+                ]
+            },
+            {
+                "serie": "172",
+                "unidadesFisicas": "340.00 U",
+                "partida": "8714109000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "AMORTIGUADOR DE RESORTE POSTER, S/M, S/M",
+                    "RR. SHOCK ABSORBER, PART CODE: 33300-J170-C0000G",
+                    "FIERRO",
+                    "REPUESTO PARA MOTOCICLETA",
+                    "AMORTIGUADOR DE RESORTE POSTERIOR"
+                ]
+            },
+            {
+                "serie": "173",
+                "unidadesFisicas": "170.00 U",
+                "partida": "4016992900",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "BUJE BOCAMAZA POSTERIOR, S/M, S/M",
+                    "LH RR. BUSH, PART CODE: 51201-I126-00000C",
+                    "JEBE",
+                    "REPUESTO PARA MOTOCICLETA",
+                    "BUJE BOCAMAZA POSTERIOR"
+                ]
+            },
+            {
+                "serie": "174",
+                "unidadesFisicas": "170.00 U",
+                "partida": "8714109000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "RUEDA POSTERIOR, S/M, S/M",
+                    "REAR WHEEL ASSY, PART CODE: 51220-I126-060071",
+                    "ALEACION",
+                    "REPUESTO PARA MOTOCICLETA",
+                    "RUEDA POSTERIOR"
+                ]
+            },
+            {
+                "serie": "175",
+                "unidadesFisicas": "34.80 KG",
+                "partida": "7318159000",
+                "tratoPreferente": "35-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "EJE DE RUEDA POSTERIOR, S/M, S/M",
+                    "RR. AXLE, PART CODE: 51281-I126-04000C",
+                    "ACERO INOXIDABLE",
+                    "REPUESTO PARA MOTOCICLETA",
+                    "EJE DE RUEDA POSTERIOR"
+                ]
+            },
+            {
+                "serie": "176",
+                "unidadesFisicas": "170.00 U",
+                "partida": "8714109000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "PANEL FRENO POSTERIOR, S/M, S/M",
+                    "RR. BRAKE, PART CODE: 54200-1126-C70071",
+                    "FIERRO",
+                    "REPUESTO PARA MOTOCICLETA",
+                    "PANEL FRENO POSTERIOR"
+                ]
+            },
+            {
+                "serie": "177",
+                "unidadesFisicas": "170.00 U",
+                "partida": "8714109000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "CATALINA 37, S/M, S/M",
+                    "SPROCKET 37T, PART CODE: 55002-I126-10000C",
+                    "FIERRO",
+                    "REPUESTO PARA MOTOCICLETA",
+                    "CATALINA 37"
+                ]
+            },
+            {
+                "serie": "178",
+                "unidadesFisicas": "170.00 U",
+                "partida": "8714109000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "CATALINA 42, S/M, S/M",
+                    "SPROCKET 42T, PART CODE: 55002-1126-19000C",
+                    "FIERRO",
+                    "REPUESTO PARA MOTOCICLETA",
+                    "CATALINA 42"
+                ]
+            },
+            {
+                "serie": "179",
+                "unidadesFisicas": "170.00 U",
+                "partida": "8512209000",
+                "tratoPreferente": "0-",
+                "codLiber": "0-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "FARO POSTERIOR, S/M, S/M",
+                    "TAIL LIGHT, PART CODE: 86200-I126-C30001",
+                    "PLASTICO",
+                    "REPUESTO PARA MOTOCICLETA",
+                    "FARO POSTERIOR"
+                ]
+            },
+            {
+                "serie": "180",
+                "unidadesFisicas": "170.00 U",
+                "partida": "8714109000",
+                "tratoPreferente": "35-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "TRAPECIO POSTERIOR, S/M, S/M",
+                    "REAR FORK, PART CODE: 35200-I126-C8006N",
+                    "FIERRO",
+                    "REPUESTO PARA MOTOCICLETA",
+                    "TRAPECIO POSTERIOR"
+                ]
+            }
+        ]
+    }
+}
