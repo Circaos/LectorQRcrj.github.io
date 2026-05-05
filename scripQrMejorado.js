@@ -58,13 +58,13 @@ formBusquedaDam.addEventListener("submit", async (event) => {
     event.preventDefault();
     const valorBusqueda = document.getElementById("inputBusqueda").value
 
-    // if (valorBusqueda.length != 13) {
-    //     alertaInputDam.textContent = "Error - Ingresar un DAM correcta"
-    //     return
-    // }
+    if (valorBusqueda.length != 13) {
+        alertaInputDam.textContent = "Error - Ingresar un DAM correcta"
+        return
+    }
 
     // const dam = await obtenerApiDam(valorBusqueda)
-    dam = await obtenerApiDam("1182610134752")
+    dam = await obtenerApiDam(valorBusqueda)
 
     if (dam == null) {
         alertaInputDam.textContent = "Error - Dam no Encontrada"
@@ -74,7 +74,7 @@ formBusquedaDam.addEventListener("submit", async (event) => {
     contenedorInputDam.classList.add("noView")
     contenedorInfoDam.classList.remove("noView")
 
-    rellenarTablaDam(dam)
+    rellenarTablaDam(dam["dam"])
     await agregarListener()
 
     // console.log("criscris")
@@ -83,20 +83,35 @@ formBusquedaDam.addEventListener("submit", async (event) => {
 
 
 async function obtenerApiDam(dam) {
-    const damFinalTempo = await fetch(`./${dam}.json`)
+    // // const damFinalTempo = await fetch(`./${dam}.json`)
 
-    console.log(damFinalTempo)
-    if (!damFinalTempo.ok) {
-        return null
-    }
+    // // console.log(damFinalTempo)
+    // // if (!damFinalTempo.ok) {
+    // //     return null
+    // // }
 
-    const damFinal = await damFinalTempo.json();
+    // const damFinal = await damFinalTempo.json();
+
+    const url = "https://apiproviaspruebav1-production.up.railway.app/dtarc/getInfoDam"
+    const data = { 'dua': dam }
+
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+
+    const damFinal = await response.json()
+
 
     return damFinal["dam"]
 }
 
 
 function rellenarTablaDam(dam) {
+
+    console.log("rellenar",dam)
+
     const tbodyCabecera = tablaCabeceraInfo.querySelector("tbody")
     const filaCabecera1 = tbodyCabecera.insertRow();
     filaCabecera1.insertCell(0).textContent = "DECLARACION"
@@ -236,7 +251,8 @@ function onScanSuccess(decodedText, decodedResult) {
     stopScanner()
     console.log("decodedText", decodedText)
     console.log("decodedResult", decodedResult)
-    let rptAlgoritmo =  algoritoBuscado(decodedText,dam["series"])
+    console.log('dam["series"]',dam["dam"]["series"])
+    let rptAlgoritmo =  algoritoBuscado(decodedText,dam["dam"]["series"])
     console.log(rptAlgoritmo)
     console.log("decodedResult" )
     console.log("decodedResult" )
