@@ -1,5 +1,5 @@
 let dam = null
-
+let lastScamProporcion = 1
 
 const contenedorInputDam = document.getElementById("idContenedorInputDam")
 const formBusquedaDam = document.getElementById("formBusqueda")
@@ -24,6 +24,7 @@ const stopBtn = document.getElementById('stopBtn');
 const resultDiv = document.getElementById('result');
 const formatSpan = document.getElementById('formatSpan');
 const statusDiv = document.getElementById('status');
+const contenedorBtnResize = document.getElementById('idContenedorBtnResize');
 
 // Configuración del escáner
 let html5QrCode = null;
@@ -74,7 +75,7 @@ formBusquedaDam.addEventListener("submit", async (event) => {
     contenedorInfoDam.classList.remove("noView")
 
     rellenarTablaDam(dam)
-    agregarListener()
+    await agregarListener()
 
     // console.log("criscris")
     // console.log(valorBusqueda)
@@ -181,13 +182,13 @@ function rellenarTablaDam(dam) {
 }
 
 
-function agregarListener() {
-    btnLector.addEventListener("click", () => {
+async function agregarListener() {
+    btnLector.addEventListener("click", async () => {
         console.log("cricris")
         contenedorLector.classList.remove("noView")
         contenedorInfoDam.classList.add("noView")
 
-        iniciarPantallaSCAM()
+        await iniciarPantallaSCAM()
     })
 }
 
@@ -289,11 +290,19 @@ function onScanError(errorMessage) {
 }
 
 // Iniciar el escáner
-async function startScanner() {
-    if (isScanning) {
+async function startScanner(sizeProporcion = 1) {
+
+    // lastScamProporcion = 1
+    if (lastScamProporcion == null || lastScamProporcion == undefined) {
+        lastScamProporcion = 1
+    }
+
+    if (isScanning && sizeProporcion==lastScamProporcion) {
         updateStatus('⚠️ El escáner ya está activo', 'info');
         return;
     }
+
+    lastScamProporcion = sizeProporcion
 
     updateStatus('🔄 Solicitando acceso a la cámara...', 'info');
 
@@ -318,7 +327,7 @@ async function startScanner() {
         let widthQR = contentDiv.offsetWidth*.85
         qrCodeConfig.qrbox = {
                 width: widthQR,
-                height: widthQR/5
+                height: widthQR/lastScamProporcion
             }
         console.log(qrCodeConfig.qrbox)
 
@@ -392,18 +401,33 @@ async function stopScanner() {
     }
 }
 
-function iniciarPantallaSCAM() {
-    startScanner()
+async function iniciarPantallaSCAM() {
+    startScanner(lastScamProporcion)
     // Event listeners
-    startBtn.addEventListener('click', startScanner);
+    startBtn.addEventListener('click',()=>{
+        startScanner(lastScamProporcion)
+    } );
     stopBtn.addEventListener('click', stopScanner);
-    btnVolverScanear.addEventListener('click', startScanner)
+    btnVolverScanear.addEventListener('click', ()=>{
+        btnVolverScanear.classList.add("noView")
+        startScanner(lastScamProporcion)
+    })
     btnAtrasScam.addEventListener('click', ()=>{
         stopScanner()
         contenedorLector.classList.add("noView")
         contenedorInfoDam.classList.remove("noView")
     })
-
+    
+    const botonesResizes = document.querySelectorAll('.cajaBotonesRedimensionarScam > .btnScam') 
+    botonesResizes.forEach( (boton,index) =>{
+        boton.id = `boton-${index+1}`
+        boton.addEventListener( 'click', ()=>{
+            stopScanner()
+            setTimeout(()=>{
+                startScanner(index+1)
+            },1000)
+        })
+    })
 }
 
 function enviarResponse(rptAlgoritmo, busquedaPalabra) {
