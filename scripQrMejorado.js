@@ -24,15 +24,18 @@ const stopBtn = document.getElementById('stopBtn');
 const resultDiv = document.getElementById('result');
 const formatSpan = document.getElementById('formatSpan');
 const statusDiv = document.getElementById('status');
-const contentDiv = document.getElementsByClassName('content');
+
 // Configuración del escáner
 let html5QrCode = null;
 let isScanning = false;
 let lastResult = '';
 // Configuración avanzada para mejor lectura
+
+
+
 let qrCodeConfig = {
     fps: 30, // Fotogramas por segundo
-    qrbox: { width: (contentDiv.offsetWidth - 35), height: 200 }, // Área de escaneo
+    qrbox: { width: 200, height: 200 }, // Área de escaneo
     aspectRatio: 1.0,
     disableFlip: false,
     rememberLastUsedCamera: true,
@@ -307,6 +310,17 @@ async function startScanner() {
 
         // Crear instancia del escáner
         html5QrCode = new Html5Qrcode("reader");
+
+
+        const contentDiv = document.querySelector('.content');
+        // console.log(contentDiv)
+        // console.log(contentDiv.offsetWidth)
+        let widthQR = contentDiv.offsetWidth*.85
+        qrCodeConfig.qrbox = {
+                width: widthQR,
+                height: widthQR/5
+            }
+        console.log(qrCodeConfig.qrbox)
 
         // Configuración de la cámara
         const cameraConfig = {
