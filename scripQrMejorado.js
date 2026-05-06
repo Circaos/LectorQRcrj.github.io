@@ -30,6 +30,8 @@ const contenedorBtnResize = document.getElementById('idContenedorBtnResize');
 let html5QrCode = null;
 let isScanning = false;
 let lastResult = '';
+
+let inicialiadoControlesScam = false
 // Configuración avanzada para mejor lectura
 
 
@@ -74,7 +76,7 @@ formBusquedaDam.addEventListener("submit", async (event) => {
     contenedorInputDam.classList.add("noView")
     contenedorInfoDam.classList.remove("noView")
 
-    rellenarTablaDam(dam["dam"])
+    rellenarTablaDam(dam)
     await agregarListener()
 
     // console.log("criscris")
@@ -93,6 +95,7 @@ async function obtenerApiDam(dam) {
     // const damFinal = await damFinalTempo.json();
 
     const url = "https://apiproviaspruebav1-production.up.railway.app/dtarc/getInfoDam"
+    // const url = "http://localhost:3050/dtarc/getInfoDam"
     const data = { 'dua': dam }
 
     const response = await fetch(url, {
@@ -251,8 +254,8 @@ function onScanSuccess(decodedText, decodedResult) {
     stopScanner()
     console.log("decodedText", decodedText)
     console.log("decodedResult", decodedResult)
-    console.log('dam["series"]',dam["dam"]["series"])
-    let rptAlgoritmo =  algoritoBuscado(decodedText,dam["dam"]["series"])
+    console.log('dam["series"]',dam["series"])
+    let rptAlgoritmo =  algoritoBuscado(decodedText,dam["series"])
     console.log(rptAlgoritmo)
     console.log("decodedResult" )
     console.log("decodedResult" )
@@ -418,32 +421,43 @@ async function stopScanner() {
 }
 
 async function iniciarPantallaSCAM() {
+
     startScanner(lastScamProporcion)
-    // Event listeners
-    startBtn.addEventListener('click',()=>{
-        startScanner(lastScamProporcion)
-    } );
-    stopBtn.addEventListener('click', stopScanner);
-    btnVolverScanear.addEventListener('click', ()=>{
-        btnVolverScanear.classList.add("noView")
-        startScanner(lastScamProporcion)
-    })
-    btnAtrasScam.addEventListener('click', ()=>{
-        stopScanner()
-        contenedorLector.classList.add("noView")
-        contenedorInfoDam.classList.remove("noView")
-    })
+    if (!inicialiadoControlesScam) {
+
+        inicialiadoControlesScam = true
+        // Event listeners
+        startBtn.addEventListener('click',()=>{
+            startScanner(lastScamProporcion)
+        } );
+        stopBtn.addEventListener('click', stopScanner);
+        btnVolverScanear.addEventListener('click', ()=>{
     
-    const botonesResizes = document.querySelectorAll('.cajaBotonesRedimensionarScam > .btnScam') 
-    botonesResizes.forEach( (boton,index) =>{
-        boton.id = `boton-${index+1}`
-        boton.addEventListener( 'click', ()=>{
+            btnVolverScanear.classList.add("noView")
             stopScanner()
-            setTimeout(()=>{
-                startScanner(index+1)
-            },1000)
+            setTimeout(() => {
+                startScanner(lastScamProporcion)
+            }, 250)
+            
         })
-    })
+        btnAtrasScam.addEventListener('click', ()=>{
+            stopScanner()
+            contenedorLector.classList.add("noView")
+            contenedorInfoDam.classList.remove("noView")
+        })
+        
+        const botonesResizes = document.querySelectorAll('.cajaBotonesRedimensionarScam > .btnScam') 
+        botonesResizes.forEach( (boton,index) =>{
+            boton.id = `boton-${index+1}`
+            boton.addEventListener( 'click', ()=>{
+                stopScanner()
+                setTimeout(()=>{
+                    startScanner(index+1)
+                },250)
+            })
+        })
+    }
+
 }
 
 function enviarResponse(rptAlgoritmo, busquedaPalabra) {
