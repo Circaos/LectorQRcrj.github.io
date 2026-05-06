@@ -59,10 +59,13 @@ const supportedFormatsList = [
 formBusquedaDam.addEventListener("submit", async (event) => {
     event.preventDefault();
     const valorBusqueda = document.getElementById("inputBusqueda").value
-
+    const botonBuscar = document.querySelector("#formBusqueda > button")
     if (valorBusqueda.length != 13) {
         alertaInputDam.textContent = "Error - Ingresar un DAM correcta"
         return
+    }else{
+        botonBuscar.disabled = true
+        alertaInputDam.textContent = "Buscando ..."
     }
 
     // const dam = await obtenerApiDam(valorBusqueda)
@@ -70,6 +73,7 @@ formBusquedaDam.addEventListener("submit", async (event) => {
 
     if (dam == null) {
         alertaInputDam.textContent = "Error - Dam no Encontrada"
+        botonBuscar.disabled = false
         return
     }
 
