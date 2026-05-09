@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Visualizador de Documento | Formulario + Previsualización</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #e0eafc 0%, #cfdef3 100%);
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            /* min-height: 100vh; */
+            height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        /* contenedor principal: dos columnas */
+        .dashboard {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1400px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(2px);
+            border-radius: 2.5rem;
+            padding: 1.8rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* COLUMNA IZQUIERDA: FORMULARIO */
+        .form-panel {
+            height: 100%;
+            flex: 1.2;
+            min-width: 280px;
+            background: #ffffffdd;
+            backdrop-filter: blur(4px);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1.8rem;
+            padding: 1.5rem 1.8rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            /* overflow: auto; */
+        }
+
+        .form-panel h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #1a2c3e;
+            border-left: 5px solid #2c7da0;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.3px;
+        }
+
+        .form-group {
+            margin-bottom: 1.4rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #1f4e6e;
+            margin-bottom: 0.4rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem 1rem;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 1rem;
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: white;
+            transition: all 0.2s;
+            outline: none;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #2c7da0;
+            box-shadow: 0 0 0 3px rgba(44, 125, 160, 0.2);
+        }
+
+        .row-double {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .row-double .form-group {
+            flex: 1;
+        }
+
+        textarea {
+            min-height: 85px;
+        }
+
+        /* Estilo para el campo de moneda (input number decorado) */
+        .currency-input {
+            position: relative;
+        }
+
+        .currency-input span {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #2c7da0;
+            font-weight: 600;
+            pointer-events: none;
+        }
+
+        .currency-input input {
+            padding-left: 1.8rem;
+        }
+
+        small.hint {
+            font-size: 0.7rem;
+            color: #5a6e7c;
+            margin-top: 0.25rem;
+        }
+
+        button {
+            background: #2c7da0;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.4rem;
+            margin: 0 10px;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            width: auto;
+            margin-top: 0.8rem;
+            letter-spacing: 0.3px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background: #1f5e7e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        /* COLUMNA DERECHA: PREVISUALIZACIÓN DOCUMENTO (CUADRADO) */
+        .preview-panel {
+            height: 100%;
+            /* flex: 1; */
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .doc-card {
+            background: #fffef7;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 200, 0.6);
+        }
+
+        /* Encabezado simulado de documento */
+        .doc-header {
+            background: #f4f0e1;
+            padding: 0.5rem 1.5rem;
+            border-bottom: 2px dashed #d9cdb0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .doc-header .doc-icon {
+            font-size: 1.8rem;
+        }
+
+        .doc-header h3 {
+            font-weight: 500;
+            color: #5e3a1c;
+            letter-spacing: -0.2px;
+        }
+
+        /* CUERPO DEL DOCUMENTO: ÁREA DE PREVISUALIZACIÓN */
+        .doc-body {
+            overflow: auto;
+            /* padding: 1.8rem 2rem; */
+            background: #ffffff;
+            flex: 1;
+            font-family: 'Courier New', 'Segoe UI', monospace;
+            line-height: 1.5;
+            display: flex;
+        }
+
+        /* Estilos para la previsualización de datos */
+        .preview-field {
+            margin-bottom: 1rem;
+            border-bottom: 1px dotted #e2e8f0;
+            padding-bottom: 0.6rem;
+        }
+
+        .preview-label {
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #6b7b8c;
+            letter-spacing: 0.5px;
+            display: block;
+        }
+
+        .preview-value {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #0f2b38;
+            word-break: break-word;
+            background: #f9fafb;
+            padding: 0.3rem 0.7rem;
+            border-radius: 12px;
+            display: inline-block;
+            margin-top: 0.25rem;
+        }
+
+        .preview-value.moneda {
+            background: #e6f4ea;
+            color: #2b6e3c;
+            font-weight: 600;
+        }
+
+        .preview-value.fecha {
+            background: #eef2ff;
+            color: #1e4c6e;
+        }
+
+        .preview-value.numero {
+            background: #fff0db;
+            color: #ac6e2f;
+            font-family: monospace;
+            font-size: 1.2rem;
+        }
+
+        .doc-footer {
+            background: #f8f6f0;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.7rem;
+            text-align: right;
+            color: #8b7a66;
+            border-top: 1px solid #ede5d5;
+        }
+
+        /* Placeholder cuando no hay datos */
+        .empty-preview {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #a7b6c2;
+            font-style: italic;
+        }
+
+        .documentForm {
+            flex-direction: column;
+            display: flex;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .divConjuntoBtnsDescarga{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        /* Responsive */
+        @media (max-width: 780px) {
+            body {
+                padding: 1rem;
+                height: auto;
+            }
+
+            .dashboard {
+                flex-direction: column;
+            }
+
+            .preview-panel,
+            .form-panel {
+                width: 100%;
+            }
+
+            .doc-body {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- COLUMNA IZQUIERDA: FORMULARIO COMPLETO -->
+        <div class="form-panel">
+            <h2>✍️ Editor del documento</h2>
+            <form class="documentForm" id="documentForm">
+                <div style=" overflow: auto; flex: 1;">
+                    <!-- FECHA -->
+                    <div class="form-group">
+                        <label>📅 Fecha del documento</label>
+                        <input type="date" id="fechaDoc" name="fechaDoc" value="2025-04-15">
+                        <small class="hint">Selecciona una fecha importante.</small>
+                    </div>
+
+                    <!-- PALABRAS (texto libre) -->
+                    <div class="form-group">
+                        <label>📝 Palabras clave / Título</label>
+                        <input type="text" id="palabrasClave" placeholder="Ej: Factura mensual, Contrato, Informe..."
+                            value="Presupuesto Q2 2025">
+                        <small class="hint">Título o frase principal</small>
+                    </div>
+
+                    <!-- NÚMEROS (cantidad númerica entero o decimal) -->
+                    <div class="form-group">
+                        <label>🔢 Número (cantidad / ID)</label>
+                        <input type="number" id="numeroCantidad" step="any" placeholder="Ej: 1542, 99.99"
+                            value="1250.75">
+                        <small class="hint">Valor numérico (puede ser decimal)</small>
+                    </div>
+
+                    <!-- MONEDA con aspecto -->
+                    <div class="form-group">
+                        <label>💰 Moneda (Monto)</label>
+                        <div class="currency-input">
+                            <span>$</span>
+                            <input type="number" id="montoMoneda" step="0.01" placeholder="0.00" value="5499.99">
+                        </div>
+                        <small class="hint">Cantidad en dólares (o tu moneda local)</small>
+                    </div>
+
+                    <!-- Texto adicional (descripción larga) -->
+                    <div class="form-group">
+                        <label>📄 Texto adicional / Observaciones</label>
+                        <textarea id="textoExtra" rows="3"
+                            placeholder="Comentarios, descripción, detalles del documento...">Servicio de consultoría digital + desarrollo web. Incluye mantenimiento por 3 meses.</textarea>
+                        <small class="hint">Puedes incluir más contexto.</small>
+                    </div>
+
+                    <!-- Campo extra para representar otra palabra / concepto (personalizable) -->
+                    <div class="form-group">
+                        <label>🏷️ Etiqueta / Referencia</label>
+                        <input type="text" id="referencia" placeholder="Referencia adicional" value="REF-2025-001">
+                    </div>
+
+                </div>
+
+                <button type="button" id="actualizarPreviewBtn">🔄 Actualizar vista previa</button>
+
+                <div class="divConjuntoBtnsDescarga" style="width: 100%;">
+                    <button type="button" id="descargarWordBtn">⬇️ WORD</button>
+                    <button type="button" id="descargarPdfBtn">⬇️ PDF</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- COLUMNA DERECHA: CUADRADO DE PREVISUALIZACIÓN DEL DOCUMENTO -->
+        <div class="preview-panel">
+            <div class="doc-card">
+                <div class="doc-header">
+                    <span class="doc-icon">📄📎</span>
+                    <h3>Vista previa del documento</h3>
+                </div>
+                <div class="doc-body" id="previewBody">
+                    <!-- Contenido dinámico se llenará con JS -->
+                    <!-- <div class="empty-preview">
+                        ⚡ Cargando previsualización...
+                    </div> -->
+                    <!-- Lorem ipsum is placeholder text used in design and publishing to showcase graphic elements without using meaningful content. Derived from Cicero's 45 BC work, it features nonsensical Latin and has been standard filler text since the 1500s, preventing readers from focusing on text content rather than layout.Standard Lorem Ipsum Passage"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    Lorem ipsum is placeholder text used in design and publishing to showcase graphic elements without using meaningful content. Derived from Cicero's 45 BC work, it features nonsensical Latin and has been standard filler text since the 1500s, preventing readers from focusing on text content rather than layout.Standard Lorem Ipsum Passage"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." -->
+                    <div id="previewDocx"></div>
+                </div>
+                <div class="doc-footer">
+                    <span>🖨️ documento generado en tiempo real</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/pizzip@3.1.6/dist/pizzip.js"></script>
+    <script src="https://unpkg.com/docxtemplater@3.46.0/build/docxtemplater.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
