@@ -6,7 +6,7 @@ class PDFCollageMaker {
         this.maxImages = 400;
         this.imagesPerPage = 8;
         this.isGenerating = false;
-        this.quality = 80; // Calidad por defecto 80%
+        this.quality = 40; // Calidad por defecto 80%
         this.maxPDFSizeMB = 2; // Tamaño máximo por PDF en MB
 
         this.initElements();
@@ -54,27 +54,66 @@ class PDFCollageMaker {
             this.handleFiles(files);
         });
 
-        this.uploadArea.addEventListener('click', () => {
-            this.fileInput.click();
-        });
+        // this.uploadArea.addEventListener('click', () => {
+        //     console.log("pollito")
+        //     this.fileInput.click();
+        // });
     }
 
     async recategorizacion() {
-        for (let index = 0; index < this.images.length; index++) {
-            const imagen = this.images[index];
-            this.images[index]["data"] = await this.compressImage(this.images[index]["fileOriginalImagen"])
+
+        if (this.images.length == 0) {
+            this.updateStats()
+            return
         }
 
-        await this.mostrarTamanioCompress()
+        this.changeActivacionBotonesPanel(true)
+
+        this.showProgress(true, 'Recalculando Compresión...');
+        this.changeActivacionBotonesPanel()
+        console.log("inicio recat")
+        for (let index = 0; index < this.images.length; index++) {
+            // console.log(index)
+            const imagen = this.images[index];
+            this.images[index]["data"] = await this.compressImage(this.images[index]["fileOriginalImagen"])
+
+
+            this.updateProgress((index + 1) / this.images.length * 100, `Cargando ${index + 1}/${this.images.length}`);
+        }
+
+        // await this.mostrarTamanioCompress()
 
         //     const testBlob = await this.generatePDFBlob(testImages);
         //     const testSizeMB = testBlob.size / (1024 * 1024);
+        this.updateStats()
+        this.changeActivacionBotonesPanel(false)
         console.log("this.imagesthis.images", this.images)
+        this.showProgress(false);
+        console.log("fin recat")
     }
 
     // calcularSize(){
 
     // }
+
+    changeActivacionBotonesPanel(activar) {
+        if (activar == null || activar == undefined) {
+            console.log("fallo en changue boton")
+            return
+        }
+        const panelControl = document.querySelector(".control-panel")
+        if (activar) {
+            panelControl.classList.add("inactive")
+        } else {
+            panelControl.classList.remove("inactive")
+        }
+
+        const botones = document.querySelectorAll(".quality-presets>button")
+        botones.forEach((boton => {
+            // console.log(boton.textContent)
+            boton.disabled = activar
+        }))
+    }
 
     createQualityControl() {
         // Crear panel de control de calidad
@@ -84,25 +123,28 @@ class PDFCollageMaker {
             <div class="control-group">
                 <label>🎨 Calidad de imágenes en PDF:</label>
                 <div class="quality-control">
-                    <input type="range" id="qualitySlider" min="10" max="100" value="${this.quality}" step="5">
-                    <span id="qualityValue" class="quality-value">${this.quality}%</span>
+                    <!-- <input type="range" id="qualitySlider" min="10" max="100" value="${this.quality}" step="5"> -->
+                    <span id="qualityValue" class="quality-value">${this.quality}%</span>  
                     <div class="quality-presets">
-                        <button type="button" data-quality="70" class="quality-preset">70% (Menor tamaño)</button>
-                        <button type="button" data-quality="80" class="quality-preset active">80% (Recomendado)</button>
-                        <button type="button" data-quality="90" class="quality-preset">90% (Mejor calidad)</button>
+                        <button type="button" data-quality="10" class="quality-preset">10% (Estas a Limite)</button>
+                        <button type="button" data-quality="15" class="quality-preset">15% (Hardcore)</button>
+                        <button type="button" data-quality="25" class="quality-preset">25% (Menor tamaño)</button>
+                        <button type="button" data-quality="40" class="quality-preset active">40% (Recomendado)</button>
+                        <button type="button" data-quality="55" class="quality-preset">55% (Mejor Calidad)</button>
+                        <button type="button" data-quality="70" class="quality-preset">70% (Casi lo Mismo)</button>
                     </div>
                 </div>
-                <small class="quality-note">🔍 Menor calidad = menor tamaño de archivo</small>
+                <!-- <small class="quality-note">🔍 Menor calidad = menor tamaño de archivo</small> -->
             </div>
             
-            <div class="control-group">
+            <!-- <div class="control-group">
                 <label>📦 División por tamaño:</label>
                 <div class="size-control">
                     <span>Máximo ${this.maxPDFSizeMB} MB por PDF</span>
                     <button type="button" id="configureSizeBtn" class="small-btn">Configurar</button>
                 </div>
                 <small class="size-note">⚡ Si el PDF supera ${this.maxPDFSizeMB}MB, se dividirá automáticamente</small>
-            </div>
+            </div> -->
         `;
 
         // Insertar después del área de estadísticas
@@ -114,97 +156,100 @@ class PDFCollageMaker {
         const qualityValue = document.getElementById('qualityValue');
         const qualityPresets = document.querySelectorAll('.quality-preset');
 
-        qualitySlider.addEventListener('input', (e) => {
-            this.quality = parseInt(e.target.value);
-            qualityValue.textContent = `${this.quality}%`;
+        // qualitySlider.addEventListener('input', (e) => {
+        //     this.quality = parseInt(e.target.value);
+        //     qualityValue.textContent = `${this.quality}%`;
 
-            // Actualizar presets activos
-            qualityPresets.forEach(preset => {
-                const presetQuality = parseInt(preset.dataset.quality);
-                if (Math.abs(presetQuality - this.quality) <= 5) {
-                    preset.classList.add('active');
-                } else {
-                    preset.classList.remove('active');
-                }
-            });
+        //     // Actualizar presets activos
+        //     qualityPresets.forEach(preset => {
+        //         const presetQuality = parseInt(preset.dataset.quality);
+        //         if (Math.abs(presetQuality - this.quality) <= 5) {
+        //             preset.classList.add('active');
+        //         } else {
+        //             preset.classList.remove('active');
+        //         }
+        //     });
 
-            // console.log("this.images",this.images)
-            this.recategorizacion()
-        });
+        //     // console.log("this.images",this.images)
+        //     this.recategorizacion()
+        // });
 
         qualityPresets.forEach(preset => {
             preset.addEventListener('click', () => {
                 const newQuality = parseInt(preset.dataset.quality);
                 this.quality = newQuality;
-                qualitySlider.value = newQuality;
+                // qualitySlider.value = newQuality;
                 qualityValue.textContent = `${newQuality}%`;
 
                 qualityPresets.forEach(p => p.classList.remove('active'));
                 preset.classList.add('active');
+
+                this.recategorizacion()
             });
         });
 
         // Configurar evento de tamaño máximo
-        const configureSizeBtn = document.getElementById('configureSizeBtn');
-        configureSizeBtn.addEventListener('click', () => this.configureMaxSize());
+        // const configureSizeBtn = document.getElementById('configureSizeBtn');
+        // configureSizeBtn.addEventListener('click', () => this.configureMaxSize());
     }
 
-    configureMaxSize() {
-        const modal = document.createElement('div');
-        modal.className = 'modal-overlay';
-        modal.innerHTML = `
-            <div class="modal-content">
-                <h3>Configurar tamaño máximo por PDF</h3>
-                <div class="modal-body">
-                    <label>Tamaño máximo (MB):</label>
-                    <input type="number" id="maxSizeInput" value="${this.maxPDFSizeMB}" min="0.5" max="10" step="0.5">
-                    <small>Entre 0.5 MB y 10 MB</small>
-                </div>
-                <div class="modal-actions">
-                    <button class="btn-modal btn-modal-cancel">Cancelar</button>
-                    <button class="btn-modal btn-modal-confirm">Aceptar</button>
-                </div>
-            </div>
-        `;
+    // configureMaxSize() {
+    //     const modal = document.createElement('div');
+    //     modal.className = 'modal-overlay';
+    //     modal.innerHTML = `
+    //         <div class="modal-content">
+    //             <h3>Configurar tamaño máximo por PDF</h3>
+    //             <div class="modal-body">
+    //                 <label>Tamaño máximo (MB):</label>
+    //                 <input type="number" id="maxSizeInput" value="${this.maxPDFSizeMB}" min="0.5" max="10" step="0.5">
+    //                 <small>Entre 0.5 MB y 10 MB</small>
+    //             </div>
+    //             <div class="modal-actions">
+    //                 <button class="btn-modal btn-modal-cancel">Cancelar</button>
+    //                 <button class="btn-modal btn-modal-confirm">Aceptar</button>
+    //             </div>
+    //         </div>
+    //     `;
 
-        document.body.appendChild(modal);
+    //     document.body.appendChild(modal);
 
-        const confirmBtn = modal.querySelector('.btn-modal-confirm');
-        const cancelBtn = modal.querySelector('.btn-modal-cancel');
-        const sizeInput = modal.querySelector('#maxSizeInput');
+    //     const confirmBtn = modal.querySelector('.btn-modal-confirm');
+    //     const cancelBtn = modal.querySelector('.btn-modal-cancel');
+    //     const sizeInput = modal.querySelector('#maxSizeInput');
 
-        confirmBtn.onclick = () => {
-            let newSize = parseFloat(sizeInput.value);
-            if (isNaN(newSize)) newSize = 2;
-            if (newSize < 0.5) newSize = 0.5;
-            if (newSize > 10) newSize = 10;
+    //     confirmBtn.onclick = () => {
+    //         let newSize = parseFloat(sizeInput.value);
+    //         if (isNaN(newSize)) newSize = 2;
+    //         if (newSize < 0.5) newSize = 0.5;
+    //         if (newSize > 10) newSize = 10;
 
-            this.maxPDFSizeMB = newSize;
-            const sizeNote = document.querySelector('.size-note');
-            sizeNote.innerHTML = `⚡ Si el PDF supera ${this.maxPDFSizeMB}MB, se dividirá automáticamente`;
+    //         this.maxPDFSizeMB = newSize;
+    //         const sizeNote = document.querySelector('.size-note');
+    //         sizeNote.innerHTML = `⚡ Si el PDF supera ${this.maxPDFSizeMB}MB, se dividirá automáticamente`;
 
-            document.body.removeChild(modal);
-        };
+    //         document.body.removeChild(modal);
+    //     };
 
-        cancelBtn.onclick = () => {
-            document.body.removeChild(modal);
-        };
+    //     cancelBtn.onclick = () => {
+    //         document.body.removeChild(modal);
+    //     };
 
-        modal.onclick = (e) => {
-            if (e.target === modal) {
-                document.body.removeChild(modal);
-            }
-        };
-    }
+    //     modal.onclick = (e) => {
+    //         if (e.target === modal) {
+    //             document.body.removeChild(modal);
+    //         }
+    //     };
+    // }
 
     async handleFiles(files) {
+        console.log("file", files)
         const imageFiles = Array.from(files).filter(f => f.type.startsWith('image/'));
 
         if (this.images.length + imageFiles.length > this.maxImages) {
             alert(`❌ Solo puedes subir máximo ${this.maxImages} imágenes. Actualmente tienes ${this.images.length}`);
             return;
         }
-
+        this.changeActivacionBotonesPanel(true)
         this.showProgress(true, 'Cargando imágenes...');
 
         for (let i = 0; i < imageFiles.length; i++) {
@@ -224,19 +269,51 @@ class PDFCollageMaker {
             this.updateProgress((i + 1) / imageFiles.length * 100, `Cargando ${i + 1}/${imageFiles.length}`);
         }
 
-        await this.mostrarTamanioCompress()
+        // await this.mostrarTamanioCompress()
 
 
         this.updatePreview();
         this.updateStats();
+        this.changeActivacionBotonesPanel(false)
         this.showProgress(false);
     }
 
-    async mostrarTamanioCompress() {
-        const sizeTempoBlob = await this.generatePDFBlob(this.images);
-        const testSizeMB = sizeTempoBlob.size / (1000 * 1024);
-        this.totalSizeCompress.textContent = `${testSizeMB.toFixed(2)}MB aprox`
-        console.log("testSizeMB", testSizeMB)
+    // async mostrarTamanioCompress() {
+    //     console.log("polloWil")
+    //     const sizeTempoBlob = await this.generatePDFBlob(this.images);
+    //     const testSizeMB = sizeTempoBlob.size / (1000 * 1024);
+    //     this.totalSizeCompress.textContent = `${testSizeMB.toFixed(2)} aprx`
+
+    //     let pesoTempo = 0
+    //     for (let index = 0; index < this.images.length; index++) {
+    //         const imagenTempo = this.images[index]
+    //         const bytesOriginales = ((imagenTempo["data"].length * 3) / 4)/(1);
+    //         console.log(bytesOriginales)
+    //         pesoTempo = pesoTempo + bytesOriginales
+    //     }
+
+    //     console.log("testSizeMB", testSizeMB)
+    //     console.log("testSizeMB2", pesoTempo)
+    //     console.log("polloWil2")
+    // }
+    obtenerTamanioCompress() {
+        console.log("polloWil")
+        // const sizeTempoBlob = await this.generatePDFBlob(this.images);
+        // const testSizeMB = sizeTempoBlob.size / (1000 * 1024);
+        // this.totalSizeCompress.textContent = `${testSizeMB.toFixed(2)} aprx`
+
+        let pesoTempo = 0
+        for (let index = 0; index < this.images.length; index++) {
+            const imagenTempo = this.images[index]
+            const bytesOriginales = ((imagenTempo["data"].length * 3) / 4) / (1024 * 1024);
+            // console.log(bytesOriginales)
+            pesoTempo = pesoTempo + bytesOriginales
+        }
+
+        // console.log("testSizeMB", testSizeMB)
+        console.log("testSizeMB2", pesoTempo)
+        console.log("polloWil2")
+        return `${pesoTempo.toFixed(2)} aprx`
     }
 
     compressImage(file) {
@@ -331,6 +408,7 @@ class PDFCollageMaker {
         this.imageCountSpan.textContent = totalImages;
         this.pageCountSpan.textContent = totalPages;
         this.totalSizeSpan.textContent = (totalSize / (1024 * 1024)).toFixed(2);
+        this.totalSizeCompress.textContent = this.obtenerTamanioCompress()
 
         this.generateBtn.disabled = totalImages === 0 || this.isGenerating;
     }
@@ -348,6 +426,7 @@ class PDFCollageMaker {
 
         this.isGenerating = true;
         this.generateBtn.disabled = true;
+        this.changeActivacionBotonesPanel(true)
         this.showProgress(true, 'Preparando PDF...');
 
         try {
@@ -358,7 +437,7 @@ class PDFCollageMaker {
 
             if (fullPDFSizeMB <= this.maxPDFSizeMB) {
                 // Un solo PDF es suficiente
-                this.downloadPDF(fullPDFBlob, `collage_${this.images.length}imagenes_${Date.now()}.pdf`);
+                this.downloadPDF(fullPDFBlob, `FOTOS.pdf`);
                 this.updateProgress(100, '¡PDF generado exitosamente!');
                 setTimeout(() => {
                     this.showProgress(false);
@@ -370,10 +449,12 @@ class PDFCollageMaker {
             }
 
         } catch (error) {
+            this.changeActivacionBotonesPanel(false)
             console.error('Error:', error);
             alert('❌ Error al generar el PDF. Por favor intenta de nuevo.');
             this.showProgress(false);
         } finally {
+            this.changeActivacionBotonesPanel(false)
             this.isGenerating = false;
             this.generateBtn.disabled = this.images.length === 0;
         }
@@ -574,7 +655,7 @@ class PDFCollageMaker {
 
         for (let i = 0; i < pdfsToGenerate.length; i++) {
             const pdf = pdfsToGenerate[i];
-            const fileName = `collage_parte_${i + 1}_de_${pdfsToGenerate.length}_${Date.now()}.pdf`;
+            const fileName = `FOTOS_${i + 1}_de_${pdfsToGenerate.length}.pdf`;
             this.downloadPDF(pdf.blob, fileName);
 
             this.updateProgress(

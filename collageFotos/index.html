@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Collage Maker - 6 imágenes por hoja A4</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1>🎨 PDF Maker</h1>
-            <p>Crea PDFs profesionales con 6 imágenes por hoja A4</p>
+            <!-- <p>Crea PDFs profesionales con 6 imágenes por hoja A4</p> -->
         </header>
 
-        <div class="upload-area" id="uploadArea">
-            <div class="upload-content">
-                📸 Arrastra o haz clic para subir imágenes
-                <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/jpg,image/webp,image/bmp">
-                <small>Máximo 400 imágenes | Formatos: JPG, PNG, WEBP, BMP</small>
-            </div>
-        </div>
+        <div class="agrupadorHorizontal">
+            <div class="subAgrupador">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        📸 Arrastra o haz clic para subir imágenes
+                        <input type="file" id="fileInput" multiple
+                            accept="image/jpeg,image/png,image/jpg,image/webp,image/bmp">
+                        <small>Máximo 400 imágenes | Formatos: JPG, PNG, WEBP, BMP</small>
+                    </div>
+                </div>
 
-        <div class="stats">
-            <div class="stat-card">
-                <span class="stat-label">Imágenes:</span>
-                <span class="stat-value" id="imageCount">0</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Páginas PDF:</span>
-                <span class="stat-value" id="pageCount">0</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Tamaño total:</span>
-                <span class="stat-value" id="totalSize">0 MB</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Tamaño Comprimido:</span>
-                <span class="stat-value" id="totalSizeCompress">0 MB</span>
-            </div>
-        </div>
+                <div class="stats">
+                    <div class="stat-card">
+                        <span class="stat-label">Imágenes:</span>
+                        <span class="stat-value" id="imageCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Páginas PDF:</span>
+                        <span class="stat-value" id="pageCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Tamaño total(MB):</span>
+                        <span class="stat-value" id="totalSize">0 MB</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Tamaño Comprimido(MB):</span>
+                        <span class="stat-value" id="totalSizeCompress">0 MB</span>
+                    </div>
+                </div>
 
-        <div class="preview-container">
-            <h3>Vista previa de imágenes</h3>
-            <div class="preview-grid" id="previewGrid"></div>
-        </div>
+            </div>
+            <div class="subAgrupador">
+                <div class="preview-container">
+                    <h3>Vista previa de imágenes</h3>
+                    <div class="contenedorImagenes">
+                        <div class="preview-grid" id="previewGrid"></div>
+                    </div>
+                </div>
 
-        <div class="actions">
-            <button id="generateBtn" class="btn btn-primary" disabled>
-                <span>📄</span> Generar PDF
-            </button>
-            <button id="clearBtn" class="btn btn-secondary">
-                <span>🗑️</span> Limpiar todo
-            </button>
+            </div>
+
+
         </div>
 
         <div class="progress-container" id="progressContainer" style="display: none;">
@@ -64,9 +69,21 @@
             </div>
             <div id="progressDetail" class="progress-detail">Preparando imágenes...</div>
         </div>
+
+        <div class="actions">
+            <button id="generateBtn" class="btn btn-primary" disabled>
+                <span>📄</span> Generar PDF
+            </button>
+            <button id="clearBtn" class="btn btn-secondary">
+                <span>🗑️</span> Limpiar todo
+            </button>
+        </div>
+
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
