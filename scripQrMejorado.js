@@ -44,8 +44,8 @@ let qrCodeConfig = {
     rememberLastUsedCamera: true,
     videoConstraints: {
         facingMode: "environment", // Sigue siendo la cámara trasera
-        width: { ideal: 1920 },  // ¡ASÍ LE PIDES ALTA RESOLUCIÓN!
-        height: { ideal: 1080 }  // El navegador usará la resolución más cercana que pueda
+        width: { ideal: 2048 },  // ¡ASÍ LE PIDES ALTA RESOLUCIÓN!
+        height: { ideal: 2048 }  // El navegador usará la resolución más cercana que pueda
     },
     supportedScanTypes: [
         Html5QrcodeScanType.SCAN_TYPE_CAMERA,
@@ -366,7 +366,7 @@ async function startScanner(sizeProporcion = 1) {
             qrbox: qrCodeConfig.qrbox,
             aspectRatio: qrCodeConfig.aspectRatio,
             disableFlip: qrCodeConfig.disableFlip,
-            // videoConstraints: qrCodeConfig.videoConstraints,
+            videoConstraints: qrCodeConfig.videoConstraints,
             advanced: qrCodeConfig.advanced
         };
 
