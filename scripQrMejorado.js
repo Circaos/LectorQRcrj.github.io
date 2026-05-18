@@ -43,14 +43,15 @@ let qrCodeConfig = {
     disableFlip: false,
     rememberLastUsedCamera: true,
     videoConstraints: {
-        facingMode: { exact: "environment" }, // Sigue siendo la cámara trasera
+        facingMode: "environment", // Sigue siendo la cámara trasera
         width: { ideal: 1920 },  // ¡ASÍ LE PIDES ALTA RESOLUCIÓN!
         height: { ideal: 1080 }  // El navegador usará la resolución más cercana que pueda
     },
     supportedScanTypes: [
         Html5QrcodeScanType.SCAN_TYPE_CAMERA,
         Html5QrcodeScanType.SCAN_TYPE_FILE
-    ]
+    ],
+    advanced: [{ focusMode: "continuous" }]
 };
 const supportedFormatsList = [
     'QR_CODE', 'AZTEC', 'CODABAR', 'CODE_39', 'CODE_93', 'CODE_128',
@@ -364,7 +365,8 @@ async function startScanner(sizeProporcion = 1) {
             fps: qrCodeConfig.fps,
             qrbox: qrCodeConfig.qrbox,
             aspectRatio: qrCodeConfig.aspectRatio,
-            disableFlip: qrCodeConfig.disableFlip
+            disableFlip: qrCodeConfig.disableFlip,
+            videoConstraints: qrCodeConfig.videoConstraints
         };
 
         // Iniciar escaneo con la cámara trasera preferentemente
@@ -393,7 +395,9 @@ async function startScanner(sizeProporcion = 1) {
                     {
                         fps: qrCodeConfig.fps,
                         qrbox: qrCodeConfig.qrbox,
-                        aspectRatio: qrCodeConfig.aspectRatio
+                        aspectRatio: qrCodeConfig.aspectRatio,
+                        disableFlip: qrCodeConfig.disableFlip,
+                        videoConstraints: qrCodeConfig.videoConstraints
                     },
                     onScanSuccess,
                     onScanError
