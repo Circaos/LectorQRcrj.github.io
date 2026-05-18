@@ -366,7 +366,7 @@ async function startScanner(sizeProporcion = 1) {
             qrbox: qrCodeConfig.qrbox,
             aspectRatio: qrCodeConfig.aspectRatio,
             disableFlip: qrCodeConfig.disableFlip,
-            videoConstraints: qrCodeConfig.videoConstraints,
+            // videoConstraints: qrCodeConfig.videoConstraints,
             advanced: qrCodeConfig.advanced
         };
 
