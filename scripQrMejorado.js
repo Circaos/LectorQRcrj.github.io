@@ -366,7 +366,8 @@ async function startScanner(sizeProporcion = 1) {
             qrbox: qrCodeConfig.qrbox,
             aspectRatio: qrCodeConfig.aspectRatio,
             disableFlip: qrCodeConfig.disableFlip,
-            videoConstraints: qrCodeConfig.videoConstraints
+            videoConstraints: qrCodeConfig.videoConstraints,
+            advanced: qrCodeConfig.advanced
         };
 
         // Iniciar escaneo con la cámara trasera preferentemente
@@ -375,7 +376,37 @@ async function startScanner(sizeProporcion = 1) {
             cameraConfig,
             onScanSuccess,
             onScanError
-        );
+        ).then(() => {
+            console.log("stream")
+            // Obtener el stream y sus tracks
+            const stream = html5QrCode.getRunningTrackCameraCapabilities();
+            if (stream) {
+                // Método CORRECTO para obtener el stream
+                const videoElement = document.querySelector("#reader video");
+                if (videoElement && videoElement.srcObject) {
+                    const stream = videoElement.srcObject;
+                    const track = stream.getVideoTracks()[0];
+                    const capabilities = track.getCapabilities();
+                    const settings = track.getSettings();
+
+                    console.log("=== INFO DE LA CÁMARA ===");
+                    console.log("Etiqueta:", track.label);
+                    console.log("Resolución real:", settings.width, "x", settings.height);
+                    console.log("Frame rate real:", settings.frameRate);
+                    console.log("Facing mode usado:", settings.facingMode);
+                    console.log("Capacidades:", {
+                        widthMax: capabilities.width?.max,
+                        heightMax: capabilities.height?.max,
+                        frameRateMax: capabilities.frameRate?.max
+                    });
+
+                    document.getElementById("idTextoInformacion").textContent = `calidad ${ settings.width} x ${settings.height} | frame ${settings.frameRate} | Facing mode usado ${ settings.facingMode} | etiqueta ${track.label}`
+
+                } else {
+                    console.log("No se encontró el elemento de video");
+                }
+            }
+        })
 
         isScanning = true;
         startBtn.disabled = true;
@@ -397,11 +428,35 @@ async function startScanner(sizeProporcion = 1) {
                         qrbox: qrCodeConfig.qrbox,
                         aspectRatio: qrCodeConfig.aspectRatio,
                         disableFlip: qrCodeConfig.disableFlip,
-                        videoConstraints: qrCodeConfig.videoConstraints
+                        videoConstraints: qrCodeConfig.videoConstraints,
+                        advanced: qrCodeConfig.advanced
                     },
                     onScanSuccess,
                     onScanError
-                );
+                ).then(() => {
+                    console.log("stream")
+                    // Obtener el stream y sus tracks
+                    const stream = html5QrCode.getRunningTrackCameraCapabilities();
+                    if (stream) {
+                        const track = stream.getVideoTracks()[0];
+                        const capabilities = track.getCapabilities();
+                        const settings = track.getSettings();
+
+                        console.log("=== INFO DE LA CÁMARA ===");
+                        console.log("Etiqueta:", track.label);
+                        console.log("Resolución real:", settings.width, "x", settings.height);
+                        console.log("Frame rate real:", settings.frameRate);
+                        console.log("Facing mode usado:", settings.facingMode);
+                        console.log("Capacidades máximas:", {
+                            width: capabilities.width?.max,
+                            height: capabilities.height?.max,
+                            frameRate: capabilities.frameRate?.max
+                        });
+                    }
+                })
+
+
+
                 isScanning = true;
                 startBtn.disabled = true;
                 stopBtn.disabled = false;
