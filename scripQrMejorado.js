@@ -406,31 +406,36 @@ async function startScanner(sizeProporcion = 1) {
                     console.log("No se encontró el elemento de video");
                 }
 
-                if (html5QrCode.getRunningTrackCapabilities) {
-                    const trackCapabilities = html5QrCode.getRunningTrackCapabilities();
-
-                    // Revisamos si la cámara SOPORTA ZOOM
-                    if (trackCapabilities.zoom) {
-                        let mensajeTempo = `| Zoom soportado! Rango: min=${trackCapabilities.zoom.min}, max=${trackCapabilities.zoom.max}, step=${trackCapabilities.zoom.step}` 
-                        console.log(mensajeTempo);
-
-                        // Aquí puedes, por ejemplo, habilitar un control deslizante (slider) en tu UI
-                        // y configurarle el rango: min, max, step.
-                        const zoomSlider = document.getElementById('mi-control-zoom');
-                        zoomSlider.min = trackCapabilities.zoom.min;
-                        zoomSlider.max = trackCapabilities.zoom.max;
-                        zoomSlider.step = trackCapabilities.zoom.step;
-                        zoomSlider.disabled = false;
-
-
-                        document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + mensajeTempo 
-                        
-                    } else {
-                        let mensajeTempo ="| Tu cámara o navegador no soporta el control de zoom." 
-                        console.warn(mensajeTempo);
-                        
-                        document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + mensajeTempo 
+                try {
+                    
+                    if (html5QrCode.getRunningTrackCapabilities) {
+                        const trackCapabilities = html5QrCode.getRunningTrackCapabilities();
+    
+                        // Revisamos si la cámara SOPORTA ZOOM
+                        if (trackCapabilities.zoom) {
+                            let mensajeTempo = `| Zoom soportado! Rango: min=${trackCapabilities.zoom.min}, max=${trackCapabilities.zoom.max}, step=${trackCapabilities.zoom.step}` 
+                            console.log(mensajeTempo);
+    
+                            // Aquí puedes, por ejemplo, habilitar un control deslizante (slider) en tu UI
+                            // y configurarle el rango: min, max, step.
+                            const zoomSlider = document.getElementById('mi-control-zoom');
+                            zoomSlider.min = trackCapabilities.zoom.min;
+                            zoomSlider.max = trackCapabilities.zoom.max;
+                            zoomSlider.step = trackCapabilities.zoom.step;
+                            zoomSlider.disabled = false;
+    
+    
+                            document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + mensajeTempo 
+                            
+                        } else {
+                            let mensajeTempo ="| Tu cámara o navegador no soporta el control de zoom." 
+                            console.warn(mensajeTempo);
+                            
+                            document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + mensajeTempo 
+                        }
                     }
+                } catch (error) {
+                    document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + error
                 }
 
 
