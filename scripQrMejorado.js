@@ -42,6 +42,11 @@ let qrCodeConfig = {
     aspectRatio: 1.0,
     disableFlip: false,
     rememberLastUsedCamera: true,
+    videoConstraints: {
+        facingMode: { exact: "environment" }, // Sigue siendo la cámara trasera
+        width: { ideal: 1920 },  // ¡ASÍ LE PIDES ALTA RESOLUCIÓN!
+        height: { ideal: 1080 }  // El navegador usará la resolución más cercana que pueda
+    },
     supportedScanTypes: [
         Html5QrcodeScanType.SCAN_TYPE_CAMERA,
         Html5QrcodeScanType.SCAN_TYPE_FILE
@@ -63,7 +68,7 @@ formBusquedaDam.addEventListener("submit", async (event) => {
     if (valorBusqueda.length != 13) {
         alertaInputDam.textContent = "Error - Ingresar un DAM correcta"
         return
-    }else{
+    } else {
         botonBuscar.disabled = true
         alertaInputDam.textContent = "Buscando ..."
     }
@@ -117,7 +122,7 @@ async function obtenerApiDam(dam) {
 
 function rellenarTablaDam(dam) {
 
-    console.log("rellenar",dam)
+    console.log("rellenar", dam)
 
     const tbodyCabecera = tablaCabeceraInfo.querySelector("tbody")
     const filaCabecera1 = tbodyCabecera.insertRow();
@@ -254,18 +259,18 @@ function onScanSuccess(decodedText, decodedResult) {
     // if (lastResult === decodedText) {
     //     return;
     // }
-    
+
     stopScanner()
     console.log("decodedText", decodedText)
     console.log("decodedResult", decodedResult)
-    console.log('dam["series"]',dam["series"])
-    let rptAlgoritmo =  algoritoBuscado(decodedText,dam["series"])
+    console.log('dam["series"]', dam["series"])
+    let rptAlgoritmo = algoritoBuscado(decodedText, dam["series"])
     console.log(rptAlgoritmo)
-    console.log("decodedResult" )
-    console.log("decodedResult" )
-    
-    
-    enviarResponse(rptAlgoritmo,decodedText)
+    console.log("decodedResult")
+    console.log("decodedResult")
+
+
+    enviarResponse(rptAlgoritmo, decodedText)
     btnVolverScanear.classList.remove("noView")
     // lastResult = decodedText;
     // const format = decodedResult?.result?.format?.formatName || 'Desconocido';
@@ -320,7 +325,7 @@ async function startScanner(sizeProporcion = 1) {
         lastScamProporcion = 1
     }
 
-    if (isScanning && sizeProporcion==lastScamProporcion) {
+    if (isScanning && sizeProporcion == lastScamProporcion) {
         updateStatus('⚠️ El escáner ya está activo', 'info');
         return;
     }
@@ -347,11 +352,11 @@ async function startScanner(sizeProporcion = 1) {
         const contentDiv = document.querySelector('.content');
         // console.log(contentDiv)
         // console.log(contentDiv.offsetWidth)
-        let widthQR = contentDiv.offsetWidth*.85
+        let widthQR = contentDiv.offsetWidth * .85
         qrCodeConfig.qrbox = {
-                width: widthQR,
-                height: widthQR/lastScamProporcion
-            }
+            width: widthQR,
+            height: widthQR / lastScamProporcion
+        }
         console.log(qrCodeConfig.qrbox)
 
         // Configuración de la cámara
@@ -431,33 +436,33 @@ async function iniciarPantallaSCAM() {
 
         inicialiadoControlesScam = true
         // Event listeners
-        startBtn.addEventListener('click',()=>{
+        startBtn.addEventListener('click', () => {
             startScanner(lastScamProporcion)
-        } );
+        });
         stopBtn.addEventListener('click', stopScanner);
-        btnVolverScanear.addEventListener('click', ()=>{
-    
+        btnVolverScanear.addEventListener('click', () => {
+
             btnVolverScanear.classList.add("noView")
             stopScanner()
             setTimeout(() => {
                 startScanner(lastScamProporcion)
             }, 250)
-            
+
         })
-        btnAtrasScam.addEventListener('click', ()=>{
+        btnAtrasScam.addEventListener('click', () => {
             stopScanner()
             contenedorLector.classList.add("noView")
             contenedorInfoDam.classList.remove("noView")
         })
-        
-        const botonesResizes = document.querySelectorAll('.cajaBotonesRedimensionarScam > .btnScam') 
-        botonesResizes.forEach( (boton,index) =>{
-            boton.id = `boton-${index+1}`
-            boton.addEventListener( 'click', ()=>{
+
+        const botonesResizes = document.querySelectorAll('.cajaBotonesRedimensionarScam > .btnScam')
+        botonesResizes.forEach((boton, index) => {
+            boton.id = `boton-${index + 1}`
+            boton.addEventListener('click', () => {
                 stopScanner()
-                setTimeout(()=>{
-                    startScanner(index+1)
-                },250)
+                setTimeout(() => {
+                    startScanner(index + 1)
+                }, 250)
             })
         })
     }
@@ -475,7 +480,7 @@ function enviarResponse(rptAlgoritmo, busquedaPalabra) {
         responseScam.textContent = `Se econtró ${busquedaPalabra} en la serie ${rptAlgoritmo["serie"]}`
         responseScam.classList.add("responseOKScam")
         responseScam.classList.remove("responseNOScam")
-    }else{
+    } else {
         sonidoError.play()
 
         responseScam.textContent = `NO Se econtró ${busquedaPalabra} en ninguna serie`
