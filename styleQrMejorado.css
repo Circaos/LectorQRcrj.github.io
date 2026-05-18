@@ -275,7 +275,7 @@ td {
 }
 
 
-.menuOpcionesScam{
+.menuOpcionesScam {
     position: fixed;
     /* background-color: red; */
     bottom: 0;
@@ -287,23 +287,31 @@ td {
     justify-content: center;
 }
 
-.responseNOScam{
+.responseNOScam {
     background-color: red;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 20px 0px;
+    font-weight: bold;
 }
 
-.responseOKScam{
+.responseOKScam {
     background-color: greenyellow;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 20px 0px;
+    font-weight: bold;
 }
 
 
-.header{
+.header {
     margin: 0 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.btnScam{
+.btnScam {
     background-color: #3cdb44;
     height: 30px;
     min-width: 30px;
@@ -319,12 +327,12 @@ td {
     background: #32b639;
 }
 
-h1{
+h1 {
     margin: 10px 0;
     font-size: 1.5rem;
 }
 
-.cajaBotonesRedimensionarScam{
+.cajaBotonesRedimensionarScam {
     display: flex;
     justify-content: space-evenly;
 }
@@ -342,10 +350,12 @@ h1{
     td {
         font-size: 0.85rem;
     }
-    .container{
+
+    .container {
         padding: 7px;
     }
-    .scanner-container{
+
+    .scanner-container {
         padding: 12px;
     }
 }
