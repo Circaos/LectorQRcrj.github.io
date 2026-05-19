@@ -25,6 +25,8 @@ const resultDiv = document.getElementById('result');
 const formatSpan = document.getElementById('formatSpan');
 const statusDiv = document.getElementById('status');
 const contenedorBtnResize = document.getElementById('idContenedorBtnResize');
+const sliderZoom = document.getElementById("mi-control-zoom")
+const miniContenedor = document.getElementById("miniContenedorRPT")
 
 // Configuración del escáner
 let html5QrCode = null;
@@ -102,19 +104,23 @@ async function obtenerApiDam(dam) {
     // //     return null
     // // }
 
+    // const damFinalTempo = await fetch(`./1182610071567.json`)
     // const damFinal = await damFinalTempo.json();
 
-    const url = "https://apiproviaspruebav1-production.up.railway.app/dtarc/getInfoDam"
-    // const url = "http://localhost:3050/dtarc/getInfoDam"
-    const data = { 'dua': dam }
 
+
+    // const url = "http://localhost:3050/dtarc/getInfoDam"
+    const url = "https://apiproviaspruebav1-production.up.railway.app/dtarc/getInfoDam"
+    const data = { 'dua': dam }
     const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     })
-
     const damFinal = await response.json()
+
+
+
 
 
     return damFinal["dam"]
@@ -156,6 +162,11 @@ function rellenarTablaDam(dam) {
 
     const tbody = tablaInfo.querySelector("tbody")
     const series = dam["series"]
+
+    instertarSeries(tbody, series)
+}
+
+function instertarSeries(tbody, series) {
     for (const serie of series) {
         const fila0 = tbody.insertRow();
         let celdaSeparador = fila0.insertCell(0)
@@ -206,9 +217,7 @@ function rellenarTablaDam(dam) {
         }
 
     }
-
 }
-
 
 async function agregarListener() {
     btnLector.addEventListener("click", async () => {
@@ -261,51 +270,23 @@ function onScanSuccess(decodedText, decodedResult) {
     //     return;
     // }
 
+    sliderZoom.classList.add("noView")
+    contenedorBtnResize.classList.add("noView")
+    responseScam.classList.remove("noView")
+
     stopScanner()
     console.log("decodedText", decodedText)
     console.log("decodedResult", decodedResult)
     console.log('dam["series"]', dam["series"])
-    let rptAlgoritmo = algoritoBuscado(decodedText, dam["series"])
+    let rptAlgoritmo = algoritoBuscado(decodedText)
     console.log(rptAlgoritmo)
     console.log("decodedResult")
     console.log("decodedResult")
 
 
-    enviarResponse(rptAlgoritmo, decodedText)
+    enviarResponse(rptAlgoritmo)
     btnVolverScanear.classList.remove("noView")
-    // lastResult = decodedText;
-    // const format = decodedResult?.result?.format?.formatName || 'Desconocido';
-    // const formattedFormat = formatFormatName(format);
 
-    // // Mostrar resultado
-    // resultDiv.innerHTML = decodedText;
-    // formatSpan.innerHTML = formattedFormat;
-    // formatSpan.style.background = '#4caf50';
-    // formatSpan.style.color = 'white';
-
-    // updateStatus(`✅ ¡Código leído! Formato: ${formattedFormat}`, 'success');
-
-    // // Reproducir sonido de lectura (opcional)
-    // try {
-    //     const beep = new Audio('data:audio/wav;base64,U3RlYWx0aCBzb3VuZA==');
-    //     beep.play().catch(e => console.log('No se pudo reproducir el sonido'));
-    // } catch (e) { }
-
-    // // Resetear el formato del badge después de 2 segundos
-    // setTimeout(() => {
-    //     if (formatSpan.innerHTML === formattedFormat) {
-    //         formatSpan.style.background = '#e8f5e9';
-    //         formatSpan.style.color = '#2e7d32';
-    //     }
-    // }, 2000);
-
-    // // Mostrar notificación si está permitido
-    // if (Notification.permission === 'granted') {
-    //     new Notification('Código leído', {
-    //         body: `${formattedFormat}: ${decodedText}`,
-    //         icon: 'https://cdn-icons-png.flaticon.com/512/149/149060.png'
-    //     });
-    // }
 }
 // Callback cuando hay error en lectura
 function onScanError(errorMessage) {
@@ -320,6 +301,10 @@ function onScanError(errorMessage) {
 
 // Iniciar el escáner
 async function startScanner(sizeProporcion = 1) {
+
+    sliderZoom.classList.remove("noView")
+    contenedorBtnResize.classList.remove("noView")
+    responseScam.classList.add("noView")
 
     // lastScamProporcion = 1
     if (lastScamProporcion == null || lastScamProporcion == undefined) {
@@ -406,37 +391,37 @@ async function startScanner(sizeProporcion = 1) {
                     console.log("No se encontró el elemento de video");
                 }
 
-                // try {
-                    
-                //     if (html5QrCode.getRunningTrackCapabilities) {
-                //         const trackCapabilities = html5QrCode.getRunningTrackCapabilities();
-    
-                //         // Revisamos si la cámara SOPORTA ZOOM
-                //         if (trackCapabilities.zoom) {
-                //             let mensajeTempo = `| Zoom soportado! Rango: min=${trackCapabilities.zoom.min}, max=${trackCapabilities.zoom.max}, step=${trackCapabilities.zoom.step}` 
-                //             console.log(mensajeTempo);
-    
-                //             // Aquí puedes, por ejemplo, habilitar un control deslizante (slider) en tu UI
-                //             // y configurarle el rango: min, max, step.
-                //             const zoomSlider = document.getElementById('mi-control-zoom');
-                //             zoomSlider.min = trackCapabilities.zoom.min;
-                //             zoomSlider.max = trackCapabilities.zoom.max;
-                //             zoomSlider.step = trackCapabilities.zoom.step;
-                //             zoomSlider.disabled = false;
-    
-    
-                //             document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + mensajeTempo 
-                            
-                //         } else {
-                //             let mensajeTempo ="| Tu cámara o navegador no soporta el control de zoom." 
-                //             console.warn(mensajeTempo);
-                            
-                //             document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + mensajeTempo 
-                //         }
-                //     }
-                // } catch (error) {
-                //     document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + error
-                // }
+                try {
+
+                    if (html5QrCode.getRunningTrackCapabilities) {
+                        const trackCapabilities = html5QrCode.getRunningTrackCapabilities();
+
+                        // Revisamos si la cámara SOPORTA ZOOM
+                        if (trackCapabilities.zoom) {
+                            let mensajeTempo = `| Zoom soportado! Rango: min=${trackCapabilities.zoom.min}, max=${trackCapabilities.zoom.max}, step=${trackCapabilities.zoom.step}`
+                            console.log(mensajeTempo);
+
+                            // Aquí puedes, por ejemplo, habilitar un control deslizante (slider) en tu UI
+                            // y configurarle el rango: min, max, step.
+                            // const zoomSlider = document.getElementById('mi-control-zoom');
+                            sliderZoom.min = trackCapabilities.zoom.min;
+                            sliderZoom.max = trackCapabilities.zoom.max;
+                            sliderZoom.step = trackCapabilities.zoom.step;
+                            sliderZoom.disabled = false;
+
+
+                            document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + mensajeTempo
+
+                        } else {
+                            let mensajeTempo = "| Tu cámara o navegador no soporta el control de zoom."
+                            console.warn(mensajeTempo);
+
+                            document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + mensajeTempo
+                        }
+                    }
+                } catch (error) {
+                    document.getElementById("idTextoInformacion").textContent = document.getElementById("idTextoInformacion").textContent + "ERROR -> " + error
+                }
 
 
             }
@@ -504,6 +489,7 @@ async function startScanner(sizeProporcion = 1) {
 
 // Detener el escáner
 async function stopScanner() {
+
     if (!isScanning || !html5QrCode) {
         updateStatus('ℹ️ El escáner no está activo', 'info');
         return;
@@ -562,36 +548,86 @@ async function iniciarPantallaSCAM() {
 
 }
 
-function enviarResponse(rptAlgoritmo, busquedaPalabra) {
-    console.log("pollo")
+function enviarResponse(rptAlgoritmo) {
+
     responseScam.classList.remove("noView")
-    // responseScam.textContent = "hols"
-    console.log("pollo2")
-    if (rptAlgoritmo.encontrado) {
-        sonidoExito.play()
 
-        responseScam.textContent = `Se econtró ${busquedaPalabra} en la serie ${rptAlgoritmo["serie"]}`
-        responseScam.classList.add("responseOKScam")
-        responseScam.classList.remove("responseNOScam")
-    } else {
-        sonidoError.play()
 
-        responseScam.textContent = `NO Se econtró ${busquedaPalabra} en ninguna serie`
-        responseScam.classList.add("responseNOScam")
+    if (rptAlgoritmo["tipo"] == "unico") {
+        console.log("pollo")
+        if (rptAlgoritmo.encontrado) {
+            sonidoExito.play()
+
+            responseScam.querySelector("h3").textContent = `✅ Se econtró ${rptAlgoritmo["textoClave"]} en la serie ${rptAlgoritmo["serie"]}✅`
+            responseScam.classList.add("responseOKScam")
+            responseScam.classList.remove("responseNOScam")
+
+
+            pintadoTablaSerieEncontrada(miniContenedor,rptAlgoritmo["serie"],rptAlgoritmo["textoClave"])
+
+
+        } else {
+            sonidoError.play()
+
+            responseScam.querySelector("h3").textContent = `❌ NO Se econtró ${rptAlgoritmo["textoClave"]} en ninguna serie ❌`
+            responseScam.classList.add("responseNOScam")
+            responseScam.classList.remove("responseOKScam")
+        }
+
+    }else if(rptAlgoritmo["tipo"] == "multiple"){
         responseScam.classList.remove("responseOKScam")
+        responseScam.classList.remove("responseNOScam")
+
+        miniContenedor.innerHTML = ''
+        console.log("pollo multiple")
+        if (rptAlgoritmo["cantidadNegativos"] == 0) {
+            sonidoExito.play()
+            responseScam.querySelector("h3").textContent = `✅✅ Se han analizado ${rptAlgoritmo["rptMultiple"].length} "UNIQUE SERIAL" y TODOS fueron encontrados en la DAM ✅✅`
+        }else if(rptAlgoritmo["cantidadPositivos"] == 0){
+            sonidoError.play()
+            responseScam.querySelector("h3").textContent = `❌❌ Se han analizado ${rptAlgoritmo["rptMultiple"].length} "UNIQUE SERIAL" y NINGUNO fue encontrado en la DAM ❌❌`
+        }else{
+            responseScam.querySelector("h3").textContent = `🚨⚠️ Se han analizado ${rptAlgoritmo["rptMultiple"].length} "UNIQUE SERIAL" de los cuales ${rptAlgoritmo["cantidadPositivos"]} SI fueron encontrados y  ${rptAlgoritmo["cantidadNegativos"]} NO fueron encontrados ⚠️🚨`
+        }
+
+        for (let index = 0; index < rptAlgoritmo["rptMultiple"].length; index++) {
+            const element = rptAlgoritmo["rptMultiple"][index];
+            const nuevoDiv = document.createElement('div');
+            nuevoDiv.classList.add("miniDivRPT")
+            if (element["encontrado"]) {
+                nuevoDiv.innerHTML = `✅ <p class="resalteScam2"> ${element["textoClave"]} </p> en Serie ${element["serie"]} ✅`
+            }else{
+                nuevoDiv.innerHTML = `❌ <p class="resalteScam2"> ${element["textoClave"]} </p>   NO se encontró  ❌`
+            }
+            miniContenedor.appendChild(nuevoDiv)
+
+        }
+
     }
+
+}
+
+function pintadoTablaSerieEncontrada(miniContenedorS, numeroSerie,textoClave) {
+    miniContenedorS.innerHTML = '<table><tbody class="tBodyRptScam"></tbody></table>'
+    const tbody = miniContenedorS.querySelector("tbody")
+    instertarSeries(tbody, [dam["series"][numeroSerie - 1]])
+
+    miniContenedorS.innerHTML = miniContenedorS.innerHTML.replaceAll(textoClave, `<p class="resalteScam">${textoClave}</p>`)
+}
+
+function extraerNumerosLargos(texto, longitudMinima = 8) {
+    // Patrón que busca números de N dígitos o más (sin separadores)
+    const patron = new RegExp(`\\b\\d{${longitudMinima},}\\b`, 'g');
+    const numerosEncontrados = texto.match(patron) || [];
+    return numerosEncontrados;
 }
 
 
-// ALGORITMO DE BUSQUEDA
-function algoritoBuscado(palabraClave, seriesOriginal) {
-    console.log("entrando al algoritmo")
-    console.log(palabraClave)
-    console.log(seriesOriginal)
+function miniAlgoritmoBusqueda(palabraClave) {
+    console.log("entrando al miniAlgoritmo")
+    const seriesOriginal = dam["series"]
     for (let index = 0; index < seriesOriginal.length; index++) {
-        // console.log("buscando",index)
         let miniSerie = seriesOriginal[index]
-
         let encontrado = false
         const descripciones = miniSerie["descripciones"]
         for (let index = 0; index < descripciones.length; index++) {
@@ -600,24 +636,83 @@ function algoritoBuscado(palabraClave, seriesOriginal) {
                 break
             }
         }
-
         if (encontrado) {
             return {
+                "textoClave": palabraClave,
                 "encontrado": encontrado,
-                "serie": miniSerie["serie"],
-                "serieData": miniSerie
+                "serie": Number(miniSerie["serie"])
             }
-
             break
         }
     }
     return {
+        "textoClave": palabraClave,
         "encontrado": false
     }
 }
 
+// ALGORITMO DE BUSQUEDA
+function algoritoBuscado(palabraClave) {
+    console.log("entrando al algoritmo")
+    let seriesOriginal = dam["series"]
+    console.log(palabraClave)
+    // console.log(seriesOriginal)
 
+    if (palabraClave.length <= 50) {
+        console.log("entrando Unico")
+        let rptUnico = miniAlgoritmoBusqueda(palabraClave)
+        rptUnico["tipo"] = "unico"
+        return rptUnico
+    } else {
+        console.log("entrando Multiple")
 
+        let arregloImeis = extraerNumerosLargos(palabraClave)
+        console.log("arregloImeis", arregloImeis)
+
+        let rptMultiple = []
+        let cantidadPositivos = 0
+        let cantidadNegativos = 0
+        arregloImeis.forEach((imei) => {
+            let rptTempo = miniAlgoritmoBusqueda(imei)
+
+            if (rptTempo["encontrado"]) {
+                cantidadPositivos = cantidadPositivos + 1
+            }else{
+                cantidadNegativos = cantidadNegativos + 1
+            }
+
+            rptMultiple.push(rptTempo)
+        })
+
+        return {
+            "tipo": "multiple",
+            "cantidadPositivos":cantidadPositivos,
+            "cantidadNegativos":cantidadNegativos,
+            "rptMultiple": rptMultiple
+        }
+    }
+
+}
+
+// Esta función se ejecuta, por ejemplo, cuando el usuario mueve el slider
+async function cambiarZoom(nuevoValorZoom) {
+    if (html5QrCode.applyVideoConstraints) {
+        try {
+            // Aplicamos la nueva restricción de zoom
+            await html5QrCode.applyVideoConstraints({
+                zoom: { exact: parseFloat(nuevoValorZoom) }
+            });
+            console.log(`Zoom ajustado a: ${nuevoValorZoom}`);
+        } catch (error) {
+            console.error("No se pudo aplicar el zoom:", error);
+            // Esto puede fallar si el valor está fuera del rango soportado
+        }
+    }
+}
+
+sliderZoom.addEventListener('input', (event) => {
+    cambiarZoom(event.target.value);
+});
 
 
 

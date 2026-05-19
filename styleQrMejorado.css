@@ -139,6 +139,8 @@ td {
 
 /* estilos scam */
 .container {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     background: white;
     border-radius: 20px;
@@ -288,7 +290,7 @@ td {
 }
 
 .responseNOScam {
-    background-color: red;
+    background-color: rgb(207, 36, 36);
     font-size: 2rem;
     text-transform: uppercase;
     margin: 20px 0px;
@@ -338,8 +340,61 @@ h1 {
 }
 
 
+input[type="range"] {
+    width: 80%;
+    margin: 0 25px;
+}
 
 
+
+
+.contenedorResponse {
+    flex: 1;
+    /* background-color: #a3da0c; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 55px;
+    min-height: 0px;
+}
+
+#miniContenedorRPT {
+    flex: 1;
+    overflow-y: auto;
+}
+
+#titleResponseScam {
+    margin: 14px;
+    font-size: 1.35rem;
+    text-align: center;
+}
+
+#idResponseScam.responseNOScam {
+    align-items: center;
+    justify-content: center;
+}
+
+#idResponseScam.responseNOScam>#miniContenedorRPT {
+    display: none;
+}
+
+.tBodyRptScam {
+    font-weight: normal;
+}
+
+p.resalteScam {
+    display: inline;
+    background: orange;
+    font-weight: bold;
+}
+p.resalteScam2 {
+    display: inline;
+    /* background: orange; */
+    font-weight: bold;
+}
+.miniDivRPT{
+    text-align: center;
+    margin: 10px;
+}
 
 .noView {
     display: none;

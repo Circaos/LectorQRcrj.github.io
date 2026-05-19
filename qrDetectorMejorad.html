@@ -10,7 +10,7 @@
 
 <body>
     <div class="contenedorInputDAM" id="idContenedorInputDam">
-        <h1>INGRESAR DAM V9</h1>
+        <h1>INGRESAR DAM V10</h1>
         <form id="formBusqueda" onsubmit="return false;">
             <input type="number" id="inputBusqueda" placeholder="1182610...">
             <button type="submit">Buscar</button>
@@ -58,39 +58,6 @@
                     </div>
                 </div>
 
-                <!-- <div class="result-area">
-                    <div class="result-header">
-                        Último código leído
-                        <span id="formatSpan" class="format-badge">-</span>
-                    </div>
-                    <div class="result-content">
-                        <div id="result">No hay datos</div>
-                    </div>
-                    <div id="status" class="status info">
-                        💡 Presiona "Iniciar Escáner" y permite el acceso a la cámara
-                    </div>
-                </div>
-
-                <div class="supported-formats">
-                    <h4>📦 Formatos soportados:</h4>
-                    <div class="format-list">
-                        <span class="format-tag">Código 128</span>
-                        <span class="format-tag">Código 39</span>
-                        <span class="format-tag">EAN-13</span>
-                        <span class="format-tag">EAN-8</span>
-                        <span class="format-tag">UPC-A</span>
-                        <span class="format-tag">UPC-E</span>
-                        <span class="format-tag">ITF</span>
-                        <span class="format-tag">Código 93</span>
-                        <span class="format-tag">PDF417</span>
-                        <span class="format-tag">QR</span>
-                        <span class="format-tag">Data Matrix</span>
-                        <span class="format-tag">Aztec</span>
-                        <span class="format-tag">MaxiCode</span>
-                        <span class="format-tag">RSS-14</span>
-                        <span class="format-tag">RSS-Expanded</span>
-                    </div>
-                </div> -->
             </div>
             <div class="cajaBotonesRedimensionarScam" id="idContenedorBtnResize">
                 <button class="btnScam">1/1</button>
@@ -99,10 +66,12 @@
                 <button class="btnScam">1/4</button>
                 <button class="btnScam">1/5</button>
             </div>
-            <div id="idResponseScam" class="noView">
-                
+            <input type="range" id="mi-control-zoom">
+            <div id="idResponseScam" class="contenedorResponse noView">
+                <h3 id="titleResponseScam"></h3>
+                <div id="miniContenedorRPT"></div>
             </div>
-            <p id="idTextoInformacion"></p>
+            <p id="idTextoInformacion" class="noView"></p>
         </div>
         <div class="menuOpcionesScam">
             <button class="botonFixed noView" id="idBtnVolverScanear">🔎 VOLVER A ESCANEAR</button>

@@ -1,0 +1,84 @@
+{
+    "estado": "ok",
+    "dam": {
+        "dam": "118-2026-10-071567-00",
+        "fechaNumeracion": "12/02/2026",
+        "rucImportador": "4-20608912135",
+        "nomImportador": "AMAZONAS ENERGIA SOLAR S.A.C.",
+        "cantBultos": "21.00",
+        "cantUndFisicas": "40.00",
+        "cantUndComerciales": "40.00",
+        "cantSeries": "5",
+        "series": [
+            {
+                "serie": "1",
+                "unidadesFisicas": "9.00 U",
+                "partida": "8504409000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "INVERSOR DE CORRIENTE ELÉCTRICA SUN2000-330KTL-H1, HUAWEI, SUN2000-330KTL-H1",
+                    "SUN2000-330KTL-H1",
+                    "P/N: 01076532-005; S/N: GR2589019975, GR25A9072721, GR25A9072720, GR25A9075498",
+                    "CONVIERTE LA ENERGÍA FOTOVOLTAICA A CORRIENTE ELECTRICA CONVENCIONAL.",
+                    "S/N: GR25A9075488, GR2599001755, GR2599001750, GR2589108656, GR2589108499,Adelanto 20%, 70"
+                ]
+            },
+            {
+                "serie": "2",
+                "unidadesFisicas": "10.00 U",
+                "partida": "8504409000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "INVERSOR DE CORRIENTE ELÉCTRICA SUN2000-330KTL-H1, HUAWEI, SUN2000-330KTL-H1",
+                    "SUN2000-330KTL-H1",
+                    "P/N: 01076532-005; S/N: GR25A9109119, GR25A9109062, GR25A9109070, GR25A9109091, GR25B90494",
+                    "CONVIERTE LA ENERGÍA FOTOVOLTAICA A CORRIENTE ELECTRICA CONVENCIONAL.",
+                    "S/N: GR25B9049388, GR25B9049406, GR25B9049391, GR25A9075433, GR25A9075420"
+                ]
+            },
+            {
+                "serie": "3",
+                "unidadesFisicas": "10.00 U",
+                "partida": "8504409000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "INVERSOR DE CORRIENTE ELÉCTRICA SUN2000-330KTL-H1, HUAWEI, SUN2000-330KTL-H1",
+                    "SUN2000-330KTL-H1",
+                    "P/N: 01076532-005;S/N: GR25A9075411, GR25A9075428, GR25A9075495, GR25A9075487, GR25A907448",
+                    "CONVIERTE LA ENERGÍA FOTOVOLTAICA A CORRIENTE ELECTRICA CONVENCIONAL.",
+                    "S/N: GR25A9074468, GR25C9024910, GR25C9024873, GR25C9024878, GR25C9024883"
+                ]
+            },
+            {
+                "serie": "4",
+                "unidadesFisicas": "10.00 U",
+                "partida": "8504409000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "INVERSOR DE CORRIENTE ELÉCTRICA SUN2000-330KTL-H1, HUAWEI, SUN2000-330KTL-H1",
+                    "SUN2000-330KTL-H1",
+                    "P/N: 01076532-005;S/N: GR25B9052482, GR25B9052493, GR25B9052438, GR25B9052496, GR25B902502",
+                    "CONVIERTE LA ENERGÍA FOTOVOLTAICA A CORRIENTE ELECTRICA CONVENCIONAL.",
+                    "S/N: GR25B9025036, GR25B9025040, GR25B9025054, GR25B9049335, GR25B9049356"
+                ]
+            },
+            {
+                "serie": "5",
+                "unidadesFisicas": "1.00 U",
+                "partida": "8504409000",
+                "tratoPreferente": "0-",
+                "codLiber": "4438-LEY AMAZONIA-IMPORTACION DEVOLUCION CON N/C",
+                "descripciones": [
+                    "INVERSOR DE CORRIENTE ELÉCTRICA SUN2000-330KTL-H1, HUAWEI, SUN2000-330KTL-H1",
+                    "SUN2000-330KTL-H1",
+                    "P/N: 01076532-005; S/N: GR2579023637",
+                    "CONVIERTE LA ENERGÍA FOTOVOLTAICA A CORRIENTE ELECTRICA CONVENCIONAL."
+                ]
+            }
+        ]
+    }
+}
