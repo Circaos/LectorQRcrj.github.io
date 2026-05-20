@@ -118,6 +118,7 @@ class PDFCollageMaker {
     createQualityControl() {
         // Crear panel de control de calidad
         const controlPanel = document.createElement('div');
+        controlPanel.style.display = "flex"
         controlPanel.className = 'control-panel';
         controlPanel.innerHTML = `
             <div class="control-group">
@@ -137,14 +138,14 @@ class PDFCollageMaker {
                 <!-- <small class="quality-note">🔍 Menor calidad = menor tamaño de archivo</small> -->
             </div>
             
-            <!-- <div class="control-group">
+            <div class="control-group">
                 <label>📦 División por tamaño:</label>
                 <div class="size-control">
-                    <span>Máximo ${this.maxPDFSizeMB} MB por PDF</span>
+                    <span>Máx ${this.maxPDFSizeMB} MB por PDF</span>
                     <button type="button" id="configureSizeBtn" class="small-btn">Configurar</button>
                 </div>
                 <small class="size-note">⚡ Si el PDF supera ${this.maxPDFSizeMB}MB, se dividirá automáticamente</small>
-            </div> -->
+            </div> 
         `;
 
         // Insertar después del área de estadísticas
@@ -189,57 +190,62 @@ class PDFCollageMaker {
         });
 
         // Configurar evento de tamaño máximo
-        // const configureSizeBtn = document.getElementById('configureSizeBtn');
-        // configureSizeBtn.addEventListener('click', () => this.configureMaxSize());
+        const configureSizeBtn = document.getElementById('configureSizeBtn');
+        configureSizeBtn.addEventListener('click', () => this.configureMaxSize());
     }
 
-    // configureMaxSize() {
-    //     const modal = document.createElement('div');
-    //     modal.className = 'modal-overlay';
-    //     modal.innerHTML = `
-    //         <div class="modal-content">
-    //             <h3>Configurar tamaño máximo por PDF</h3>
-    //             <div class="modal-body">
-    //                 <label>Tamaño máximo (MB):</label>
-    //                 <input type="number" id="maxSizeInput" value="${this.maxPDFSizeMB}" min="0.5" max="10" step="0.5">
-    //                 <small>Entre 0.5 MB y 10 MB</small>
-    //             </div>
-    //             <div class="modal-actions">
-    //                 <button class="btn-modal btn-modal-cancel">Cancelar</button>
-    //                 <button class="btn-modal btn-modal-confirm">Aceptar</button>
-    //             </div>
-    //         </div>
-    //     `;
+    configureMaxSize() {
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay';
+        modal.innerHTML = `
+            <div class="modal-content">
+                <h3>Configurar tamaño máximo por PDF</h3>
+                <div class="modal-body">
+                    <label>Tamaño máximo (MB):</label>
+                    <input type="number" id="maxSizeInput" value="${this.maxPDFSizeMB}" min="0.5" max="10" step="0.5">
+                    <small>Entre 0.5 MB y 10 MB</small>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn-modal btn-modal-cancel">Cancelar</button>
+                    <button class="btn-modal btn-modal-confirm">Aceptar</button>
+                </div>
+            </div>
+        `;
 
-    //     document.body.appendChild(modal);
+        document.body.appendChild(modal);
 
-    //     const confirmBtn = modal.querySelector('.btn-modal-confirm');
-    //     const cancelBtn = modal.querySelector('.btn-modal-cancel');
-    //     const sizeInput = modal.querySelector('#maxSizeInput');
+        const confirmBtn = modal.querySelector('.btn-modal-confirm');
+        const cancelBtn = modal.querySelector('.btn-modal-cancel');
+        const sizeInput = modal.querySelector('#maxSizeInput');
 
-    //     confirmBtn.onclick = () => {
-    //         let newSize = parseFloat(sizeInput.value);
-    //         if (isNaN(newSize)) newSize = 2;
-    //         if (newSize < 0.5) newSize = 0.5;
-    //         if (newSize > 10) newSize = 10;
+        confirmBtn.onclick = () => {
+            console.log("criscris MM")
+            
+            let newSize = parseFloat(sizeInput.value);
+            if (isNaN(newSize)) newSize = 2;
+            if (newSize < 0.5) newSize = 0.5;
+            if (newSize > 10) newSize = 10;
 
-    //         this.maxPDFSizeMB = newSize;
-    //         const sizeNote = document.querySelector('.size-note');
-    //         sizeNote.innerHTML = `⚡ Si el PDF supera ${this.maxPDFSizeMB}MB, se dividirá automáticamente`;
+            this.maxPDFSizeMB = newSize;
 
-    //         document.body.removeChild(modal);
-    //     };
 
-    //     cancelBtn.onclick = () => {
-    //         document.body.removeChild(modal);
-    //     };
+            document.querySelector(".size-control > span").textContent = `Máx ${this.maxPDFSizeMB} MB por PDF`
+            const sizeNote = document.querySelector('.size-note');
+            sizeNote.innerHTML = `⚡ Si el PDF supera ${this.maxPDFSizeMB}MB, se dividirá automáticamente`;
 
-    //     modal.onclick = (e) => {
-    //         if (e.target === modal) {
-    //             document.body.removeChild(modal);
-    //         }
-    //     };
-    // }
+            document.body.removeChild(modal);
+        };
+
+        cancelBtn.onclick = () => {
+            document.body.removeChild(modal);
+        };
+
+        modal.onclick = (e) => {
+            if (e.target === modal) {
+                document.body.removeChild(modal);
+            }
+        };
+    }
 
     async handleFiles(files) {
         console.log("file", files)
