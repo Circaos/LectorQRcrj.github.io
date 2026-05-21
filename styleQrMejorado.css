@@ -85,7 +85,8 @@ td {
     margin-bottom: 25px;
     margin-right: 25px;
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
+    justify-content: space-evenly;
     /* height: 5%; */
 
 }

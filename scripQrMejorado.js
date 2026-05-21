@@ -10,6 +10,7 @@ const contenedorInfoDam = document.getElementById("idContenedorInfoDam")
 const tablaInfo = document.getElementById("idTablaInfo")
 const tablaCabeceraInfo = document.getElementById("idTablaCabeceraInfo")
 const btnLector = document.getElementById("idBtnLector")
+const btnImportar = document.getElementById("idBtnImportar")
 
 
 const contenedorLector = document.getElementById("idContenedorLector")
@@ -97,19 +98,19 @@ formBusquedaDam.addEventListener("submit", async (event) => {
 
 
 async function obtenerApiDam(dam) {
-    // // const damFinalTempo = await fetch(`./${dam}.json`)
+    // const damFinalTempo = await fetch(`./${dam}.json`)
 
-    // // console.log(damFinalTempo)
-    // // if (!damFinalTempo.ok) {
-    // //     return null
-    // // }
+    // console.log(damFinalTempo)
+    // if (!damFinalTempo.ok) {
+    //     return null
+    // }
 
     // const damFinalTempo = await fetch(`./1182610071567.json`)
     // const damFinal = await damFinalTempo.json();
 
 
 
-    // const url = "http://localhost:3050/dtarc/getInfoDam"
+    const url = "http://localhost:3050/dtarc/getInfoDam"
     const url = "https://apiproviaspruebav1-production.up.railway.app/dtarc/getInfoDam"
     const data = { 'dua': dam }
     const response = await fetch(url, {
@@ -167,6 +168,9 @@ function rellenarTablaDam(dam) {
 }
 
 function instertarSeries(tbody, series) {
+
+    tbody.innerHTML = ''
+
     for (const serie of series) {
         const fila0 = tbody.insertRow();
         let celdaSeparador = fila0.insertCell(0)
@@ -563,7 +567,7 @@ function enviarResponse(rptAlgoritmo) {
             responseScam.classList.remove("responseNOScam")
 
 
-            pintadoTablaSerieEncontrada(miniContenedor,rptAlgoritmo["serie"],rptAlgoritmo["textoClave"])
+            pintadoTablaSerieEncontrada(miniContenedor, rptAlgoritmo["serie"], rptAlgoritmo["textoClave"])
 
 
         } else {
@@ -574,7 +578,7 @@ function enviarResponse(rptAlgoritmo) {
             responseScam.classList.remove("responseOKScam")
         }
 
-    }else if(rptAlgoritmo["tipo"] == "multiple"){
+    } else if (rptAlgoritmo["tipo"] == "multiple") {
         responseScam.classList.remove("responseOKScam")
         responseScam.classList.remove("responseNOScam")
 
@@ -583,10 +587,10 @@ function enviarResponse(rptAlgoritmo) {
         if (rptAlgoritmo["cantidadNegativos"] == 0) {
             sonidoExito.play()
             responseScam.querySelector("h3").textContent = `✅✅ Se han analizado ${rptAlgoritmo["rptMultiple"].length} "UNIQUE SERIAL" y TODOS fueron encontrados en la DAM ✅✅`
-        }else if(rptAlgoritmo["cantidadPositivos"] == 0){
+        } else if (rptAlgoritmo["cantidadPositivos"] == 0) {
             sonidoError.play()
             responseScam.querySelector("h3").textContent = `❌❌ Se han analizado ${rptAlgoritmo["rptMultiple"].length} "UNIQUE SERIAL" y NINGUNO fue encontrado en la DAM ❌❌`
-        }else{
+        } else {
             responseScam.querySelector("h3").textContent = `🚨⚠️ Se han analizado ${rptAlgoritmo["rptMultiple"].length} "UNIQUE SERIAL" de los cuales ${rptAlgoritmo["cantidadPositivos"]} SI fueron encontrados y  ${rptAlgoritmo["cantidadNegativos"]} NO fueron encontrados ⚠️🚨`
         }
 
@@ -596,7 +600,7 @@ function enviarResponse(rptAlgoritmo) {
             nuevoDiv.classList.add("miniDivRPT")
             if (element["encontrado"]) {
                 nuevoDiv.innerHTML = `✅ <p class="resalteScam2"> ${element["textoClave"]} </p> en Serie ${element["serie"]} ✅`
-            }else{
+            } else {
                 nuevoDiv.innerHTML = `❌ <p class="resalteScam2"> ${element["textoClave"]} </p>   NO se encontró  ❌`
             }
             miniContenedor.appendChild(nuevoDiv)
@@ -607,7 +611,7 @@ function enviarResponse(rptAlgoritmo) {
 
 }
 
-function pintadoTablaSerieEncontrada(miniContenedorS, numeroSerie,textoClave) {
+function pintadoTablaSerieEncontrada(miniContenedorS, numeroSerie, textoClave) {
     miniContenedorS.innerHTML = '<table><tbody class="tBodyRptScam"></tbody></table>'
     const tbody = miniContenedorS.querySelector("tbody")
     instertarSeries(tbody, [dam["series"][numeroSerie - 1]])
@@ -677,7 +681,7 @@ function algoritoBuscado(palabraClave) {
 
             if (rptTempo["encontrado"]) {
                 cantidadPositivos = cantidadPositivos + 1
-            }else{
+            } else {
                 cantidadNegativos = cantidadNegativos + 1
             }
 
@@ -686,8 +690,8 @@ function algoritoBuscado(palabraClave) {
 
         return {
             "tipo": "multiple",
-            "cantidadPositivos":cantidadPositivos,
-            "cantidadNegativos":cantidadNegativos,
+            "cantidadPositivos": cantidadPositivos,
+            "cantidadNegativos": cantidadNegativos,
             "rptMultiple": rptMultiple
         }
     }
@@ -715,19 +719,116 @@ sliderZoom.addEventListener('input', (event) => {
 });
 
 
+document.getElementById('mi-archivo').addEventListener('change', function (e) {
+    const archivo = e.target.files[0];
+    if (archivo) {
+        importarJSON(archivo);
+    }
+});
+
+function importarJSON(archivo) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        try {
+            // Convertir el texto del JSON a objeto JS
+            const objetoJS = JSON.parse(e.target.result);
+
+            // Ahora puedes interactuar con el objeto
+            console.log('Objeto convertido:', objetoJS);
+
+            // Ejemplo de cómo acceder a los datos
+            // console.log(objetoJS.propiedad);
+            // console.log(objetoJS.array[0]);
+
+            // Aquí puedes usar tu objeto
+            usarObjetoJSON(objetoJS);
 
 
 
+        } catch (error) {
+            console.error('Error al parsear JSON:', error);
+        }
+    };
+
+    reader.readAsText(archivo);
+}
 
 
+function usarObjetoJSON(data) {
+    // Ejemplos de interacción
+    console.log('Tipo de dato:', typeof data);
+    console.log('¿Es array?', Array.isArray(data));
+    // console.log('Propiedades:', Object.keys(data)); 
+
+    // Si es un objeto
+    // if (typeof data === 'object' && data !== null) {
+    //     // Recorrer propiedades
+    //     for (let key in data) {
+    //         console.log(`${key}:`, data[key]);
+    //     }
+    // }
+
+    // Si es un array
+    // if (Array.isArray(data)) {
+    //     data.forEach((item, index) => {
+    //         console.log(`Item ${index}:`, item);
+    //     });
+    // }
+
+    // Tu lógica aquí
 
 
+    if (typeof data != 'object' || data == null) {
+        alert("importacion No valida")
+        return
+    }
+
+    let claves = Object.keys(data)
+
+    let series = data[claves[0]]
+    const serieConvertida = convertirSeries(series)
+
+    dam.series = serieConvertida
+
+    const tbody = tablaInfo.querySelector("tbody")
+    instertarSeries(tbody, serieConvertida)
+
+    
 
 
+    alert("importado correctamente")
+
+}
 
 
+function convertirSeries(seriesDDBB) {
+    // console.log("seriesDDBB",seriesDDBB)
+    let serieConvertida = []
+
+    for (const serieDB of seriesDDBB) {
+        serieConvertida.push(
+            {
+                "serie": `${serieDB["NUM_SECSERIE"]}`,
+                "unidadesFisicas": "--.-- U",
+                "partida": "-----",
+                "tratoPreferente": "----",
+                "codLiber": "----",
+                "descripciones": [
+                    serieDB["DES_COMER"],
+                    serieDB["DES_FORMAPRESEN"],
+                    serieDB["DES_MATECOMP"],
+                    serieDB["DES_MERCESP"],
+                    serieDB["DES_OTROSCARAC"],
+                    serieDB["DES_USOAPLIC"]
+                ]
+            }
+        )
+    }
 
 
+    return serieConvertida
+}
 
 
 
