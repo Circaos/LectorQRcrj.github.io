@@ -110,7 +110,7 @@ async function obtenerApiDam(dam) {
 
 
 
-    const url = "http://localhost:3050/dtarc/getInfoDam"
+    // const url = "http://localhost:3050/dtarc/getInfoDam"
     const url = "https://apiproviaspruebav1-production.up.railway.app/dtarc/getInfoDam"
     const data = { 'dua': dam }
     const response = await fetch(url, {
