@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Visualizador de Documento | Formulario + Previsualización</title>
+    <link rel="stylesheet" href="./stiloMain.css">
+    <link rel="stylesheet" href="./stiloModal.css">
+    <link rel="stylesheet" href="./stiloModalConfig.css">
+
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- COLUMNA IZQUIERDA: FORMULARIO COMPLETO -->
+        <div class="form-panel">
+            <h2>✍️ Editor del documento</h2>
+            <form class="documentForm" id="documentForm">
+                <div style=" overflow: auto; flex: 1;">
+
+                    <div class="agrupador" data-id="idBuscadorDam">
+                        <div class="form-group" data-id="idBuscadorDam">
+                            <label>📅 DAM</label>
+                            <input type="text" name="inputName" placeholder="1182610XXXXXX">
+                            <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ INGRESAR DAM</small>
+                        </div>
+                        <button class="btnMain">Buscar</button>
+                    </div>
+
+                    <div class="separador2" data-id3="sepradorInputs">
+
+                        <div class="agrupador">
+                            <div class="form-group peso3" data-id2="idDamBuscada">
+                                <label>DAM</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                            <div class="form-group  peso1" data-id2="idFechaNumeracion">
+                                <label>Fecha Numeracion</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group" data-id2="idAduanaOrigen">
+                            <label>Aduana Origen</label>
+                            <input type="text" name="inputName" readonly>
+                        </div>
+                        <div class="agrupador">
+                            <div class="form-group peso3" data-id2="idNombreEmpresa">
+                                <label>Nombre Empresa</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                            <div class="form-group peso1" data-id2="idRucEmpresa">
+                                <label>RUC Empresa</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                        </div>
+                        <div class="agrupador">
+                            <div class="form-group peso3" data-id2="idCantBultosTexto">
+                                <label>Numero de Bultos Texto</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                            <div class="form-group peso1" data-id2="idCantBultosNumber">
+                                <label>Numero de Bultos</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                        </div>
+                        <div class="agrupador">
+                            <div class="form-group" data-id2="idAgenteAduana">
+                                <label>Agente Aduanas</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                            <div class="form-group" data-id2="idDomicilioFiscal">
+                                <label>Domicilio Fiscal</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                        </div>
+                        <div class="separador"></div>
+                        <div class="agrupador">
+                            <div class="form-group" data-id2="idPartiNabandina">
+                                <label>Partida Nandina</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                            <div class="form-group" data-id2="idPartiNandina">
+                                <label>Partida Nabandina</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                        </div>
+                        <div class="agrupador">
+                            <div class="form-group" data-id2="idDescriMerca">
+                                <label>Descri Merc. Rec.</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                        </div>
+                        <div class="agrupador">
+                            <div class="form-group" data-id2="idBultosReco">
+                                <label>Bultos Reconocidos</label>
+                                <input type="text" name="inputName" readonly>
+                            </div>
+                        </div>
+
+
+                        <button id="idCorreccionDAM" class="btnMain">✏️ Corregir</button>
+                    </div>
+
+                    <div class="separador2" data-id3="sepradorPagoFactura">
+                        <div class="form-group-type2" data-id2="idPagoFactura">
+                            <label>Pagó factura: </label>
+                            <span class="cumple-si"> ✅ Pagado </span>
+                            <input type="checkbox" name="inputName" id="idCheckboxFactura" checked style="display:none;">
+                        </div>
+                        <div class="agrupador">
+                            <div class="form-group" data-id2="idReqFactura">
+                                <label>N° Req. Factura</label>
+                                <input type="text" name="inputName" readonly>
+                                <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                            </div>
+                            <div class="form-group" data-id2="idFechaReqFactura">
+                                <label>Fech Req. Factura</label>
+                                <input type="date" name="inputName" readonly>
+                                <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                            </div>
+                        </div>
+                        <div class="agrupador">
+                            <div class="form-group" data-id2="idPlazoFactura">
+                                <label>Plazo Factura</label>
+                                <input type="text" name="inputName" readonly>
+                                <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                            </div>
+                            <div class="form-group" data-id2="idFechaFactura">
+                                <label>Fecha Factura</label>
+                                <input type="date" name="inputName" readonly>
+                                <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                            </div>
+                        </div>
+                        <button id="idCorreccionPagoFactura" class="btnMain">✏️ Corregir</button>
+                    </div>
+                    <!-- 
+                    <div class="separador"></div> -->
+
+                    <div class="separador2" data-id4="separadorCombos">
+
+                        <div class="agrupador" data-id="idArt2">
+                            <div class="form-group" data-id="idInformeArt2">
+                                <label>N. INF. ART. 2</label>
+                                <select name="comboList"></select>
+                                <small class="hint" style="color: red; font-weight: 700;"></small>
+                            </div>
+                            <div class="form-group" data-id="idFechaArt2">
+                                <label>FECHA ART 2</label>
+                                <input type="date" name="inputName" readonly>
+                                <small class="hint" style="color: red; font-weight: 700;"> </small>
+                            </div>
+                            <button class="btnMain">⚙️</button>
+                        </div>
+                        <div class="separador"></div>
+                        <div class="agrupador" data-id="idAforo">
+                            <div class="form-group" data-id="idLugarAforo">
+                                <label>LUGAR AFORO</label>
+                                <select name="comboList"></select>
+                                <small class="hint" style="color: red; font-weight: 700;"></small>
+                            </div>
+                            <div class="form-group" data-id="idFechaAforo">
+                                <label>FECHA AFORO</label>
+                                <input type="date" name="inputName">
+                                <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ VERIFICAR</small>
+                            </div>
+                            <button class="btnMain">⚙️</button>
+                        </div>
+                        <div class="separador"></div>
+                        <div class="agrupador" data-id="idCeca">
+                            <div class="form-group" data-id="idCorreoCeca">
+                                <label>CORREO CECA</label>
+                                <select name="comboList"></select>
+                                <small class="hint" style="color: red; font-weight: 700;"> </small>
+                            </div>
+                            <div class="form-group" data-id="idFechaCeca">
+                                <label>FECHA CECA</label>
+                                <input type="date" name="inputName">
+                                <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ VERIFICAR</small>
+                            </div>
+                            <button class="btnMain">⚙️</button>
+                        </div>
+                        <div class="separador"></div>
+                        <div class="agrupador" data-id="idEncargado">
+                            <div class="form-group peso3" data-id="idNombreEncargado">
+                                <label>Encargado</label>
+                                <select name="comboList"></select>
+                                <small class="hint" style="color: red; font-weight: 700;"></small>
+                            </div>
+                            <div class="form-group peso1" data-id="idDNIEncargado" style="max-width: 35%;">
+                                <label>DNI Encargado</label>
+                                <input type="text" name="inputName" readonly>
+                                <small class="hint" style="color: red; font-weight: 700;"></small>
+                            </div>
+                            <button class="btnMain">⚙️</button>
+                        </div>
+                        <div class="separador"></div>
+
+                    </div>
+
+                    <div class="separador2">
+                        <div class="agrupador" data-id="idGuias">
+                            <div class="form-group" data-id="idBotonGuias">
+                                <label>🚗📄 [GUIAS] 📑🚜 </label>
+                                <button class="btnMain">GRETs📄</button>
+                                <small class="hint" style="color: red; font-weight: 700;"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agrupador">
+                        <div class="form-group" data-id="idModalPeca">
+                            <label>📄📑📍[PECO]</label>
+                            <button class="btnMain">Ventana PECO</button>
+                            <small class="hint" style="color: red; font-weight: 700;"></small>
+                        </div>
+                        <div class="form-group" data-id="idModalTributos">
+                            <label>📄📑📍[TRIBUTOS]</label>
+                            <button class="btnMain">Ventana TRIBUTOS</button>
+                            <small class="hint" style="color: #1bc331; font-weight: 700;"></small>
+                        </div>
+                    </div>
+                    <!-- <div class="agrupador">
+
+                        <div class="form-group">
+                            <label>📅 Fecha del documento</label>
+                            <input type="date" id="fechaDoc" name="fechaDoc" value="2025-04-15">
+                            <small class="hint">Selecciona una fecha importante.</small>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label>📅 Fecha del documento</label>
+                            <input type="date" id="fechaDoc" name="fechaDoc" value="2025-04-15">
+                            <small class="hint">Selecciona una fecha importante.</small>
+                        </div>
+
+                    </div> -->
+                    <!-- FECHA -->
+
+                    <!-- PALABRAS (texto libre) -->
+                    <!-- <div class="form-group">
+                        <label>📝 Palabras clave / Título</label>
+                        <input type="text" id="palabrasClave" placeholder="Ej: Factura mensual, Contrato, Informe..."
+                            value="Presupuesto Q2 2025">
+                        <small class="hint">Título o frase principal</small>
+                    </div> -->
+
+                    <!-- NÚMEROS (cantidad númerica entero o decimal) -->
+                    <!-- <div class="form-group">
+                        <label>🔢 Número (cantidad / ID)</label>
+                        <input type="number" id="numeroCantidad" step="any" placeholder="Ej: 1542, 99.99"
+                            value="1250.75">
+                        <small class="hint">Valor numérico (puede ser decimal)</small>
+                    </div> -->
+
+                    <!-- MONEDA con aspecto -->
+                    <!-- <div class="form-group">
+                        <label>💰 Moneda (Monto)</label>
+                        <div class="currency-input">
+                            <span>$</span>
+                            <input type="number" id="montoMoneda" step="0.01" placeholder="0.00" value="5499.99">
+                        </div>
+                        <small class="hint">Cantidad en dólares (o tu moneda local)</small>
+                    </div> -->
+
+                    <!-- Texto adicional (descripción larga) -->
+                    <!-- <div class="form-group">
+                        <label>📄 Texto adicional / Observaciones</label>
+                        <textarea id="textoExtra" rows="3"
+                            placeholder="Comentarios, descripción, detalles del documento...">Servicio de consultoría digital + desarrollo web. Incluye mantenimiento por 3 meses.</textarea>
+                        <small class="hint">Puedes incluir más contexto.</small>
+                    </div> -->
+
+                    <!-- Campo extra para representar otra palabra / concepto (personalizable) -->
+                    <!-- <div class="form-group">
+                        <label>🏷️ Etiqueta / Referencia</label>
+                        <input type="text" id="referencia" placeholder="Referencia adicional" value="REF-2025-001">
+                    </div> -->
+
+                </div>
+
+                <!-- <button type="button" id="tuBotonDeAbrir">🔄 Abrir Modal</button>
+                <button type="button" id="actualizarPreviewBtn">🔄 Actualizar vista previa</button> -->
+
+                <!-- <div class="divConjuntoBtnsDescarga" style="width: 100%;">
+                    <button type="button" id="descargarWordBtn">⬇️ WORD</button>
+                    <button type="button" id="descargarPdfBtn">⬇️ PDF</button>
+                </div> -->
+            </form>
+        </div>
+
+        <!-- COLUMNA DERECHA: CUADRADO DE PREVISUALIZACIÓN DEL DOCUMENTO -->
+        <div class="preview-panel">
+            <div class="doc-card">
+                <div class="doc-header">
+                    <span class="doc-icon">📄📎</span>
+                    <h3>Vista previa del documento</h3>
+                </div>
+                <div class="doc-body" id="previewBody">
+                    <div id="previewDocx"></div>
+                </div>
+                <div class="doc-footer" style="display: flex; justify-content: space-around;">
+                    <button type="button" class="btnFooter" id="idEleccionInforme">INFORME</button>
+                    <button type="button" class="btnFooter" id="idEleccionResolucion">RESOLUCION</button>
+                    <button type="button" class="btn-save" id="descargarWordBtn">⬇️ DESCARGAR</button>
+                    <span>🖨️ documento generado en tiempo real</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="miModalGuias" class="modal-overlay">
+        <div class="modal-content">
+            <div class="conten-interfaz-pega">
+                <div class="section">
+                    <h2>📄 GUIAS </h2>
+                    <div id="guias-container">
+                        <!-- Dinámico -->
+                    </div>
+                    <div class="add-item">
+                        <input type="text" id="new-guia-numero" placeholder="N° GUIA">
+                        <input type="text" id="new-guia-ruc" placeholder="RUC">
+                        <input type="text" id="new-guia-razonSocial" placeholder="Razón Social">
+                        <button id="btnAddGuias" class="btn-add">➕ Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="global-actions">
+                <button id="cerrarModalGuias" class="btn-save">Guardar Todo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fondo oscuro (Overlay) -->
+    <div id="miModal" class="modal-overlay">
+        <!-- Recuadro blanco (Contenido) -->
+        <div class="modal-content">
+
+            <h1>Pegado???</h1>
+            <!-- <h2>Título del Modal</h2>
+            <p>Este es un mensaje importante sin mover nada de tu diseño.</p> -->
+            <div class="conten-interfaz-pega">
+                <button id="idBtnPegarContenido" class="btnMain">"CLICK" PARA PEGAR</button>
+                <div class="icono">➡️</div>
+                <div class="tablaContenido noView" id="idTablaContenidoPECO">PECO/AMAZONIA</div>
+                <div class="tablaContenido noView" id="idTablaContenidoTRIBUTOS">TRIBUTOS</div>
+            </div>
+
+            <h3 class="alertaModal">Mensaje</h3>
+
+            <button id="cerrarModal" class="btnMain">Cerrar</button>
+        </div>
+    </div>
+
+
+    <div id="miModalConfig" class="modal-overlay">
+        <!-- Recuadro blanco (Contenido) -->
+        <div class="modal-content modal-content-config">
+            <h1 id="titleModalConfig">📋 Gestor de Información</h1>
+            <div class="configInfoSeccion">
+
+                <div class="section">
+                    <h2>📋 Artículo 2</h2>
+                    <div id="art2-container">
+                        <!-- Aquí se renderizarán dinámicamente los Art2 -->
+                    </div>
+                    <div class="add-item">
+                        <button id="btnAddLugarArt2" class="btn-add">➕ Agregar Art2</button>
+                    </div>
+                </div>
+
+                <!-- Sección Lugar Aforo -->
+                <div class="section">
+                    <h2>📍 Lugares de Aforo</h2>
+                    <div id="lugarAforo-container">
+                        <!-- Dinámico -->
+                    </div>
+                    <div class="add-item">
+                        <input type="text" id="new-lugarAforo" placeholder="Nuevo lugar">
+                        <button id="btnAddLugarAforo" class="btn-add">➕ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Sección Correo CECA -->
+                <div class="section">
+                    <h2>📧 Correos CECA</h2>
+                    <div id="correoCeca-container">
+                        <!-- Dinámico -->
+                    </div>
+                    <div class="add-item">
+                        <input type="email" id="new-correo" placeholder="Nuevo correo">
+                        <button id="btnAddCorreoCeca" class="btn-add">➕ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Sección Responsables -->
+                <div class="section">
+                    <h2>👥 Responsables</h2>
+                    <div id="responsables-container">
+                        <!-- Dinámico -->
+                    </div>
+                    <div class="add-item">
+                        <input type="text" id="new-responsable-nombre" placeholder="Nombre">
+                        <input type="text" id="new-responsable-dni" placeholder="DNI">
+                        <button id="btnAddResponsable" class="btn-add">➕ Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="global-actions">
+                <button id="cancelarModalConfig" class="btn-delete">Cancelar</button>
+                <button id="GuardarModalConfig" class="btn-save">Guardar Todo</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/pizzip@3.1.6/dist/pizzip.js"></script>
+    <script src="https://unpkg.com/docxtemplater@3.46.0/build/docxtemplater.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/angular-expressions@1.4.3/dist/angular-expressions.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./modalConfig.js"></script>
+    <!-- <script>
+        const modal = document.getElementById('miModal');
+        const btnAbrir = document.getElementById('tuBotonDeAbrir'); // Usa el ID de un botón que ya tengas
+        const btnCerrar = document.getElementById('cerrarModal');
+
+        // Función para abrir
+        btnAbrir.onclick = () => modal.style.display = 'flex';
+
+        // Función para cerrar
+        btnCerrar.onclick = () => modal.style.display = 'none';
+
+        // Cerrar si hacen clic fuera del recuadro blanco
+        window.onclick = (event) => {
+            if (event.target == modal) modal.style.display = 'none';
+        }
+
+    </script> -->
+</body>
+
+</html>
