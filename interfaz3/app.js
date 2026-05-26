@@ -926,7 +926,8 @@ function rellenarAlimentadorFromDam(data) {
     setOtrosDatos(rucData, razonSocialData)
 
 
-    dataAlimentadorWord.fromDam.aduanaNumeracion = nomAduana(data["dam"].slice(0, 3))
+    dataAlimentadorWord.fromDam.aduanaNumeracion = nomAduana(data["dam"].slice(0, 3)).toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" "); 
+    
     dataAlimentadorWord.fromDam.agenteAduana = data["nomDeclarante"]
     dataAlimentadorWord.fromDam.cantBultosNumero = Number(data["cantBultos"].replace(',', '')).toString()
     dataAlimentadorWord.fromDam.cantBultosTexto = numeroAPalabras(Number(data["cantBultos"].replace(',', '')))

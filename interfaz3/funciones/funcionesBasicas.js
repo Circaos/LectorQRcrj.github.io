@@ -333,32 +333,69 @@ function reconfiguracionObjeto(objeto) {
     const IGVArray = objetoPlano["cuadroDeudaTributaria-cuadroGeneral-IGV"]
     const TotalArray = objetoPlano["cuadroDeudaTributaria-cuadroGeneral-totales"]
 
+
+    if (objetoPlano[""]) {
+        
+    }
+    //Redodeando TOTALES
+    TotalArray[0] = Math.round(TotalArray[0])
+    TotalArray[4] = Math.round(TotalArray[4])
+    TotalArray[5] = Math.round(TotalArray[5])
+    //REDONDEADO LIQUIDACION ARANCEL NACIONAL
+    // const pepe = obtenerRedondeoInicales(TotalArray[0],AVArray[0],IPMArray[0],IGVArray[0])
+    // console.log("pepe",pepe)
+    const datosRedondosLiqui = obtenerRedondeoInicales(TotalArray[0],AVArray[0],IPMArray[0],IGVArray[0])
+    AVArray[0] = datosRedondosLiqui[0]
+    IPMArray[0] = datosRedondosLiqui[1]
+    IGVArray[0] = datosRedondosLiqui[2] 
+    // //RED. DS 015-94
+    const datosRedondosPECO = obtenerRedondeoInicales(TotalArray[4],AVArray[4],IPMArray[4],IGVArray[4])
+    AVArray[4] = datosRedondosPECO[0]
+    IPMArray[4] = datosRedondosPECO[1]
+    IGVArray[4] = datosRedondosPECO[2]
+    // [AVArray[4],IPMArray[4],IGVArray[4]] = obtenerRedondeoInicales(TotalArray[4],AVArray[4],IPMArray[4],IGVArray[4])
+    // //RED. 27037
+    const datosRedondosAmazonia = obtenerRedondeoInicales(TotalArray[5],AVArray[5],IPMArray[5],IGVArray[5])
+    AVArray[5] = datosRedondosAmazonia[0]
+    IPMArray[5] = datosRedondosAmazonia[1]
+    IGVArray[5] = datosRedondosAmazonia[2]
+    // [AVArray[5],IPMArray[5],IGVArray[5]] = obtenerRedondeoInicales(TotalArray[5],AVArray[5],IPMArray[5],IGVArray[5])
+    
+
+
+
     objetoPlano["textoAVLiqu"] = formatearNumeroDOC(AVArray[0])
     objetoPlano["textoIPMLiqu"] = formatearNumeroDOC(IPMArray[0])
     objetoPlano["textoIGVLiqu"] = formatearNumeroDOC(IGVArray[0])
-    objetoPlano["textoTotLiqu"] = formatearNumeroDOC(Math.round(TotalArray[0]))
-
-    if (objeto["estadoOnlyAMAZONIA"]) {
-        objetoPlano["textoAVNoReg"] = formatearNumeroDOC(AVArray[0] - AVArray[5])
-        objetoPlano["textoIPMNoReg"] = formatearNumeroDOC(IPMArray[0] - IPMArray[5])
-        objetoPlano["textoIGVNoReg"] = formatearNumeroDOC(IGVArray[0] - IGVArray[5])
-        objetoPlano["textoTotNoReg"] = formatearNumeroDOC(Math.round(TotalArray[0] - TotalArray[5]))
-    }else{
-        objetoPlano["textoAVNoReg"] = formatearNumeroDOC(AVArray[0] - AVArray[5] - AVArray[4])
-        objetoPlano["textoIPMNoReg"] = formatearNumeroDOC(IPMArray[0] - IPMArray[5]- IPMArray[4])
-        objetoPlano["textoIGVNoReg"] = formatearNumeroDOC(IGVArray[0] - IGVArray[5] - IGVArray[4])
-        objetoPlano["textoTotNoReg"] = formatearNumeroDOC(Math.round(TotalArray[0] - TotalArray[5] - TotalArray[4]))
-    }
+    objetoPlano["textoTotLiqu"] = formatearNumeroDOC(TotalArray[0])
 
     objetoPlano["textoAVRegu27"] = formatearNumeroDOC(AVArray[5])
     objetoPlano["textoIPMRegu27"] = formatearNumeroDOC(IPMArray[5])
     objetoPlano["textoIGVRegu27"] = formatearNumeroDOC(IGVArray[5])
-    objetoPlano["textoTotRegu27"] = formatearNumeroDOC(Math.round(TotalArray[5]))
+    objetoPlano["textoTotRegu27"] = formatearNumeroDOC(TotalArray[5])
 
     objetoPlano["textoAVReguPECO"] = formatearNumeroDOC(AVArray[4])
     objetoPlano["textoIPMReguPECO"] = formatearNumeroDOC(IPMArray[4])
     objetoPlano["textoIGVReguPECO"] = formatearNumeroDOC(IGVArray[4])
-    objetoPlano["textoTotReguPECO"] = formatearNumeroDOC(Math.round(TotalArray[4]))
+    objetoPlano["textoTotReguPECO"] = formatearNumeroDOC(TotalArray[4])
+    
+    if (objeto["estadoOnlyAMAZONIA"]) {
+        objetoPlano["textoAVNoReg"] = formatearNumeroDOC(AVArray[0] - AVArray[5])
+        objetoPlano["textoIPMNoReg"] = formatearNumeroDOC(IPMArray[0] - IPMArray[5])
+        objetoPlano["textoIGVNoReg"] = formatearNumeroDOC(IGVArray[0] - IGVArray[5])
+        objetoPlano["textoTotNoReg"] = formatearNumeroDOC(TotalArray[0] - TotalArray[5])
+    }else{
+        objetoPlano["textoAVNoReg"] = formatearNumeroDOC(AVArray[0] - AVArray[5] - AVArray[4])
+        objetoPlano["textoIPMNoReg"] = formatearNumeroDOC(IPMArray[0] - IPMArray[5]- IPMArray[4])
+        objetoPlano["textoIGVNoReg"] = formatearNumeroDOC(IGVArray[0] - IGVArray[5] - IGVArray[4])
+        objetoPlano["textoTotNoReg"] = formatearNumeroDOC(TotalArray[0] - TotalArray[5] - TotalArray[4])
+    }
+
+
+
+
+
+
 
     objetoPlano["estadoPECOyAMAZONIAProc"] = objeto["estadoPECOyAMAZONIA"] && AVArray[4] > 0
     objetoPlano["estadoPECOyAMAZONIAnoProcPECO"] = objeto["estadoPECOyAMAZONIA"] && AVArray[4] == 0
@@ -412,6 +449,44 @@ function reconfiguracionObjeto(objeto) {
 
     console.log(objetoPlano)
     return objetoPlano
+
+}
+
+function obtenerRedondeoInicales(sumaRedondeada, primerBruto, segundoBruto, terceroBruto) {
+    let primerRedondo = Math.round(primerBruto)
+    let segundoRedondo = Math.round(segundoBruto)
+    let terceroRedondo = Math.round(terceroBruto)
+
+    let diferenciaTempo = sumaRedondeada - (primerRedondo + segundoRedondo + terceroRedondo)
+    if (diferenciaTempo == 0) {
+        return [primerRedondo, segundoRedondo, terceroRedondo]
+    } else {
+
+        let difPrimer = 0
+        let difSegun = 0
+        let difTerc = 0
+        if (diferenciaTempo > 0) {
+            let mayorTempo = Math.max(primerBruto, segundoBruto, terceroBruto)
+            if (mayorTempo == primerBruto) {
+                difPrimer = diferenciaTempo
+            } else if (mayorTempo == segundoBruto) {
+                difSegun = diferenciaTempo
+            } else {
+                difTerc = diferenciaTempo
+            }
+            return [primerRedondo + difPrimer, segundoRedondo + difSegun, terceroRedondo + difTerc]
+        } else {
+            let mayorTempo = Math.min(primerBruto, segundoBruto, terceroBruto)
+            if (mayorTempo == primerBruto) {
+                difPrimer = diferenciaTempo
+            } else if (mayorTempo == segundoBruto) {
+                difSegun = diferenciaTempo
+            } else {
+                difTerc = diferenciaTempo
+            }
+            return [primerRedondo + difPrimer, segundoRedondo + difSegun, terceroRedondo + difTerc]
+        }
+    }
 
 }
 
