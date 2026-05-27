@@ -98,6 +98,8 @@ let dataAlimentadorWord = {
         fechaCorreoCeca: "PENDIENTE-FECHA-CORREO-CECA",
         nombreEncargado: "PENDIENTE-NOMBRE-ENCARGADO",
         dniEncargado: "PENDIENTE-DNI-ENCARGADO",
+        tipoDocumento: "PENDIENTE-TIPO-DOCUMENTO",
+        preNombre: "PENDIENTE-PRE-NOMBRE",
     },
     cuadroPedoAmazonia: {
         numeroRegularizacion: "PENDIENTE-NUMERO-REGULARIZACION",
@@ -1097,6 +1099,8 @@ function pintarCuadrosInput() {
         fechaCorreoCeca: "PENDIENTE-FECHA-CORREO-CECA",
         nombreEncargado: "PENDIENTE-NOMBRE-ENCARGADO",
         dniEncargado: "PENDIENTE-DNI-ENCARGADO",
+        tipoDocumento: "PENDIENTE-TIPO-DOCUMENTO",
+        preNombre: "PENDIENTE-PRE-NOMBRE",
     }
 
     // ART 2
@@ -1205,10 +1209,12 @@ function pintarCuadrosInput() {
             } else {
                 selectLugar.selectedIndex = seleccionInputsHelper.indexEncargado
             }
-            document.querySelector(`.form-group[data-id="${listIDs.idDNIEncargado}"] > input`).value = dataResponsable[seleccionInputsHelper.indexEncargado]["dni"]
+            document.querySelector(`.form-group[data-id="${listIDs.idDNIEncargado}"] > input`).value = dataResponsable[seleccionInputsHelper.indexEncargado]["documento"]
 
-            fromInputsTempo.dniEncargado = dataResponsable[seleccionInputsHelper.indexEncargado]["dni"]
+            fromInputsTempo.dniEncargado = dataResponsable[seleccionInputsHelper.indexEncargado]["documento"]
             fromInputsTempo.nombreEncargado = dataResponsable[seleccionInputsHelper.indexEncargado]["nombre"]
+            fromInputsTempo.tipoDocumento = dataResponsable[seleccionInputsHelper.indexEncargado]["tipoDoc"]
+            fromInputsTempo.preNombre = dataResponsable[seleccionInputsHelper.indexEncargado]["preNombre"]
         }
     }
 

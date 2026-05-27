@@ -314,7 +314,7 @@ function reconfiguracionObjeto(objeto) {
     const keysObjetos = Object.keys(objetoPlano)
 
     for (const key of keysObjetos) {
-
+        // console.log(key)
         if (!key.includes("estado")) {
             if (objetoPlano[key].includes("PENDIENTE-")) {
                 objetoPlano[`${key}RRR`] = objetoPlano[key]

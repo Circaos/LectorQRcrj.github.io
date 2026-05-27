@@ -180,8 +180,8 @@
                             </div>
                             <button class="btnMain">⚙️</button>
                         </div>
-                        <div class="separador"></div>
-                        <div class="agrupador" data-id="idEncargado">
+                        <!-- <div class="separador"></div> -->
+                        <div class="agrupador" data-id="idEncargado" style="display: none;">
                             <div class="form-group peso3" data-id="idNombreEncargado">
                                 <label>Encargado</label>
                                 <select name="comboList"></select>
@@ -194,7 +194,7 @@
                             </div>
                             <button class="btnMain">⚙️</button>
                         </div>
-                        <div class="separador"></div>
+                        <!-- <div class="separador"></div> -->
 
                     </div>
 
@@ -361,7 +361,7 @@
             <div class="configInfoSeccion">
 
                 <div class="section">
-                    <h2>📋 Artículo 2</h2>
+                    <h2>📋 Informe Artículo 2</h2>
                     <div id="art2-container">
                         <!-- Aquí se renderizarán dinámicamente los Art2 -->
                     </div>
@@ -384,25 +384,33 @@
 
                 <!-- Sección Correo CECA -->
                 <div class="section">
-                    <h2>📧 Correos CECA</h2>
+                    <h2>📧 Destinatario de Correos CECA</h2>
                     <div id="correoCeca-container">
                         <!-- Dinámico -->
                     </div>
                     <div class="add-item">
-                        <input type="email" id="new-correo" placeholder="Nuevo correo">
+                        <input type="email" id="new-correo" placeholder="Nuevo correo @ .com">
                         <button id="btnAddCorreoCeca" class="btn-add">➕ Agregar</button>
                     </div>
                 </div>
 
                 <!-- Sección Responsables -->
                 <div class="section">
-                    <h2>👥 Responsables</h2>
+                    <h2>👥 Persona Autorizada en Aforo</h2>
                     <div id="responsables-container">
                         <!-- Dinámico -->
                     </div>
                     <div class="add-item">
+                        <select name="new-preNombre" id="new-preNombre">
+                            <option value="Sr.">Sr.</option>
+                            <option value="Sra.">Sra.</option>
+                        </select>
                         <input type="text" id="new-responsable-nombre" placeholder="Nombre">
-                        <input type="text" id="new-responsable-dni" placeholder="DNI">
+                        <select name="new-tipoDoc" id="new-tipoDoc">
+                            <option value="DNI">DNI</option>
+                            <option value="CE">CE</option>
+                        </select>
+                        <input type="text" id="new-responsable-documento" placeholder="Documento">
                         <button id="btnAddResponsable" class="btn-add">➕ Agregar</button>
                     </div>
                 </div>

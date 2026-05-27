@@ -435,7 +435,7 @@ function renderizarResponsables() {
 
 function renderizarVistaResponsable(resp, index) {
     return `
-        <span class="item-content">👤 ${resp.nombre} - DNI: ${resp.dni}</span>
+        <span class="item-content">👤 ${resp.preNombre} ${resp.nombre} - ${resp.tipoDoc}: ${resp.documento}</span>
         <div>
             <button class="btn-edit">✏️ Editar</button>
             <button class="btn-delete">🗑️ Eliminar</button>
@@ -444,10 +444,19 @@ function renderizarVistaResponsable(resp, index) {
 }
 
 function renderizarFormularioEdicionResponsable(resp, index) {
+ 
     return `
         <div class="edit-responsable-form">
+            <select name="preNombre" id="preNombre">
+                <option value="Sr." ${(resp.preNombre == "Sr.") ? "selected" : "" }>Sr.</option>
+                <option value="Sra." ${(resp.preNombre == "Sra.") ? "selected" : "" }>Sra.</option>
+            </select>
             <input type="text" id="edit-resp-nombre-${index}" value="${resp.nombre}" placeholder="Nombre" class="edit-input">
-            <input type="text" id="edit-resp-dni-${index}" value="${resp.dni}" placeholder="DNI" class="edit-input">
+            <select name="tipoDoc" id="tipoDoc">
+                <option value="DNI" ${(resp.tipoDoc == "DNI") ? "selected" : "" }>DNI</option>
+                <option value="CE" ${(resp.tipoDoc == "CE") ? "selected" : "" }>CE</option>
+            </select>
+            <input type="text" id="edit-resp-documento-${index}" value="${resp.documento}" placeholder="Documento" class="edit-input">
         </div>
         <div>
             <button class="btn-save-form">💾 Guardar</button>
@@ -463,16 +472,19 @@ function editarResponsable(index) {
 
 function guardarEdicionResponsable(index) {
     const nombre = document.getElementById(`edit-resp-nombre-${index}`).value.trim();
-    const dni = document.getElementById(`edit-resp-dni-${index}`).value.trim();
+    const documento = document.getElementById(`edit-resp-documento-${index}`).value.trim();
+    const preNombre = document.getElementById('preNombre').value.trim();
+    const tipoDoc = document.getElementById('tipoDoc').value.trim();
 
-    if (nombre && dni) {
-        datos.responsable[index] = { nombre, dni };
+    console.log(`${nombre} - ${documento} - ${preNombre} - ${tipoDoc}`)
+    if (nombre && documento && preNombre && tipoDoc) {
+        datos.responsable[index] = { nombre, documento,preNombre,tipoDoc };
         editandoResponsableIndex = null;
         renderizarResponsables();
         guardarEnLocalStorage();
         mostrarNotificacion('Responsable actualizado ✓', 'success');
     } else {
-        mostrarNotificacion('Complete nombre y DNI', 'error');
+        mostrarNotificacion('Complete nombre y Documento', 'error');
     }
 }
 
@@ -483,17 +495,21 @@ function cancelarEdicionResponsable() {
 
 function agregarResponsable() {
     const nombre = document.getElementById('new-responsable-nombre').value.trim();
-    const dni = document.getElementById('new-responsable-dni').value.trim();
+    const documento = document.getElementById('new-responsable-documento').value.trim();
+    const preNombre = document.getElementById('new-preNombre').value.trim();
+    const tipoDoc = document.getElementById('new-tipoDoc').value.trim();
 
-    if (nombre && dni) {
-        datos.responsable.push({ nombre, dni });
+    if (nombre && documento && preNombre && tipoDoc) {
+        datos.responsable.push({ nombre, documento, preNombre,tipoDoc });
         renderizarResponsables();
         guardarEnLocalStorage();
         document.getElementById('new-responsable-nombre').value = '';
-        document.getElementById('new-responsable-dni').value = '';
+        document.getElementById('new-responsable-documento').value = '';
+        document.getElementById('new-preNombre').selectedIndex  = 0
+        document.getElementById('new-tipoDoc').selectedIndex  = 0
         mostrarNotificacion(`Responsable "${nombre}" agregado ✓`, 'success');
     } else {
-        mostrarNotificacion('Complete nombre y DNI', 'error');
+        mostrarNotificacion('Complete nombre y Documento', 'error');
     }
 }
 
