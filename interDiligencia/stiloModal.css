@@ -1,0 +1,83 @@
+.modal-overlay {
+  /* Oculto por defecto */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Oscurece el fondo */
+  z-index: 900;
+  /* Asegura que esté arriba de todo */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #e0eafc 0%, #cfdef3 100%);
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  /* max-width: 400px; */
+  /* text-align: center; */
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal-content-config {
+  width: 90%;
+  height: 90%;
+}
+
+.conten-interfaz-pega {
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.25);
+  width: 95%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+
+.tablaContenido {
+  /* background-color: royalblue; */
+  border-radius: 8px;
+  flex: 1;
+  height: 85%;
+}
+
+.icono {
+  align-content: center;
+  font-size: 2.5rem;
+}
+
+.tablaHtml {
+  /* background-color: red; */
+  height: 100%;
+  width: 100%;
+  /* border-radius: 1.5rem; */
+  border: 1px solid #4682B4;
+  border-spacing: 0px;
+  font-size: 0.8rem;
+}
+
+.tablaHtml td {
+  border: 1px solid #4682B4;
+  background-color: white;
+  text-align: center;
+  word-break: break-all;
+  min-width: 4rem;
+  /* border-spacing: 1px; */
+}
+
+.tablaHtml th {
+  border: 1px solid #4682B4;
+  background-color: #9FC5F8;
+  padding: 0.15rem;
+}
