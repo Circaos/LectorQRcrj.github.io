@@ -208,7 +208,14 @@ function generarParrafo2() {
     const cantBultosNumber  =Number(dataAlimentadorWord.fromDam.cantBultosNumero)
 
     const palabraBultito = ( cantBultosNumber==1)? "bulto":"bultos"
-    let primerParrafo = `Se verificó la llegada de ${cantBultosNumber} ${palabraBultito}, reconocimiento físico ${(cantBultosVeri==cantBultosNumber)?`de ${cantBultosNumber} ${palabraBultito}`: `, selectivo y aleatorio de ${cantBultosVeri} de ${cantBultosNumber} bultos` }, conteniendo ${dataAlimentadorWord.fromDam.descripcionMerca}, según lo declarado y solicitado a regularización, aforo en presencia de persona autorizada por la empresa ${dataAlimentadorWord.fromInputs.preNombre} ${dataAlimentadorWord.fromInputs.nombreEncargado} identificado con ${dataAlimentadorWord.fromInputs.tipoDocumento} N° ${dataAlimentadorWord.fromInputs.dniEncargado}.`
+
+    const inicialBasica = `Se verificó la llegada de ${cantBultosNumber} ${palabraBultito}, reconocimiento físico ${(cantBultosVeri==cantBultosNumber)?`de ${cantBultosNumber} ${palabraBultito}`: `, selectivo y aleatorio de ${cantBultosVeri} de ${cantBultosNumber} bultos` }, conteniendo ${dataAlimentadorWord.fromDam.descripcionMerca}, según lo declarado y solicitado a regularización, aforo en presencia de persona autorizada por la empresa ${dataAlimentadorWord.fromInputs.preNombre} ${dataAlimentadorWord.fromInputs.nombreEncargado} ${(dataAlimentadorWord.fromInputs.preNombre=="Sr.")?"identificado":"identificada"} con ${dataAlimentadorWord.fromInputs.tipoDocumento} N° ${dataAlimentadorWord.fromInputs.dniEncargado}`
+
+    let primerParrafo = `${inicialBasica}.`
+    
+    let primerParrafoOnlyPeco = `${inicialBasica}, al amparo del D.S. N.º 015-94-EF.`
+
+
 
     let segundoParrafo = `Conforme al INFORME N.º${dataAlimentadorWord.fromInputs.numeroInformeArt2}, el importador ${dataAlimentadorWord.fromDam.nombreEmpresa} identificado con RUC N° ${dataAlimentadorWord.fromDam.ruc}, con domicilio fiscal ubicado en ${dataAlimentadorWord.fromDam.domicilioFiscal}, SI cumple con los requisitos establecidos en el artículo 2° del Decreto Supremo N° 103-99-EF “Aprueban el Reglamento de las Disposiciones Tributarias contenidas en la Ley de Promoción de la inversión en la Amazonía” y modificatoria, configurando dicho cumplimiento el goce del beneficio contemplado en la Ley N° 27037 “Ley de Promoción de la Inversión en la Amazonía”.`
 
@@ -216,7 +223,14 @@ function generarParrafo2() {
 
     let noPagoParrafo = `Asimismo, queda usted notificado para que en el plazo de 5 días hábiles de efectuado el pago de la Compraventa de las mercancías que ampara esta DAM o vencido el plazo declarado por el OCE para la operación al crédito, se sirva presentar conforme lo establecido en el Art 3-A TUO de la Ley para la Lucha contra la Evasión y para la Formalización de la Economía - D.S. N° 150-2007-EF y modificatorias, los documentos que acreditan el uso de los medios de pago establecidos en el Art. 5.° de la norma citada, caso contrario estará incurso en la infracción PA8 estipulada en la Tabla de Sanciones de la Ley General de Aduanas, equivalente al 10% del valor FOB declarado de la mercancía. Se precisa que la presentación de los documentos que sustente el uso de los medios de pago puede ser presentados vía expediente a través de la mesa de parte virtual de la SUNAT o en su defecto a través del requerimiento generado en la DAM por la transmisión de la rectificación electrónica de la casilla 4.1 del Formato B indicando el código/nombre de la entidad financiera y el número de operación.`
 
-    let rpt = `${titulo}\n\n${fechitaAforo}\n${horitaAfoto} \n\n${primerParrafo}\n\n${segundoParrafo}`
+    let rpt = `${titulo}\n\n${fechitaAforo}\n${horitaAfoto}`
+
+    if (dataAlimentadorWord.estadoOnlyPECO && !dataAlimentadorWord.estadoOnlyAMAZONIA) {
+        rpt = `${rpt}\n\n${primerParrafoOnlyPeco}`
+    }else{
+        rpt = `${rpt}\n\n${primerParrafo}\n\n${segundoParrafo}`
+    }
+
 
     if (!dataAlimentadorWord.estadoPagadoFactura) {
         rpt = `${rpt}\n\n${noPagoParrafo}`
