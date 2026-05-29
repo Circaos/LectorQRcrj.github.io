@@ -258,7 +258,7 @@ function generarParrafo2() {
         rpt = `${rpt}\n\n${noPagoParrafo}`
     }
 
-    if (dataAlimentadorWord.estadoOnlyAMAZONIA) {
+    if (dataAlimentadorWord.estadoOnlyAMAZONIA || dataAlimentadorWord.estadoPECOyAMAZONIA) {
         rpt = `${rpt}\n\n${segundoParrafo}`
     }
 
