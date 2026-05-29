@@ -41,7 +41,7 @@
                                     <div class="form-group peso3" data-id2="idDamBuscada">
                                         <label>DAM</label>
                                         <input type="text" name="inputName" readonly>
-                                        
+
                                     </div>
                                     <!-- <div class="form-group  peso1" data-id2="idFechaNumeracion" style="display: none;">
                                         <label>Fecha Numeracion</label>
@@ -69,6 +69,10 @@
                                     </div>
                                     <div class="form-group peso1" data-id2="idCantBultosNumber">
                                         <label>Numero de Bultos</label>
+                                        <input type="text" name="inputName" readonly>
+                                    </div>
+                                    <div class="form-group peso1" data-id2="idCantUnidComerNumber">
+                                        <label>Cant Und. Comerc.</label>
                                         <input type="text" name="inputName" readonly>
                                     </div>
                                 </div>
@@ -100,9 +104,22 @@
                                         <small class="hint" style="color: #d78607; font-weight: 700;"></small>
                                     </div>
                                 </div>
+                                <div class="separador"></div>
                                 <div class="agrupador">
+                                    <div class="contentRadios">
+                                        <input type="radio" name="tipoContent" value="bultos" id="bultos" checked disabled>
+                                        <label for="bultos">Bultos</label>
+                                        <br>
+                                        <input type="radio" name="tipoContent" value="unidComer" id="unidComer" disabled>
+                                        <label for="unidComer">Und.Comer.</label>
+                                    </div>
                                     <div class="form-group" data-id2="idBultosReco">
                                         <label>Bultos Reconocidos</label>
+                                        <input type="text" name="inputName" readonly>
+                                        <small class="hint" style="color: #d78607; font-weight: 700;"></small>
+                                    </div>
+                                    <div class="form-group" data-id2="idUnidComerReco" style="display: none;">
+                                        <label>Und.Comer Reconocidos</label>
                                         <input type="text" name="inputName" readonly>
                                         <small class="hint" style="color: #d78607; font-weight: 700;"></small>
                                     </div>
@@ -161,7 +178,7 @@
                                     </div>
                                     <button class="btnMain">⚙️</button>
                                 </div>
-                                <div class="agrupador" data-id="idAforo" >
+                                <div class="agrupador" data-id="idAforo">
                                     <div class="form-group" data-id="idLugarAforo" style="display: none;">
                                         <label>LUGAR AFORO</label>
                                         <select name="comboList"></select>
@@ -185,7 +202,7 @@
 
                             </div>
 
-                            
+
 
                             <div class="separador2" data-id3="sepradorPagoFactura">
                                 <div class="form-group-type2" data-id2="idPagoFactura">

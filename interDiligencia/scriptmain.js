@@ -15,6 +15,7 @@ let dataAlimentadorWord = {
         numeroDam: "PENDIENTE-NUMERO-DAM",
         cantBultosNumero: "PENDIENTE-CANTIDAD-BULTOS-NUMERO",
         cantBultosTexto: "PENDIENTE-CANTIDAD-BULTOS-TEXTO",
+        cantUnidComerNumero:"PENDIENTE-CANTIDAD-UND-COMERC",
         aduanaNumeracion: "PENDIENTE-ADUANA-NUMERACION",
         fechaCancelacionTributos: "PENDIENTE-FECHA-CANCELACION",
         rangoSeriesAcogida: "PENDIENTE-RANGO-ACOGIDO",
@@ -23,6 +24,7 @@ let dataAlimentadorWord = {
         partidaNandina: "PENDIENTE-NANDINA",
         partidaNabandina: "PENDIENTE-NABANDINA",
         bultosReconocidos: "PENDIENTE-BULTOS-RECO",
+        unidComerReconocidos: "PENDIENTE-UND-COMER-RECO",
 
     },
     datosFactura: {
@@ -75,7 +77,8 @@ let dataAlimentadorWord = {
     estadoPagadoFactura: true,
     estadoOnlyPECO: false,
     estadoOnlyAMAZONIA: false,
-    estadoPECOyAMAZONIA: false
+    estadoPECOyAMAZONIA: false,
+    estadoSeleccionBultos:true
 }
 
 
@@ -101,6 +104,7 @@ const listIDs2 = {
     idNombreEmpresa: ["idNombreEmpresa", "nombreEmpresa"],
     idRucEmpresa: ["idRucEmpresa", "ruc"],
     idCantBultosNumber: ["idCantBultosNumber", "cantBultosNumero"],
+    idCantUnidComerNumber: ["idCantUnidComerNumber", "cantUnidComerNumero"],
     // idCantBultosTexto: ["idCantBultosTexto", "cantBultosTexto"],
     // idAgenteAduana: ["idAgenteAduana", "agenteAduana"],
     idDomicilioFiscal: ["idDomicilioFiscal", "domicilioFiscal"],
@@ -108,6 +112,7 @@ const listIDs2 = {
     // idPartiNandina: ["idPartiNandina", "partidaNandina"],
     // idPartiNabandina: ["idPartiNabandina", "partidaNabandina"],
     idBultosReco: ["idBultosReco", "bultosReconocidos"],
+    idUnidComerReco: ["idUnidComerReco", "unidComerReconocidos"],
 }
 
 const listIDsAgrupador = {
@@ -140,6 +145,7 @@ let seleccionInputsHelper = {
 
 //ESTADOS
 let estadoPagoFacturas = true
+let estadoSeleccionBultosTipo = true
 
 // -------- OBTENER ELEMENTOS DEL DOM ----------
 const fraseSelect = document.getElementById('fraseSelect');
@@ -203,17 +209,31 @@ function generarParrafo2() {
 
     let fechitaAforo = `FECHA AFORO: ${dataAlimentadorWord.fromInputs.fechaAforo}`
     let horitaAfoto = `HORA AFORO: ${dataAlimentadorWord.fromInputs.horaAforo}`
+    let bultitosAforo = `BULTOS AFORO: ${dataAlimentadorWord.fromDam.cantBultosNumero}`
+    let undComerAforo = `UNIDADES COMERCIALES AFORO: ${dataAlimentadorWord.fromDam.cantUnidComerNumero}`
 
     const cantBultosVeri = Number(dataAlimentadorWord.fromDam.bultosReconocidos)
     const cantBultosNumber  =Number(dataAlimentadorWord.fromDam.cantBultosNumero)
 
-    const palabraBultito = ( cantBultosNumber==1)? "bulto":"bultos"
-
-    const inicialBasica = `Se verificó la llegada de ${cantBultosNumber} ${palabraBultito}, reconocimiento físico ${(cantBultosVeri==cantBultosNumber)?`de ${cantBultosNumber} ${palabraBultito}`: `, selectivo y aleatorio de ${cantBultosVeri} de ${cantBultosNumber} bultos` }, conteniendo ${dataAlimentadorWord.fromDam.descripcionMerca}, según lo declarado y solicitado a regularización, aforo en presencia de persona autorizada por la empresa ${dataAlimentadorWord.fromInputs.preNombre} ${dataAlimentadorWord.fromInputs.nombreEncargado} ${(dataAlimentadorWord.fromInputs.preNombre=="Sr.")?"identificado":"identificada"} con ${dataAlimentadorWord.fromInputs.tipoDocumento} N° ${dataAlimentadorWord.fromInputs.dniEncargado}`
-
-    let primerParrafo = `${inicialBasica}.`
+    const cantUndComerVeri = Number(dataAlimentadorWord.fromDam.unidComerReconocidos)
+    const cantUndComerNumber = Number(dataAlimentadorWord.fromDam.cantUnidComerNumero)
     
-    let primerParrafoOnlyPeco = `${inicialBasica}, al amparo del D.S. N.º 015-94-EF.`
+    
+    const palabraBultito = ( cantBultosNumber==1)? "bulto":"bultos"
+    let inicialBasica = ""
+    if (dataAlimentadorWord.estadoSeleccionBultos) {
+
+        inicialBasica = `Se verificó la llegada de ${cantBultosNumber} ${palabraBultito}, reconocimiento físico ${(cantBultosVeri==cantBultosNumber)?`de ${cantBultosNumber} ${palabraBultito}`: `, selectivo y aleatorio de ${cantBultosVeri} de ${cantBultosNumber} bultos` }, conteniendo ${dataAlimentadorWord.fromDam.descripcionMerca}, según lo declarado y solicitado a regularización, aforo en presencia de persona autorizada por la empresa ${dataAlimentadorWord.fromInputs.preNombre} ${dataAlimentadorWord.fromInputs.nombreEncargado} ${(dataAlimentadorWord.fromInputs.preNombre=="Sr.")?"identificado":"identificada"} con ${dataAlimentadorWord.fromInputs.tipoDocumento} N° ${dataAlimentadorWord.fromInputs.dniEncargado}`
+    }else{
+        inicialBasica = `Se verificó la llegada de ${cantBultosNumber} ${palabraBultito}, reconocimiento físico${(cantUndComerVeri==cantUndComerNumber)?` de ${cantUndComerNumber} unidades comerciales`: `, selectivo y aleatorio de ${cantUndComerVeri} de ${cantUndComerNumber} unidades comerciales` }, conteniendo ${dataAlimentadorWord.fromDam.descripcionMerca}, según lo declarado y solicitado a regularización, aforo en presencia de persona autorizada por la empresa ${dataAlimentadorWord.fromInputs.preNombre} ${dataAlimentadorWord.fromInputs.nombreEncargado} ${(dataAlimentadorWord.fromInputs.preNombre=="Sr.")?"identificado":"identificada"} con ${dataAlimentadorWord.fromInputs.tipoDocumento} N° ${dataAlimentadorWord.fromInputs.dniEncargado}`
+    }
+
+
+    let primerParrafo = `${inicialBasica}, al amparo de la Ley Nro 27037 y del D.S. Nro 015-94-EF. Base legal: DESPA-PE.01.15 y DESPA-PE.01.13. `
+    
+    let primerParrafoOnlyPeco = `${inicialBasica}, al amparo del D.S. Nro 015-94-EF.  Base legal: DESPA-PE.01.13`
+
+    let primerParrafoOnlyAmazon = `${inicialBasica}, al amparo de la Ley Nro 27037. Base legal: DESPA-PE.01.15. `
 
 
 
@@ -223,17 +243,23 @@ function generarParrafo2() {
 
     let noPagoParrafo = `Asimismo, queda usted notificado para que en el plazo de 5 días hábiles de efectuado el pago de la Compraventa de las mercancías que ampara esta DAM o vencido el plazo declarado por el OCE para la operación al crédito, se sirva presentar conforme lo establecido en el Art 3-A TUO de la Ley para la Lucha contra la Evasión y para la Formalización de la Economía - D.S. N° 150-2007-EF y modificatorias, los documentos que acreditan el uso de los medios de pago establecidos en el Art. 5.° de la norma citada, caso contrario estará incurso en la infracción PA8 estipulada en la Tabla de Sanciones de la Ley General de Aduanas, equivalente al 10% del valor FOB declarado de la mercancía. Se precisa que la presentación de los documentos que sustente el uso de los medios de pago puede ser presentados vía expediente a través de la mesa de parte virtual de la SUNAT o en su defecto a través del requerimiento generado en la DAM por la transmisión de la rectificación electrónica de la casilla 4.1 del Formato B indicando el código/nombre de la entidad financiera y el número de operación.`
 
-    let rpt = `${titulo}\n\n${fechitaAforo}\n${horitaAfoto}`
+    let rpt = `${titulo}\n\n${fechitaAforo}\n${horitaAfoto}\n${bultitosAforo}\n${undComerAforo}`
 
     if (dataAlimentadorWord.estadoOnlyPECO && !dataAlimentadorWord.estadoOnlyAMAZONIA) {
         rpt = `${rpt}\n\n${primerParrafoOnlyPeco}`
+    }else if(!dataAlimentadorWord.estadoOnlyPECO && dataAlimentadorWord.estadoOnlyAMAZONIA){
+        rpt = `${rpt}\n\n${primerParrafoOnlyAmazon}`
     }else{
-        rpt = `${rpt}\n\n${primerParrafo}\n\n${segundoParrafo}`
+        rpt = `${rpt}\n\n${primerParrafo}`
     }
 
 
     if (!dataAlimentadorWord.estadoPagadoFactura) {
         rpt = `${rpt}\n\n${noPagoParrafo}`
+    }
+
+    if (dataAlimentadorWord.estadoOnlyAMAZONIA) {
+        rpt = `${rpt}\n\n${segundoParrafo}`
     }
 
     return rpt
@@ -581,6 +607,7 @@ function pintarCuadrosInputBlanco2() {
 
 function rellenarAlimentadorFromDam(data) {
 
+    console.log("rellenando DAM")
     // console.log("rellenarAlimentadorFromDam",data)
     const rucData = data["rucImportador"].split("-")[1]
     const razonSocialData = data["nomImportador"]
@@ -593,6 +620,7 @@ function rellenarAlimentadorFromDam(data) {
 
     dataAlimentadorWord.fromDam.agenteAduana = data["nomDeclarante"]
     dataAlimentadorWord.fromDam.cantBultosNumero = Number(data["cantBultos"].replace(',', '')).toString()
+    dataAlimentadorWord.fromDam.cantUnidComerNumero = Number(data["cantUndComerciales"].replace(',', '')).toString()
     dataAlimentadorWord.fromDam.cantBultosTexto = numeroAPalabras(Number(data["cantBultos"].replace(',', '')))
     dataAlimentadorWord.fromDam.domicilioFiscal = data["direccionFiscal"]
     dataAlimentadorWord.fromDam.fechaNumeracion = data["fechaNumeracion"].replaceAll("/", ".")
@@ -627,7 +655,7 @@ function updateVisualDataFromDam() {
     const contenedor = document.querySelector('.separador2[data-id3="sepradorInputs"]')
     // console.log(contenedor)
     Object.entries(listIDs2).forEach(([key, value]) => {
-        // console.log(`${key}: ${value}`);
+        console.log(`${key}: ${value}`);
         const inputTempo = contenedor.querySelector(`.form-group[data-id2="${value[0]}"] > input`)
 
         const padreInput = inputTempo.parentNode
@@ -1065,6 +1093,8 @@ function changeEdicionInputsDams(cambiador, boton) {
     inputs.forEach((input) => {
         input.readOnly = cambiador
     })
+    document.querySelector("input#bultos").disabled = cambiador
+    document.querySelector("input#unidComer").disabled = cambiador
     if (!cambiador) {
         boton.textContent = "💾 Guardar Correccion"
     } else {
@@ -1091,13 +1121,37 @@ function rellenarInfoCorreccion() {
 
     })
 
+    // document.getElementById("input#bultos")
+    // if (estadoSeleccionBultosTipo) {
+        
+    // }else{
+
+    // }
+
     actualizarPrevisualizacion()
 }
 
 document.getElementById("idCheckboxFactura").addEventListener("change", (e) => {
-
     estadoPagoFacturas = e.target.checked
-    
+})
+
+document.querySelector(".contentRadios").addEventListener("change", (e) => {
+    if (e.target.type === 'radio') {
+        // estado.textContent = `Seleccionado: ${e.target.value}`;
+        // console.log(`Seleccionado: ${e.target.value}`)
+        const formBultos = document.querySelector('div[data-id2="idBultosReco"]')    
+        const formUndComer = document.querySelector('div[data-id2="idUnidComerReco"]')    
+        if (e.target.value=="bultos") {
+            dataAlimentadorWord.estadoSeleccionBultos = true
+            formBultos.style.display = "inline"
+            formUndComer.style.display = "none"
+        }else{
+            dataAlimentadorWord.estadoSeleccionBultos = false
+            formBultos.style.display = "none"
+            formUndComer.style.display = "inline"
+        }
+        // dataAlimentadorWord.estadoSeleccionBultos = (e.target.value=="bultos")
+    }
 })
 
 function pintarCuadrosInputBlanco() {
