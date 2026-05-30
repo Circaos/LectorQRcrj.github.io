@@ -210,7 +210,7 @@ function obtenerMercaReconocida(listaSeriesDatos) {
     // Paso 2: Generar el resumen con "marca" y "modelo"
     const preResumen = Object.entries(agrupado)
     let resumen = descriProductosDef
-    if (preResumen.length < 7) {
+    if (preResumen.length <= 10) {
         resumen = preResumen.map(([producto, marcas]) => {
             const marcasTexto = Object.entries(marcas).map(([marca, modelos]) => {
                 if (modelos.length === 1) {
