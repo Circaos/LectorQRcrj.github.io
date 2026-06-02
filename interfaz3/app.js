@@ -1,5 +1,5 @@
 //Importacion Store
-import { setState, suscribir, setOtrosDatos } from './store.js'
+import { setState, suscribir, setOtrosDatos } from './storeMI.js'
 
 // Importacion Basicas
 import * as docx from 'https://cdn.jsdelivr.net/npm/docx-preview@0.3.3/+esm';
