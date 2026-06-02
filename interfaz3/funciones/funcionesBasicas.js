@@ -437,7 +437,7 @@ function reconfiguracionObjeto(objeto) {
                     objetoPlano["textoFechaTipadoRRR"] = "PENDIENTE-ESTABLECER-FECHA-BL"
                     objetoPlano["textoFechaTipado"] = ""
                 }else{
-                    objetoPlano["textoFechaTipado"] = `fecha del Bill of Lading, tal como se observa en la factura digitalizada por el importador y remitida a esta administración; teniendo que la fecha que se estipúla en el Bill of Lading digitalizado por el importador y remitida a esta administración es del ${objetoPlano["datosFactura-fechaLlegada"]}`
+                    objetoPlano["textoFechaTipado"] = `fecha del Bill of Lading, tal como se observa en la factura digitalizada por el importador y remitida a esta administración; teniendo que la fecha que se estipúla en el Bill of Lading digitalizado por el importador y remitida a esta administración es del ${objetoPlano["datosFactura-fechaBL"]}`
                     objetoPlano["textoFechaTipadoRRR"] = ""
                 }
             }
