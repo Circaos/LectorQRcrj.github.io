@@ -4,10 +4,10 @@ import { setState, suscribir, setOtrosDatos } from './store.js'
 // Importacion Basicas
 import * as docx from 'https://cdn.jsdelivr.net/npm/docx-preview@0.3.3/+esm';
 
+import {API_CONFIG} from './config/config.js'
 
-
-import { analyzeText, obtenerTableHTML } from './funciones/funcionesPegado.js'
-import { obtenerApiDam, simularAPI, obtenerApiDamCompleto } from './funciones/funcionesAPI.js';
+import { analyzeText, obtenerTableHTML } from './funciones/funcionesPegadoMI.js'
+import { obtenerApiDam, simularAPI, obtenerApiDamCompleto } from './funciones/funcionesAPIMI.js';
 import { numeroAPalabras, nomAduana, formatearResumen, fechaToFormatoInput, inputToFormatoFecha, reconfiguracionObjeto, formatearNumeroDOC, obtenerMercaReconocida } from './funciones/funcionesBasicas.js'
 //Elementos de modal
 
@@ -60,8 +60,23 @@ const listTipoHint = {
 //ESTADOS
 let blob = null
 let estadoBTNpegadoModal = null
-let estadoPagoFacturas = true
-
+// let estadoPagoFacturas = true
+const KEYS_PAGO_FACTURA = {
+    TIPOGENERAL:{
+        PLAZO: "PLAZO",
+        VENCIMIENTO: "VENCIMIENTO",
+    },
+    TIPOPLAZOS:{
+        FECHAFACTURA: "FECHAFACTURA",
+        FECHALLEGADA: "FECHALLEGADA",
+        FECHABL: "FECHABL"
+    }
+}
+let estadoPagoFacturaComplejo = {
+    estadoPagoFacturas : true,
+    tipo : KEYS_PAGO_FACTURA.TIPOGENERAL.PLAZO,
+    tipoPlazos : KEYS_PAGO_FACTURA.TIPOPLAZOS.FECHAFACTURA
+}
 
 let dataAlimentadorWord = {
     fromDam: {
@@ -85,9 +100,12 @@ let dataAlimentadorWord = {
     },
     datosFactura: {
         numeroReqFac: "PENDIENTE-NUMERO-REQUERIMIENTO",
-        fechaReqFac: "PENDIENTE-NUMERO-REQUERIMIENTO",
-        plazoFac: "PENDIENTE-NUMERO-REQUERIMIENTO",
-        fechaFac: "PENDIENTE-NUMERO-REQUERIMIENTO",
+        fechaReqFac: "PENDIENTE-FECHA-REQUERIMIENTO",
+        plazoFac: "PENDIENTE-PLAZO-FACTURA",
+        fechaFac: "PENDIENTE-FECHA-FACTURA",
+        fechaLlegada: "PENDIENTE-FECHA-LLEGADA",
+        fechaBL: "PENDIENTE-FECHA-BL",
+        fechaVencimiento: "PENDIENTE-FECHA-VENCIMIENTO"
     },
     fromInputs: {
         numeroInformeArt2: "PENDIENTE-NUMERO-INFORMEART2",
@@ -132,7 +150,10 @@ let dataAlimentadorWord = {
     estadoPagadoFactura: true,
     estadoOnlyPECO: false,
     estadoOnlyAMAZONIA: false,
-    estadoPECOyAMAZONIA: false
+    estadoPECOyAMAZONIA: false,
+    estadoJuridiccionLoreto: false,
+    estadoCompleTipoFactura: "PLAZO",
+    estadoCompleTipoPlazo: "FECHAFACTURA",
 }
 
 let dataTemporalGuias = []
@@ -151,13 +172,15 @@ let seleccionInputsHelper = {
 // const contentResolucion = await response.arrayBuffer();
 const tipoDocumento = {
     resolucion: "resolucion",
-    informe: "informe"
+    informe: "informe",
+    informeNumerado: "informeNumerado"
 }
 
 let seleccionTipoDocumento = tipoDocumento.informe
 
 let contentResolucion = null
 let contentInforme = null
+let contentInformeNumerado = null
 
 // Función principal para actualizar la previsualización estilo "documento"
 async function actualizarPrevisualizacion() {
@@ -171,45 +194,28 @@ async function actualizarPrevisualizacion() {
             contentResolucion = await response.arrayBuffer();
         }
         content = contentResolucion
+    }else if(seleccionTipoDocumento == tipoDocumento.informeNumerado){
+        if (contentInformeNumerado == null) {
+            // const response = await fetch("semiPlantillaFinalInformeV2.docx");
+            const response = await fetch("semiPlantillaFinalInformeV3Numeracion.docx");
+            contentInformeNumerado = await response.arrayBuffer();
+        }
+        content = contentInformeNumerado
     }else{
         if (contentInforme == null) {
-            const response = await fetch("semiPlantillaFinalInforme.docx");
+            const response = await fetch("semiPlantillaFinalInformeV2.docx");
             contentInforme = await response.arrayBuffer();
         }
         content = contentInforme
     }
-    // const response = await fetch("semiPlantillaFinal.docx");
-    // const content = await response.arrayBuffer();
     
-
     const zip = new PizZip(content);
-
     const doc = new window.docxtemplater(zip, {
         paragraphLoop: true,
         linebreaks: true,
         // parser: angularParser
     });
 
-    // doc.render({
-    //     nombre: "palabras",
-    //     tieneBono: true,
-    //     rawXml: `
-    //         <w:p>
-    //             <w:r>
-    //                 <w:rPr>
-    //                     <w:color w:val="FF0000"/>
-    //                 </w:rPr>
-    //                 <w:t>My custom</w:t>
-    //             </w:r>
-    //             <w:r>
-    //                 <w:rPr>
-    //                     <w:color w:val="00FF00"/>
-    //                 </w:rPr>
-    //                 <w:t>XML paragraph</w:t>
-    //             </w:r>
-    //         </w:p>
-    //         `,
-    // });
     const reconfiguracionDataAlimentador = reconfiguracionObjeto(dataAlimentadorWord)
     console.log("reconfiguracionDataAlimentador", reconfiguracionDataAlimentador)
     doc.render({
@@ -229,81 +235,6 @@ async function actualizarPrevisualizacion() {
 
 }
 
-// Función auxiliar para evitar XSS/inyecciones (por si hay texto con etiquetas)
-function escapeHtml(str) {
-    if (!str) return "";
-    return str
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
-}
-
-// Escuchar cambios en tiempo real o mediante botón. 
-// Añadimos listeners para cada input (cambios automáticos, pero también el botón).
-// Para mejor experiencia, escuchamos eventos 'input' y 'change'
-// const inputsIds = ['fechaDoc', 'palabrasClave', 'numeroCantidad', 'montoMoneda', 'textoExtra', 'referencia'];
-
-// function bindEvents() {
-//     for (let id of inputsIds) {
-//         const element = document.getElementById(id);
-//         if (element) {
-//             element.addEventListener('input', function () {
-//                 console.log("cris 1")
-//                 actualizarPrevisualizacion();
-//             });
-//             element.addEventListener('change', function () {
-//                 console.log("cris 2")
-//                 actualizarPrevisualizacion(); // cambio extra para date/number
-//             });
-//         }
-//     }
-// }
-
-// También el botón manual por si acaso
-const btnActualizar = document.getElementById('actualizarPreviewBtn');
-if (btnActualizar) {
-    btnActualizar.addEventListener('click', function (e) {
-
-        console.log("criscris")
-
-        e.preventDefault();
-        actualizarPrevisualizacion();
-    });
-}
-
-// Inicializar la previsualización y los eventos
-document.addEventListener('DOMContentLoaded', function () {
-    // Asegurar valores por defecto consistentes con el HTML inicial
-    // (el HTML ya tiene values iniciales, pero por si algún navegador no los pilla)
-    // Forzamos sincronía llamando a la función
-    actualizarPrevisualizacion();
-    // bindEvents();
-});
-
-// adicional: Para el campo de moneda, mejor formato en vivo.
-// Todo está cubierto.
-
-
-
-const btnDescargaWord = document.getElementById("descargarWordBtn")
-if (btnDescargaWord) {
-    console.log("que")
-    btnDescargaWord.addEventListener("click", () => {
-
-        let nombreDocumentoDescarga = "documentoTemporal.docx"
-        if (seleccionTipoDocumento == tipoDocumento.informe) {
-            nombreDocumentoDescarga = `Informe Regularizacion ${dataAlimentadorWord.fromDam.numeroDam}.docx`
-        }else{
-            nombreDocumentoDescarga = `Resolucion Regularizacion ${dataAlimentadorWord.fromDam.numeroDam}.docx`
-        }
-
-        saveAs(blob, nombreDocumentoDescarga);
-    })
-} else {
-    console.log("NOOOOOOOOOO")
-}
 
 
 //Funciones Modal
@@ -444,11 +375,8 @@ function verificaforPegadoTributos(data) {
 }
 
 
-
-
-
 function verificaforPegadoPeco(data) {
-    console.log("verificando PECO", data)
+    comunicador("verificando PECO", data)
     //debe contener entre 4 y 5 filas
     const cantFilas = data.length
     if (cantFilas < 4 || cantFilas > 5) {
@@ -589,13 +517,92 @@ document.querySelector('.separador2[data-id4="separadorCombos"]').addEventListen
     pintarCuadrosInput()
 })
 
-// document.querySelector('.separador2[data-id3="sepradorInputs"]').addEventListener("input", (e) => {
-//     console.log("-----------------")
-//     console.log(e.target.value)
-//     console.log(e.target.parentElement.dataset.id2)
-//     console.log("-----------------")
-// })
+document.addEventListener("change", (e) => {
 
+    comunicador("miniComu",e.target.id)
+    comunicador("miniComu",e.target.type)
+
+    switch (e.target.type) {
+        case "checkbox":
+            switch (e.target.id) {
+                case "idCheckboxFactura":
+                    estadoPagoFacturaComplejo.estadoPagoFacturas = e.target.checked
+                    comunicador("ticket",e.target.id)
+                    pintadoInputsFactura()
+                    break;
+                default:
+                    break;
+            }    
+
+            break;
+        case "radio":
+            switch (e.target.id) {
+                case "juridiccionLoreto":
+                    rellenarJuridiccion(true)
+                    break;
+                case "juridiccionOtros":
+                    rellenarJuridiccion(false)
+                    break;
+                case "fechaPlazoTipo":
+                    estadoPagoFacturaComplejo.tipo = KEYS_PAGO_FACTURA.TIPOGENERAL.PLAZO
+                    pintadoInputsFactura()
+                    break;
+                case "fechaVencimientoTipo":
+                    estadoPagoFacturaComplejo.tipo = KEYS_PAGO_FACTURA.TIPOGENERAL.VENCIMIENTO
+                    pintadoInputsFactura()
+                    break;
+                case "fechaFacturaPlazo":
+                    estadoPagoFacturaComplejo.tipoPlazos = KEYS_PAGO_FACTURA.TIPOPLAZOS.FECHAFACTURA
+                    pintadoInputsFactura()
+                    break;
+                case "fechaLlegadaPlazo":
+                    estadoPagoFacturaComplejo.tipoPlazos = KEYS_PAGO_FACTURA.TIPOPLAZOS.FECHALLEGADA
+                    pintadoInputsFactura()
+                    break;
+                case "fechaBLPlazo":
+                    estadoPagoFacturaComplejo.tipoPlazos = KEYS_PAGO_FACTURA.TIPOPLAZOS.FECHABL
+                    pintadoInputsFactura()
+                    break;
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
+    }
+
+
+    // switch (e.target.id) {
+    //     case "idCheckboxFactura":
+    //         estadoPagoFacturas = e.target.checked
+    //         comunicador("ticket",e.target.id)
+    //         pintadoInputsFactura()
+    //         break;
+    
+    //     case "idRadiosJuridiccion":
+    //         if (e.target.type === 'radio') {
+    //             rellenarJuridiccion((e.target.value == "juridiccionLoreto"))
+    //         }
+    //         break;
+    //     default:
+    //         break;
+    // }
+
+})
+
+// document.getElementById("idRadiosJuridiccion").addEventListener("change",(e)=>{
+//     comunicador("miniComunicador2",e.target.type )
+//     comunicador("miniComunicador2",e.target.id )
+//     if (e.target.type === 'radio') {
+//         if (e.target.value == "juridiccionLoreto") {
+//             // dataAlimentadorWord.estadoJuridiccionLoreto = true
+//             rellenarJuridiccion(true)
+//         }else if(e.target.value == "juridiccionOtros"){
+//             // dataAlimentadorWord.estadoJuridiccionLoreto = false
+//             rellenarJuridiccion(false)
+//         }
+//     }
+// })
 
 let estadoEdicionDam = false
 let estadoEdicionFactura = false
@@ -629,13 +636,46 @@ document.querySelectorAll("button[id]").forEach(boton => {
                 changeEdicionInputsDams(estadoEdicionDam, boton)
                 break;
             case "idCorreccionPagoFactura":
-                // console.log(boton)
                 changeEdicionPagoFactura(estadoEdicionFactura, boton)
                 break
             case "cerrarModalGuias":
                 cerrarModalGuias()
                 break;
+            case "btnAddGuias":
+                agregarGuia()
+                break;
+            case "descargarWordBtn":
+                let nombreDocumentoDescarga = "documentoTemporal.docx"
+                if (seleccionTipoDocumento == tipoDocumento.informe) {
+                    nombreDocumentoDescarga = `Informe Regularizacion ${dataAlimentadorWord.fromDam.numeroDam}.docx`
+                }else{
+                    nombreDocumentoDescarga = `Resolucion Regularizacion ${dataAlimentadorWord.fromDam.numeroDam}.docx`
+                }
+                saveAs(blob, nombreDocumentoDescarga);
+                break;
+            case "idEleccionInforme":
+                if (seleccionTipoDocumento != tipoDocumento.informe) {
+                    seleccionTipoDocumento = tipoDocumento.informe
+                    pintarBotonesFooter()
+                    actualizarPrevisualizacion()
+                }
+                break
+            case "idEleccionInformeNumerado":
+                if (seleccionTipoDocumento != tipoDocumento.informeNumerado) {
+                    seleccionTipoDocumento = tipoDocumento.informeNumerado
+                    pintarBotonesFooter()
+                    actualizarPrevisualizacion()
+                }
+                break
+            case "idEleccionResolucion":
+                if (seleccionTipoDocumento != tipoDocumento.resolucion) {
+                    seleccionTipoDocumento = tipoDocumento.resolucion
+                    pintarBotonesFooter()
+                    actualizarPrevisualizacion()
+                }
+                break
             default:
+                comunicador("OTRITO")
                 break;
         }
 
@@ -651,7 +691,19 @@ function changeEdicionPagoFactura(cambiador, boton) {
         boton.textContent = "💾 Guardar Correccion"
         formTempo.querySelector("span").style.display = "none"
         checkBox.style.display = "inline";
+        document.getElementById("idCheckboxFactura").disabled = false
+        document.getElementById("fechaPlazoTipo").disabled = false
+        document.getElementById("fechaVencimientoTipo").disabled = false
+        document.getElementById("fechaFacturaPlazo").disabled = false
+        document.getElementById("fechaLlegadaPlazo").disabled = false
+        document.getElementById("fechaBLPlazo").disabled = false
     } else {
+        document.getElementById("idCheckboxFactura").disabled = true
+        document.getElementById("fechaPlazoTipo").disabled = true
+        document.getElementById("fechaVencimientoTipo").disabled = true
+        document.getElementById("fechaFacturaPlazo").disabled = true
+        document.getElementById("fechaLlegadaPlazo").disabled = true
+        document.getElementById("fechaBLPlazo").disabled = true
         const span = formTempo.querySelector("span")
         span.style.display = "inline"
         // span.textContent = (checkBox.checked) ? "✅ Pagado" : "⚠️ Pendiente Pago"
@@ -670,9 +722,12 @@ function changeEdicionPagoFactura(cambiador, boton) {
 
         let datosFacturaParaAlimentar = {
             numeroReqFac: "PENDIENTE-NUMERO-REQUERIMIENTO",
-            fechaReqFac: "PENDIENTE-NUMERO-REQUERIMIENTO",
-            plazoFac: "PENDIENTE-NUMERO-REQUERIMIENTO",
-            fechaFac: "PENDIENTE-NUMERO-REQUERIMIENTO",
+            fechaReqFac: "PENDIENTE-FECHA-REQUERIMIENTO",
+            plazoFac: "PENDIENTE-PLAZO-FACTURA",
+            fechaFac: "PENDIENTE-FECHA-FACTURA",
+            fechaLlegada: "PENDIENTE-FECHA-LLEGADA",
+            fechaBL: "PENDIENTE-FECHA-BL",
+            fechaVencimiento: "PENDIENTE-FECHA-VENCIMIENTO"
         }
 
         const formNumeroReqFac = separadorPagoFactura.querySelector('div[data-id2="idReqFactura"]')
@@ -680,6 +735,7 @@ function changeEdicionPagoFactura(cambiador, boton) {
         if (valueNumReq == '') {
             asignarHint(formNumeroReqFac, listTipoHint.alerta, "Pendiente")
         } else {
+            asignarHint(formNumeroReqFac, listTipoHint.oculto, "Pendiente")
             datosFacturaParaAlimentar.numeroReqFac = valueNumReq
         }
         const formPlazoFac = separadorPagoFactura.querySelector('div[data-id2="idPlazoFactura"]')
@@ -687,6 +743,7 @@ function changeEdicionPagoFactura(cambiador, boton) {
         if (valuePlazoReq == '') {
             asignarHint(formPlazoFac, listTipoHint.alerta, "Pendiente")
         } else {
+            asignarHint(formPlazoFac, listTipoHint.oculto, "Pendiente")
             datosFacturaParaAlimentar.plazoFac = valuePlazoReq
         }
         const formFechaReqFac = separadorPagoFactura.querySelector('div[data-id2="idFechaReqFactura"]')
@@ -694,14 +751,40 @@ function changeEdicionPagoFactura(cambiador, boton) {
         if (valueFechaReq == '') {
             asignarHint(formFechaReqFac, listTipoHint.alerta, "Pendiente")
         } else {
-            datosFacturaParaAlimentar.fechaReqFac = inputToFormatoFecha(valueFechaReq)
+            asignarHint(formFechaReqFac, listTipoHint.oculto, "Pendiente")
+            datosFacturaParaAlimentar.fechaReqFac = inputToFormatoFecha(valueFechaReq).replaceAll("/",".")
         }
         const formFechaFac = separadorPagoFactura.querySelector('div[data-id2="idFechaFactura"]')
         const valueFechaFac = formFechaFac.querySelector("input").value
         if (valueFechaFac == '') {
             asignarHint(formFechaFac, listTipoHint.alerta, "Pendiente")
         } else {
-            datosFacturaParaAlimentar.fechaFac = inputToFormatoFecha(valueFechaFac)
+            asignarHint(formFechaFac, listTipoHint.oculto, "Pendiente")
+            datosFacturaParaAlimentar.fechaFac = inputToFormatoFecha(valueFechaFac).replaceAll("/",".")
+        }
+        const formFechaLlegada = separadorPagoFactura.querySelector('div[data-id2="idFechaLlegada"]')
+        const valueFechaLlegada = formFechaLlegada.querySelector("input").value
+        if (valueFechaLlegada == '') {
+            asignarHint(formFechaLlegada, listTipoHint.alerta, "Pendiente")
+        } else {
+            asignarHint(formFechaLlegada, listTipoHint.oculto, "Pendiente")
+            datosFacturaParaAlimentar.fechaLlegada = inputToFormatoFecha(valueFechaLlegada).replaceAll("/",".")
+        }
+        const formFechaBL = separadorPagoFactura.querySelector('div[data-id2="idFechaBL"]')
+        const valueFechaBL = formFechaBL.querySelector("input").value
+        if (valueFechaBL == '') {
+            asignarHint(formFechaBL, listTipoHint.alerta, "Pendiente")
+        } else {
+            asignarHint(formFechaBL, listTipoHint.oculto, "Pendiente")
+            datosFacturaParaAlimentar.fechaBL = inputToFormatoFecha(valueFechaBL).replaceAll("/",".")
+        }
+        const formFechaVencimiento = separadorPagoFactura.querySelector('div[data-id2="idFechaVencimiento"]')
+        const valueFechaVencimiento = formFechaVencimiento.querySelector("input").value
+        if (valueFechaVencimiento == '') {
+            asignarHint(formFechaVencimiento, listTipoHint.alerta, "Pendiente")
+        } else {
+            asignarHint(formFechaVencimiento, listTipoHint.oculto, "Pendiente")
+            datosFacturaParaAlimentar.fechaVencimiento = inputToFormatoFecha(valueFechaVencimiento).replaceAll("/",".")
         }
 
         rellenarDatosFactura(datosFacturaParaAlimentar)
@@ -714,29 +797,45 @@ function changeEdicionPagoFactura(cambiador, boton) {
     pintadoInputsFactura()
 }
 
-document.getElementById("idCheckboxFactura").addEventListener("change", (e) => {
 
-    estadoPagoFacturas = e.target.checked
-    pintadoInputsFactura()
-    // if (e.target.checked) {
-    //     console.log("criscris Verdad")
-    // } else {
-    //     console.log("criscris Falso")
-    // }
-})
+
+
 
 function pintadoInputsFactura() {
     const separadorPagoFactura = document.querySelector('.separador2[data-id3="sepradorPagoFactura"]')
     const formTempo = separadorPagoFactura.querySelector('.form-group-type2')
     const checkBox = formTempo.querySelector("input")
 
-    separadorPagoFactura.querySelectorAll(".agrupador").forEach(agrupado => {
-        if (!checkBox.checked) {
-            agrupado.style.display = "flex"
-        } else {
-            agrupado.style.display = "none"
+    if (!checkBox.checked) {
+        separadorPagoFactura.querySelector("#contenedorFacturasNivel1").style.display = "block"
+
+        if (estadoPagoFacturaComplejo.tipo == KEYS_PAGO_FACTURA.TIPOGENERAL.PLAZO) {
+            separadorPagoFactura.querySelector("#contenedorFacturasNivel2-01").style.display = "block"
+            separadorPagoFactura.querySelector("#contenedorFacturasNivel2-02").style.display = "none"
+
+            if (estadoPagoFacturaComplejo.tipoPlazos == KEYS_PAGO_FACTURA.TIPOPLAZOS.FECHAFACTURA) {
+                separadorPagoFactura.querySelector('.form-group[data-id2="idFechaFactura"]').style.display = "flex"
+                separadorPagoFactura.querySelector('.form-group[data-id2="idFechaLlegada"]').style.display = "none"
+                separadorPagoFactura.querySelector('.form-group[data-id2="idFechaBL"]').style.display = "none"
+            }else if(estadoPagoFacturaComplejo.tipoPlazos == KEYS_PAGO_FACTURA.TIPOPLAZOS.FECHALLEGADA){
+                separadorPagoFactura.querySelector('.form-group[data-id2="idFechaFactura"]').style.display = "none"
+                separadorPagoFactura.querySelector('.form-group[data-id2="idFechaLlegada"]').style.display = "flex"
+                separadorPagoFactura.querySelector('.form-group[data-id2="idFechaBL"]').style.display = "none"
+            }else if(estadoPagoFacturaComplejo.tipoPlazos == KEYS_PAGO_FACTURA.TIPOPLAZOS.FECHABL){
+                separadorPagoFactura.querySelector('.form-group[data-id2="idFechaFactura"]').style.display = "none"
+                separadorPagoFactura.querySelector('.form-group[data-id2="idFechaLlegada"]').style.display = "none"
+                separadorPagoFactura.querySelector('.form-group[data-id2="idFechaBL"]').style.display = "flex"
+            }
+        }else if(estadoPagoFacturaComplejo.tipo == KEYS_PAGO_FACTURA.TIPOGENERAL.VENCIMIENTO){
+            separadorPagoFactura.querySelector("#contenedorFacturasNivel2-01").style.display = "none"
+            separadorPagoFactura.querySelector("#contenedorFacturasNivel2-02").style.display = "block"
         }
-    })
+
+    } else {
+        separadorPagoFactura.querySelector("#contenedorFacturasNivel1").style.display = "none"
+    }
+
+
 
     console.log("estadoEdicionDam", estadoEdicionFactura)
     separadorPagoFactura.querySelectorAll(".agrupador input").forEach(input => {
@@ -1007,6 +1106,11 @@ function rellenarGuias(dataGuias) {
     actualizarPrevisualizacion()
 }
 
+function rellenarJuridiccion(isLoreto) {
+    dataAlimentadorWord.estadoJuridiccionLoreto = isLoreto
+    actualizarPrevisualizacion()
+}
+
 function rellenarCuadroTributario(tempoCuadroTributos) {
     dataAlimentadorWord.cuadroDeudaTributaria = tempoCuadroTributos
     console.log("dataAlimentadorWord.cuadroDeudaTributaria")
@@ -1026,7 +1130,12 @@ function rellenarDatosFactura(dataFactura) {
     dataAlimentadorWord.datosFactura.fechaReqFac = dataFactura.fechaReqFac
     dataAlimentadorWord.datosFactura.plazoFac = dataFactura.plazoFac
     dataAlimentadorWord.datosFactura.fechaFac = dataFactura.fechaFac
-    dataAlimentadorWord.estadoPagadoFactura = estadoPagoFacturas
+    dataAlimentadorWord.datosFactura.fechaLlegada = dataFactura.fechaLlegada
+    dataAlimentadorWord.datosFactura.fechaBL = dataFactura.fechaBL
+    dataAlimentadorWord.datosFactura.fechaVencimiento = dataFactura.fechaVencimiento
+    dataAlimentadorWord.estadoPagadoFactura = estadoPagoFacturaComplejo.estadoPagoFacturas
+    dataAlimentadorWord.estadoCompleTipoFactura = estadoPagoFacturaComplejo.tipo
+    dataAlimentadorWord.estadoCompleTipoPlazo = estadoPagoFacturaComplejo.tipoPlazos
 
     actualizarPrevisualizacion()
 }
@@ -1354,9 +1463,7 @@ function eliminarGuia(index) {
     }
 }
 
-document.getElementById("btnAddGuias").addEventListener("click", (e) => {
-    agregarGuia()
-})
+
 
 
 
@@ -1400,50 +1507,47 @@ function updateVisualDataFromDam() {
 }
 
 
-// window.onclick = (event) => {
-//     if (event.target == document.getElementById('miModal')){
-//         console.log(document.getElementById('miModal'))
-//     }else{
-//         console.log(event.target)
-//     }
-// }
-
-const botonSeleccionInforme = document.getElementById("idEleccionInforme")
-const botonSeleccionResolucion = document.getElementById("idEleccionResolucion")
-
 function pintarBotonesFooter() {
+    const botonSeleccionInforme = document.getElementById("idEleccionInforme")
+    const botonSeleccionInformeNumerado = document.getElementById("idEleccionInformeNumerado")
+    const botonSeleccionResolucion = document.getElementById("idEleccionResolucion")
     if (seleccionTipoDocumento == tipoDocumento.informe) {
         botonSeleccionInforme.style.background = "#303ef3"
         botonSeleccionInforme.style.color = "white"
         botonSeleccionResolucion.style.background = "lightgray"
         botonSeleccionResolucion.style.color = "black"
-    }else{
+        botonSeleccionInformeNumerado.style.background = "lightgray"
+        botonSeleccionInformeNumerado.style.color = "black"
+    }else if(seleccionTipoDocumento == tipoDocumento.resolucion){
         botonSeleccionResolucion.style.background = "#303ef3"
         botonSeleccionResolucion.style.color = "white"
         botonSeleccionInforme.style.background = "lightgray"
         botonSeleccionInforme.style.color = "black"
+        botonSeleccionInformeNumerado.style.background = "lightgray"
+        botonSeleccionInformeNumerado.style.color = "black"
+    }else{
+        botonSeleccionInformeNumerado.style.background = "#303ef3"
+        botonSeleccionInformeNumerado.style.color = "white"
+        botonSeleccionInforme.style.background = "lightgray"
+        botonSeleccionInforme.style.color = "black"
+        botonSeleccionResolucion.style.background = "lightgray"
+        botonSeleccionResolucion.style.color = "black"
     }
 }
 
-botonSeleccionInforme.addEventListener("click",()=>{
-    if (seleccionTipoDocumento != tipoDocumento.informe) {
-        seleccionTipoDocumento = tipoDocumento.informe
-        pintarBotonesFooter()
-        actualizarPrevisualizacion()
-    }
-})
-botonSeleccionResolucion.addEventListener("click",()=>{
-    if (seleccionTipoDocumento!= tipoDocumento.resolucion) {
-        seleccionTipoDocumento = tipoDocumento.resolucion
-        pintarBotonesFooter()
-        actualizarPrevisualizacion()
-    }
-})
 
+function comunicador(palabras,data) {
+    if (API_CONFIG.DANKERPOINT == "POLLO24") {
+        console.log(palabras,data)
+    }
+}
 
 pintarBotonesFooter()
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
+    actualizarPrevisualizacion()
     suscribir((estado) => {
         console.log("Cambio en estado detectado en APP.JS")
         estadoLocal = estado

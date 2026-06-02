@@ -58,24 +58,6 @@ function numeroAPalabras(num) {
     return resultado;
 }
 
-// Pruebas
-// console.log(numeroAPalabras(5));          // "cinco"
-// console.log(numeroAPalabras(15));         // "quince"
-// console.log(numeroAPalabras(21));         // "veintiuno"
-// console.log(numeroAPalabras(100));        // "cien"
-// console.log(numeroAPalabras(150));        // "ciento cincuenta"
-// console.log(numeroAPalabras(999));        // "novecientos noventa y nueve"
-// console.log(numeroAPalabras(1000));       // "mil"
-// console.log(numeroAPalabras(1500));       // "mil quinientos"
-// console.log(numeroAPalabras(2000));       // "dos mil"
-// console.log(numeroAPalabras(2100));       // "dos mil cien"
-// console.log(numeroAPalabras(15000));      // "quince mil"
-// console.log(numeroAPalabras(12345));      // "doce mil trescientos cuarenta y cinco"
-// console.log(numeroAPalabras(100000));     // "cien mil"
-// console.log(numeroAPalabras(150000));     // "ciento cincuenta mil"
-// console.log(numeroAPalabras(999999));     // "novecientos noventa y nueve mil novecientos noventa y nueve"
-// console.log(numeroAPalabras(1000000));    // "un millón"
-
 function nomAduana(s1) {
     var s4 = "SEDE CENTRAL";
     if (s1 == "118" || s1 == "pram1")
@@ -394,13 +376,10 @@ function reconfiguracionObjeto(objeto) {
 
 
 
-
-
-
     objetoPlano["estadoPECOyAMAZONIAProc"] = objeto["estadoPECOyAMAZONIA"] && AVArray[4] > 0
     objetoPlano["estadoPECOyAMAZONIAnoProcPECO"] = objeto["estadoPECOyAMAZONIA"] && AVArray[4] == 0
     
-
+    objetoPlano["estadoJuridiccionOtros"] = !objetoPlano["estadoJuridiccionLoreto"]
 
     objetoPlano["veriFaltanGuias"] = (objeto["guiasData"].length == 0)
     objetoPlano["veriFaltaDeudaTributaria"] = !(TotalArray[0] != -1 && TotalArray[5] != -1)
@@ -420,6 +399,50 @@ function reconfiguracionObjeto(objeto) {
         objetoPlano["fromDam-partidaNandina"]==""
     )
 
+    //TIPADO FACTURA "estadopagoFacturaTipoVencimiento" - "estadoPagoFacturaTipoPlazo" - "estadoPago"
+    objetoPlano["estadoPago"] = false
+    objetoPlano["estadopagoFacturaTipoVencimiento"] = false
+    objetoPlano["estadoPagoFacturaTipoPlazo"] = false
+    if (objetoPlano["estadoPagadoFactura"]) {
+        objetoPlano["estadoPago"] = true
+        objetoPlano["estadopagoFacturaTipoVencimiento"] = false
+        objetoPlano["estadoPagoFacturaTipoPlazo"] = false
+    }else{
+        objetoPlano["estadoPago"] = false
+        if (objetoPlano["estadoCompleTipoFactura"] == "VENCIMIENTO") {
+            objetoPlano["estadoPagoFacturaTipoPlazo"] = false
+            objetoPlano["estadopagoFacturaTipoVencimiento"] = true
+        }else if(objetoPlano["estadoCompleTipoFactura"] == "PLAZO"){
+            objetoPlano["estadoPagoFacturaTipoPlazo"] = true
+            objetoPlano["estadopagoFacturaTipoVencimiento"] = false
+
+            if (objetoPlano["estadoCompleTipoPlazo"] == "FECHAFACTURA") {
+                if (objetoPlano["datosFactura-fechaFac"].includes("PENDIENTE") || objetoPlano["datosFactura-fechaFac"] == "") {
+                    objetoPlano["textoFechaTipadoRRR"] = "PENDIENTE-ESTABLECER-FECHA-FACTURA"
+                    objetoPlano["textoFechaTipado"] = ""
+                }else{
+                    objetoPlano["textoFechaTipado"] = `fecha de la factura; teniendo que la fecha de la factura digitalizada por el importador y remitida a esta administración es del ${objetoPlano["datosFactura-fechaFac"]}`
+                    objetoPlano["textoFechaTipadoRRR"] = ""
+                }
+            }else if (objeto["estadoCompleTipoPlazo"] == "FECHALLEGADA"){
+                if (objetoPlano["datosFactura-fechaLlegada"].includes("PENDIENTE") || objetoPlano["datosFactura-fechaLlegada"] == "") {
+                    objetoPlano["textoFechaTipadoRRR"] = "PENDIENTE-ESTABLECER-FECHA-LLEGADA"
+                    objetoPlano["textoFechaTipado"] = ""
+                }else{
+                    objetoPlano["textoFechaTipado"] = `fecha de llegada, tal como se observa en la factura digitalizada por el importador y remitida a esta administración; teniendo que la fecha de llegada es del ${objetoPlano["datosFactura-fechaLlegada"]}`
+                    objetoPlano["textoFechaTipadoRRR"] = ""
+                }
+            }else if (objeto["estadoCompleTipoPlazo"] == "FECHABL"){
+                if (objetoPlano["datosFactura-fechaBL"].includes("PENDIENTE") || objetoPlano["datosFactura-fechaBL"] == "") {
+                    objetoPlano["textoFechaTipadoRRR"] = "PENDIENTE-ESTABLECER-FECHA-BL"
+                    objetoPlano["textoFechaTipado"] = ""
+                }else{
+                    objetoPlano["textoFechaTipado"] = `fecha del Bill of Lading, tal como se observa en la factura digitalizada por el importador y remitida a esta administración; teniendo que la fecha que se estipúla en el Bill of Lading digitalizado por el importador y remitida a esta administración es del ${objetoPlano["datosFactura-fechaLlegada"]}`
+                    objetoPlano["textoFechaTipadoRRR"] = ""
+                }
+            }
+        }
+    }
     objetoPlano["estadoPagadoFacturaInvert"] = !objetoPlano["estadoPagadoFactura"]
 
     if (objetoPlano.estadoPECOyAMAZONIA) {
@@ -444,6 +467,8 @@ function reconfiguracionObjeto(objeto) {
         objetoPlano["textoSolReg02"] = "PENDIENTE-PROCEDIMIENTO"
         objetoPlano["textoProceReco"] = "PENDIENTE PROCEDIMIENTO-RECONOCIMIENTO"
     }
+
+
 
 
 

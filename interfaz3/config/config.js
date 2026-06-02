@@ -4,6 +4,7 @@ export const API_CONFIG = {
   // BASE_URL: "http://192.168.18.28:3050",
   
   // BASE_URL: "http://localhost:3050",
+  DANKERPOINT : "POLLO24",
   BASE_URL: "https://apiproviaspruebav1-production.up.railway.app",
 //   ENDPOINTS: {
 //     GET_INFO_FECHA: "/webInt/getInfoFechaProviasSession",

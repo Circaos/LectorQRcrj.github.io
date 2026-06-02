@@ -76,7 +76,8 @@ body {
 }
 
 .form-group label,
-.form-group-type2 label {
+.form-group-type2 label, 
+.miniTitle{
     font-weight: 600;
     color: #1f4e6e;
     /* margin-bottom: 0.2rem; */
@@ -132,6 +133,16 @@ textarea {
     min-height: 85px;
 }
 
+.contentRadios{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.labelOption{
+    font-size: 0.85rem;
+}
+
 /* Estilo para el campo de moneda (input number decorado) */
 .currency-input {
     position: relative;
@@ -172,6 +183,8 @@ small.hint {
     width: auto;
     margin: 0 6px;
     /* margin-bottom: 0.8rem; */
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 0.3px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -341,6 +354,14 @@ small.hint {
     border-bottom: 2px solid rgba(52, 136, 185, 0.623);
     border-top: 2px solid rgba(52, 136, 185, 0.623);
 }
+
+.separador3 {
+    margin: 0 auto;
+    width: 80%;
+    border-bottom: 1.5px solid rgba(115, 147, 165, 0.623);
+    /* margin-bottom: 10px; */
+}
+
 
 .form-group.readonly label {
     color: #45535c;

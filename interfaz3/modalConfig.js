@@ -1,9 +1,12 @@
 //Importacion Store
-import { getState, setState, suscribir, getOtrosDatos } from './store.js'
+// import { getState, setState, suscribir, getOtrosDatos } from './store.js'
+import { getState, setState, suscribir, getOtrosDatos } from './storeMI.js'
 
-import { fechaToFormatoInput, inputToFormatoFecha } from './funciones/funcionesBasicas.js'
+// import { fechaToFormatoInput, inputToFormatoFecha } from './funciones/funcionesBasicas.js'
+import { fechaToFormatoInput, inputToFormatoFecha } from './funciones/funcionesBasicasMI.js'
 
-import { guardarApiDam,createEmpresaApiDam } from './funciones/funcionesAPI.js'
+// import { guardarApiDam,createEmpresaApiDam } from './funciones/funcionesAPI.js'
+import { guardarApiDam,createEmpresaApiDam } from './funciones/funcionesAPIMI.js'
 
 // Datos iniciales
 let datos = {}

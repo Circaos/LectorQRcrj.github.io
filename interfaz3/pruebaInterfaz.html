@@ -28,6 +28,23 @@
                         <button class="btnMain">Buscar</button>
                     </div>
 
+                    <div class="separador2"></div>
+                    <div class="agrupador">
+                        <div class="contentRadios" id="idRadiosJuridiccion">
+                            <div class="miniTitle">JURISDICCIÓN:</div>
+                            <div>
+                                <input type="radio" name="tipoContent" value="juridiccionLoreto" id="juridiccionLoreto">
+                                <label class="labelOption" for="juridiccionLoreto">LORETO</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="tipoContent" value="juridiccionOtros"
+                                    id="juridiccionOtros" checked="">
+                                <label class="labelOption" for="juridiccionOtros">OTROS</label>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="separador2" data-id3="sepradorInputs">
 
                         <div class="agrupador">
@@ -102,38 +119,103 @@
                         <button id="idCorreccionDAM" class="btnMain">✏️ Corregir</button>
                     </div>
 
+
                     <div class="separador2" data-id3="sepradorPagoFactura">
                         <div class="form-group-type2" data-id2="idPagoFactura">
-                            <label>Pagó factura: </label>
+                            <label for="idCheckboxFactura">Pagó factura: </label>
                             <span class="cumple-si"> ✅ Pagado </span>
-                            <input type="checkbox" name="inputName" id="idCheckboxFactura" checked style="display:none;">
+                            <input type="checkbox" name="inputName" id="idCheckboxFactura" disabled  value="idCheckboxFactura" checked
+                                style="display:none;">
                         </div>
-                        <div class="agrupador">
-                            <div class="form-group" data-id2="idReqFactura">
-                                <label>N° Req. Factura</label>
-                                <input type="text" name="inputName" readonly>
-                                <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                        <div id="contenedorFacturasNivel1">
+                            <div class="agrupador">
+                                <div class="form-group" data-id2="idReqFactura">
+                                    <label>N° Requer.</label>
+                                    <input type="text" name="inputName" readonly>
+                                    <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                                </div>
+                                <div class="form-group" data-id2="idFechaReqFactura">
+                                    <label>Fech Requer.</label>
+                                    <input type="date" name="inputName" readonly>
+                                    <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                                </div>
                             </div>
-                            <div class="form-group" data-id2="idFechaReqFactura">
-                                <label>Fech Req. Factura</label>
-                                <input type="date" name="inputName" readonly>
-                                <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                            <div class="contenedor ">
+                                <div class="separador3"></div>
+                                <div class="agrupador">
+                                    <div class="contentRadios" id="idRadiosJuridiccion">
+                                        <div class="miniTitle">TIPO:</div>
+                                        <div>
+                                            <input type="radio" name="facturaTipo" value="fechaPlazoTipo" id="fechaPlazoTipo" checked>
+                                            <label class="labelOption" for="fechaPlazoTipo">PLAZO VENC.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="facturaTipo" value="fechaVencimientoTipo" id="fechaVencimientoTipo" >
+                                            <label for="fechaVencimientoTipo" class="labelOption">FECHA VENC.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="separador3"></div>
                             </div>
-                        </div>
-                        <div class="agrupador">
-                            <div class="form-group" data-id2="idPlazoFactura">
-                                <label>Plazo Factura</label>
-                                <input type="text" name="inputName" readonly>
-                                <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                            <div id="contenedorFacturasNivel2-01">
+                                <div class="contenedor ">
+                                    <div class="separador3"></div>
+                                    <div class="agrupador">
+                                        <div class="contentRadios" id="idRadiosJuridiccion">
+                                            <!-- <div class="miniTitle">PLAZO:</div> -->
+                                            <div>
+                                                <input type="radio" name="tipoPlazo" value="fechaFacturaPlazo" id="fechaFacturaPlazo" checked>
+                                                <label class="labelOption" for="fechaFacturaPlazo">FECH-FACTURA</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" name="tipoPlazo" value="fechaLlegadaPlazo" id="fechaLlegadaPlazo" >
+                                                <label for="fechaLlegadaPlazo" class="labelOption">FECH-LLEGADA</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" name="tipoPlazo" value="fechaBLPlazo" id="fechaBLPlazo" >
+                                                <label for="fechaBLPlazo" class="labelOption">FECH-BL</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="separador3"></div>
+                                </div>
+                                <div class="agrupador">
+                                    <div class="form-group" data-id2="idPlazoFactura">
+                                        <label>DIAS Plazo</label>
+                                        <input type="text" name="inputName" readonly>
+                                        <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                                    </div>
+                                    <div class="form-group" data-id2="idFechaFactura">
+                                        <label>Fecha Factura</label>
+                                        <input type="date" name="inputName" readonly>
+                                        <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                                    </div>
+                                    <div class="form-group" data-id2="idFechaLlegada" style="display: none;">
+                                        <label>Fecha Llegada</label>
+                                        <input type="date" name="inputName" readonly>
+                                        <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                                    </div>
+                                    <div class="form-group" data-id2="idFechaBL" style="display: none;">
+                                        <label>Fecha BL</label>
+                                        <input type="date" name="inputName" readonly>
+                                        <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group" data-id2="idFechaFactura">
-                                <label>Fecha Factura</label>
-                                <input type="date" name="inputName" readonly>
-                                <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                            <div id="contenedorFacturasNivel2-02" style="display: none;">
+                                <div class="agrupador">
+                                    <div class="form-group" data-id2="idFechaVencimiento">
+                                        <label>Fecha Vencimiento</label>
+                                        <input type="date" name="inputName" readonly>
+                                        <small class="hint" style="color: #d78607; font-weight: 700;">⚠️ PENDIENTE</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <button id="idCorreccionPagoFactura" class="btnMain">✏️ Corregir</button>
                     </div>
+
+
                     <!-- 
                     <div class="separador"></div> -->
 
@@ -301,6 +383,7 @@
                 </div>
                 <div class="doc-footer" style="display: flex; justify-content: space-around;">
                     <button type="button" class="btnFooter" id="idEleccionInforme">INFORME</button>
+                    <button type="button" class="btnFooter" id="idEleccionInformeNumerado">INFORME NUM</button>
                     <button type="button" class="btnFooter" id="idEleccionResolucion">RESOLUCION</button>
                     <button type="button" class="btn-save" id="descargarWordBtn">⬇️ DESCARGAR</button>
                     <span>🖨️ documento generado en tiempo real</span>
@@ -431,7 +514,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
     <script type="module" src="./app.js"></script>
-    <script type="module" src="./modalConfig.js"></script>
+    <!-- <script type="module" src="./modalConfig.js"></script> -->
+    <script type="module" src="./modalConfigMI.js"></script>
     <!-- <script>
         const modal = document.getElementById('miModal');
         const btnAbrir = document.getElementById('tuBotonDeAbrir'); // Usa el ID de un botón que ya tengas
