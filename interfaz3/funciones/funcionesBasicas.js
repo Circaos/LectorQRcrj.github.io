@@ -453,7 +453,7 @@ function reconfiguracionObjeto(objeto) {
     objetoPlano["estadoPagadoFacturaInvert"] = !objetoPlano["estadoPagadoFactura"]
 
     if (objetoPlano.estadoPECOyAMAZONIA) {
-        objetoPlano["textoVisto"] = "en el marco del Decreto Supremo n.º 015-94-EF y de la Ley n.º 27037 Ley de Promoción de la Inversión en la Amazonía y normas conexas"
+        objetoPlano["textoVisto"] = "en el marco del Decreto Supremo n.º 015-94-EF y de la Ley n.º 27037"
         objetoPlano["textoParrafo01"] = "en los procedimientos DESPA-PE.01.13 (v3) y/o DESPA-PE.01.15 (v3), aprobados con Resolución de Superintendencia n.º 000248-2025/SUNAT y n.º 000247-2025/SUNAT respectivamente, con el objeto de acogerse a los procedimientos de devolución establecidos por el Decreto Supremo n.º 015-94-EF y Decreto Supremo n.º 103-99-EF y demás normas legales conexas"
         objetoPlano["textoSolReg01"] = "previsto por el artículo 1º del Decreto Supremo n.º 015-94-EF y artículo 18º del Decreto Supremo n.º 103-99-EF"
         objetoPlano["textoSolReg02"] = "solicita la regularización de la DAM referida, de acuerdo a los procedimientos DESPA-PE.01.13 (v3) y DESPA-PE.01.15 (v3) respectivamente"
@@ -461,7 +461,7 @@ function reconfiguracionObjeto(objeto) {
         objetoPlano["textoRecoFis"] = "marco del Convenio de Cooperación Aduanera Peruano Colombiano, Decreto Supremo n.º 015-94-EF, Resolución Ministerial n.º 107-94-EF/10, Ley n.º 27037 - “Ley de Promoción de la Inversión en la Amazonía”, su Reglamento aprobado con Decreto Supremo n.º 103-99-EF, Ley n.º 30896, Resolución Ministerial n.º 245-99-EF/15"
         objetoPlano["textoPlazoFactura"] = "amparo de la Ley n.º 27037"
     }else if(objetoPlano.estadoOnlyAMAZONIA){
-        objetoPlano["textoVisto"] = "en el marco de la Ley n.º 27037 Ley de Promoción de la Inversión en la Amazonía y normas conexas"
+        objetoPlano["textoVisto"] = "en el marco de la Ley n.º 27037"
         objetoPlano["textoParrafo01"] = "en el procedimiento DESPA-PE.01.15 (v3), aprobado con Resolución de Superintendencia n.º000247-2025/SUNAT, con el objeto de acogerse al procedimiento de devolución por el Decreto Supremo n.º103-99-EF y demás normas legales conexas"
         objetoPlano["textoSolReg01"] = "previsto por el artículo 18° del Decreto Supremo n.º103-99-EF"
         objetoPlano["textoSolReg02"] = "solicita regulación de la DAM referida, de acuerdo con el procedimiento DESPA-PE.01.15 (v3)"
