@@ -190,20 +190,20 @@ async function actualizarPrevisualizacion() {
     let content = null
     if (seleccionTipoDocumento == tipoDocumento.resolucion) {
         if (contentResolucion == null) {
-            const response = await fetch("semiPlantillaFinal.docx");
+            const response = await fetch("semiPlantillaFinalNUEVO.docx");
             contentResolucion = await response.arrayBuffer();
         }
         content = contentResolucion
     }else if(seleccionTipoDocumento == tipoDocumento.informeNumerado){
         if (contentInformeNumerado == null) {
             // const response = await fetch("semiPlantillaFinalInformeV2.docx");
-            const response = await fetch("semiPlantillaFinalInformeV3Numeracion.docx");
+            const response = await fetch("semiPlantillaFinalInformeV3NumeradoNUEVO.docx");
             contentInformeNumerado = await response.arrayBuffer();
         }
         content = contentInformeNumerado
     }else{
         if (contentInforme == null) {
-            const response = await fetch("semiPlantillaFinalInformeV2.docx");
+            const response = await fetch("semiPlantillaFinalInformeV2NUEVO.docx");
             contentInforme = await response.arrayBuffer();
         }
         content = contentInforme

@@ -366,6 +366,11 @@ function reconfiguracionObjeto(objeto) {
         objetoPlano["textoIPMNoReg"] = formatearNumeroDOC(IPMArray[0] - IPMArray[5])
         objetoPlano["textoIGVNoReg"] = formatearNumeroDOC(IGVArray[0] - IGVArray[5])
         objetoPlano["textoTotNoReg"] = formatearNumeroDOC(TotalArray[0] - TotalArray[5])
+    }else if(objeto["estadoOnlyPECO"]){
+        objetoPlano["textoAVNoReg"] = formatearNumeroDOC(AVArray[0] - AVArray[4])
+        objetoPlano["textoIPMNoReg"] = formatearNumeroDOC(IPMArray[0] - IPMArray[4])
+        objetoPlano["textoIGVNoReg"] = formatearNumeroDOC(IGVArray[0] - IGVArray[4])
+        objetoPlano["textoTotNoReg"] = formatearNumeroDOC(TotalArray[0] - TotalArray[4])
     }else{
         objetoPlano["textoAVNoReg"] = formatearNumeroDOC(AVArray[0] - AVArray[5] - AVArray[4])
         objetoPlano["textoIPMNoReg"] = formatearNumeroDOC(IPMArray[0] - IPMArray[5]- IPMArray[4])
@@ -374,7 +379,9 @@ function reconfiguracionObjeto(objeto) {
     }
 
 
-
+    //miniEstados
+    objetoPlano["estadoIncluyePeco"] = objetoPlano["estadoPECOyAMAZONIA"] || objetoPlano["estadoOnlyPECO"]
+    objetoPlano["estadoIncluyeAmazonia"] = objetoPlano["estadoPECOyAMAZONIA"] || objetoPlano["estadoOnlyAMAZONIA"]
 
     objetoPlano["estadoPECOyAMAZONIAProc"] = objeto["estadoPECOyAMAZONIA"] && AVArray[4] > 0
     objetoPlano["estadoPECOyAMAZONIAnoProcPECO"] = objeto["estadoPECOyAMAZONIA"] && AVArray[4] == 0
@@ -447,18 +454,28 @@ function reconfiguracionObjeto(objeto) {
 
     if (objetoPlano.estadoPECOyAMAZONIA) {
         objetoPlano["textoVisto"] = "en el marco del Decreto Supremo n.º 015-94-EF y de la Ley n.º 27037 Ley de Promoción de la Inversión en la Amazonía y normas conexas"
-        objetoPlano["textoParrafo01"] = "en los procedimientos DESPA-PE.01.13 y/o DESPA-PE.01.15, aprobados con Resolución de Superintendencia n.º 000248-2025/SUNAT y n.º 000247-2025/SUNAT respectivamente, con el objeto de acogerse a los procedimientos de devolución establecidos por el Decreto Supremo n.º 015-94-EF y Decreto Supremo n.º 103-99-EF y demás normas legales conexas"
+        objetoPlano["textoParrafo01"] = "en los procedimientos DESPA-PE.01.13 (v3) y/o DESPA-PE.01.15 (v3), aprobados con Resolución de Superintendencia n.º 000248-2025/SUNAT y n.º 000247-2025/SUNAT respectivamente, con el objeto de acogerse a los procedimientos de devolución establecidos por el Decreto Supremo n.º 015-94-EF y Decreto Supremo n.º 103-99-EF y demás normas legales conexas"
         objetoPlano["textoSolReg01"] = "previsto por el artículo 1º del Decreto Supremo n.º 015-94-EF y artículo 18º del Decreto Supremo n.º 103-99-EF"
-        objetoPlano["textoSolReg02"] = "solicita la regularización de la DAM referida, de acuerdo a los procedimientos DESPA-PE.01.13 y DESPA-PE.01.15 respectivamente"
+        objetoPlano["textoSolReg02"] = "solicita la regularización de la DAM referida, de acuerdo a los procedimientos DESPA-PE.01.13 (v3) y DESPA-PE.01.15 (v3) respectivamente"
         objetoPlano["textoProceReco"] = "lo establecido en el numeral 6 del literal C2 de la Sección VII del Procedimiento Específico DESPA-PE.01.13 (v3), y numeral 7 del literal C2 de la Sección VII del Procedimiento Específico DESPA-PE.01.15 (v3)"
-        objetoPlano["textoRecoFis"] = "marco del Convenio de Cooperación Aduanera Peruano Colombiano, Decreto Supremo n.º 015 -94 -EF, Resolución Ministerial n.º 107 -94 -EF/10,"
+        objetoPlano["textoRecoFis"] = "marco del Convenio de Cooperación Aduanera Peruano Colombiano, Decreto Supremo n.º 015-94-EF, Resolución Ministerial n.º 107-94-EF/10, Ley n.º 27037 - “Ley de Promoción de la Inversión en la Amazonía”, su Reglamento aprobado con Decreto Supremo n.º 103-99-EF, Ley n.º 30896, Resolución Ministerial n.º 245-99-EF/15"
+        objetoPlano["textoPlazoFactura"] = "amparo de la Ley n.º 27037"
     }else if(objetoPlano.estadoOnlyAMAZONIA){
         objetoPlano["textoVisto"] = "en el marco de la Ley n.º 27037 Ley de Promoción de la Inversión en la Amazonía y normas conexas"
-        objetoPlano["textoParrafo01"] = "en el procedimiento DESPA-PE.01.15, aprobado con Resolución de Superintendencia n.º000247-2025/SUNAT, con el objeto de acogerse al procedimiento de devolución por el Decreto Supremo n.º103-99-EF y demás normas legales conexas"
+        objetoPlano["textoParrafo01"] = "en el procedimiento DESPA-PE.01.15 (v3), aprobado con Resolución de Superintendencia n.º000247-2025/SUNAT, con el objeto de acogerse al procedimiento de devolución por el Decreto Supremo n.º103-99-EF y demás normas legales conexas"
         objetoPlano["textoSolReg01"] = "previsto por el artículo 18° del Decreto Supremo n.º103-99-EF"
-        objetoPlano["textoSolReg02"] = "solicita regulación de la DAM referida, de acuerdo con el procedimiento DESPA-PE.01.15"
+        objetoPlano["textoSolReg02"] = "solicita regulación de la DAM referida, de acuerdo con el procedimiento DESPA-PE.01.15 (v3)"
         objetoPlano["textoProceReco"] = "lo establecido en el numeral 7 del literal C2 de la Sección VII del Procedimiento Específico DESPA-PE.01.15 (v3)"
-        objetoPlano["textoRecoFis"] = "marco de la"
+        objetoPlano["textoRecoFis"] = "marco de la Ley n.º 27037 - “Ley de Promoción de la Inversión en la Amazonía”, su Reglamento aprobado con Decreto Supremo n.º 103-99-EF, Ley n.º 30896, Resolución Ministerial n.º 245-99-EF/15"
+        objetoPlano["textoPlazoFactura"] = "amparo de la Ley n.º 27037 y Decreto Supremo n.º 015-94-EF"
+    }else if(objetoPlano.estadoOnlyPECO){
+        objetoPlano["textoVisto"] = "en el marco del procedimiento establecido por el Decreto Supremo n.º 015-94-EF"
+        objetoPlano["textoParrafo01"] = "en los procedimientos DESPA-PE.01.13 (v3), aprobado con Resolución de Superintendencia n.º 000248-2025/SUNAT, con el objeto de acogerse a los procedimientos de devolución establecidos por el Decreto Supremo n.º 015-94-EF y demás normas legales conexas"
+        objetoPlano["textoSolReg01"] = "previsto por el artículo 1º del Decreto Supremo n.º 015-94-EF"
+        objetoPlano["textoSolReg02"] = "solicita la regularización de la DAM referida, de acuerdo a los procedimientos DESPA-PE.01.13 (v3)",
+        objetoPlano["textoRecoFis"] = "marco del Convenio de Cooperación Aduanera Peruano Colombiano, Decreto Supremo n.º 015-94-EF, Resolución Ministerial n.º 107-94-EF/10"
+        objetoPlano["textoPlazoFactura"] = "amparo del Decreto Supremo n.º 015-94-EF"
+        
     }else{
         objetoPlano["textoRecoFis"] = "PENDIENTE-PECO-REC-FIS"
         objetoPlano["textoVisto"] = "PENDIENTE-ASIGNACION-BENEFICIO"
@@ -466,6 +483,7 @@ function reconfiguracionObjeto(objeto) {
         objetoPlano["textoSolReg01"] = "PENDIENTE-PLAZOS"
         objetoPlano["textoSolReg02"] = "PENDIENTE-PROCEDIMIENTO"
         objetoPlano["textoProceReco"] = "PENDIENTE PROCEDIMIENTO-RECONOCIMIENTO"
+        objetoPlano["textoPlazoFactura"] = "PENDIENTE-TIPO-ACOGIMIENTO"
     }
 
 
