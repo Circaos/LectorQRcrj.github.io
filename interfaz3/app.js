@@ -648,6 +648,8 @@ document.querySelectorAll("button[id]").forEach(boton => {
                 let nombreDocumentoDescarga = "documentoTemporal.docx"
                 if (seleccionTipoDocumento == tipoDocumento.informe) {
                     nombreDocumentoDescarga = `Informe Regularizacion ${dataAlimentadorWord.fromDam.numeroDam}.docx`
+                }else if(seleccionTipoDocumento == tipoDocumento.informeNumerado){
+                    nombreDocumentoDescarga = `Informe Regularizacion N ${dataAlimentadorWord.fromDam.numeroDam}.docx`
                 }else{
                     nombreDocumentoDescarga = `Resolucion Regularizacion ${dataAlimentadorWord.fromDam.numeroDam}.docx`
                 }
@@ -1096,6 +1098,21 @@ function rellenarRangoAcogidas(seriesDam) {
     console.log("dataAlimentadorWord.fromDam.rangoSeriesAcogida")
     console.log(dataAlimentadorWord)
     actualizarPrevisualizacion()
+    asignadorTitulo()
+}
+
+
+function asignadorTitulo() {
+    // const tituloH3 = document.getElementById("idTituloDOC")
+    // if (dataAlimentadorWord.estadoPECOyAMAZONIA) {
+    //     tituloH3.textContent = `REGULARCIÓN DE TRIBUTOS AL AMPARO DE LA LEY N° 27037 Y DS N° 015-94-EF - DAM N° ${dataAlimentadorWord.fromDam.numeroDam} - ${dataAlimentadorWord.fromDam.nombreEmpresa}`
+    // }else if(dataAlimentadorWord.estadoOnlyPECO){
+    //     tituloH3.textContent = `REGULARCIÓN DE TRIBUTOS AL AMPARO DEL DS N° 015-94-EF - DAM N° ${dataAlimentadorWord.fromDam.numeroDam} - ${dataAlimentadorWord.fromDam.nombreEmpresa}`
+        
+    // }else if(dataAlimentadorWord.estadoOnlyAMAZONIA){
+    //     tituloH3.textContent = `REGULARCIÓN DE TRIBUTOS AL AMPARO DE LA LEY N° 27037 - DAM N° ${dataAlimentadorWord.fromDam.numeroDam} - ${dataAlimentadorWord.fromDam.nombreEmpresa}`
+
+    // }
 }
 
 function rellenarGuias(dataGuias) {

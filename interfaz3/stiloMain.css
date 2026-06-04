@@ -227,6 +227,7 @@ small.hint {
 
 /* Encabezado simulado de documento */
 .doc-header {
+    justify-content: space-between;
     background: #f4f0e1;
     padding: 0.5rem 1.5rem;
     border-bottom: 2px dashed #d9cdb0;
